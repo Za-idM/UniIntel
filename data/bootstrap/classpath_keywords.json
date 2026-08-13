@@ -1,0 +1,636 @@
+{
+  "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": {
+    "af": 74.0,
+    "dishwasher": 74.0,
+    "display": 49.3333,
+    "ge": 18.5,
+    "only": 74.0,
+    "pdd": 74.0,
+    "pdsh": 74.0,
+    "pyyfs": 74.0,
+    "rz": 74.0,
+    "ss": 44.4,
+    "wdts": 74.0
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Electric Dryers": {
+    "be": 74.0,
+    "bk": 16.4444,
+    "dc": 37.0,
+    "dr": 9.25,
+    "dryer": 24.6667,
+    "dv": 37.0,
+    "elect": 59.2,
+    "sq": 18.5,
+    "we": 74.0,
+    "wh": 5.1034
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": {
+    "bg": 74.0,
+    "bk": 16.4444,
+    "dc": 37.0,
+    "dg": 74.0,
+    "dr": 27.75,
+    "dryer": 49.3333,
+    "dv": 37.0,
+    "gas": 74.0,
+    "gbptdg": 74.0,
+    "gbstws": 74.0,
+    "ge": 37.0,
+    "ptd": 74.0,
+    "sq": 27.75,
+    "wg": 74.0,
+    "wh": 12.7586
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": {
+    "display": 24.6667,
+    "elect": 14.8,
+    "gw": 74.0,
+    "mvwp": 74.0,
+    "queen": 74.0,
+    "speed": 74.0,
+    "sq": 4.625,
+    "tr": 74.0,
+    "tv": 74.0,
+    "washer": 74.0,
+    "wh": 5.1034,
+    "wn": 74.0
+  },
+  "Building Materials>Decking>Deck & Porch Railings>Deck Railing Kits": {
+    "alum": 21.1429,
+    "baluster": 74.0,
+    "balusters": 37.0,
+    "black": 16.4444,
+    "classic": 74.0,
+    "composite": 37.0,
+    "horiz": 74.0,
+    "kit": 11.3846,
+    "rail": 49.3333,
+    "rnd": 74.0,
+    "select": 37.0,
+    "sq": 9.25,
+    "wh": 5.1034
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Post Sleeves": {
+    "alum": 21.1429,
+    "black": 16.4444,
+    "cap": 74.0,
+    "post": 49.3333,
+    "railing": 74.0,
+    "select": 18.5,
+    "skirt": 74.0,
+    "sleeve": 74.0
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Posts": {
+    "alum": 10.5714,
+    "black": 8.2222,
+    "deco": 74.0,
+    "post": 24.6667,
+    "support": 74.0
+  },
+  "Building Materials>Decking>Deck Stairs>Deck Stair Railing Kits": {
+    "balusters": 37.0,
+    "composite": 37.0,
+    "kit": 11.3846,
+    "rail": 24.6667,
+    "select": 18.5,
+    "sq": 9.25,
+    "stair": 74.0,
+    "wh": 5.1034
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Access Doors": {
+    "access": 74.0,
+    "attic": 74.0,
+    "door": 74.0,
+    "wh": 2.5517
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Patio Doors": {
+    "arg": 74.0,
+    "blk": 49.3333,
+    "dr": 37.0,
+    "ext": 74.0,
+    "gliding": 74.0,
+    "int": 74.0,
+    "lowe": 74.0,
+    "patio": 74.0,
+    "united": 74.0,
+    "wh": 5.1034,
+    "white": 49.3333
+  },
+  "Building Materials>Doors & Windows>Skylights>Fixed Skylights": {
+    "fs": 55.5,
+    "fxd": 74.0,
+    "gry": 74.0,
+    "ro": 74.0,
+    "shade": 74.0,
+    "skylt": 74.0,
+    "solar": 74.0,
+    "velux": 74.0,
+    "wh": 7.6552
+  },
+  "Building Materials>Flooring>Floor Moulding & Trims>Thresholds": {
+    "alum": 21.1429,
+    "dbz": 74.0,
+    "threshold": 74.0
+  },
+  "Building Materials>House Wraps & Tapes>House Wraps": {
+    "rainscreen": 74.0,
+    "zip": 74.0
+  },
+  "Building Materials>Lumber & Composites>Plywood>Oriented Strand Board (OSB)": {
+    "blue": 74.0,
+    "floor": 74.0,
+    "huber": 74.0,
+    "plusosb": 74.0,
+    "sub": 74.0
+  },
+  "Electrical>Batteries & Accessories>Battery Accessories>Battery Jump Starters": {
+    "jumpstart": 74.0,
+    "pwr": 74.0,
+    "sl": 74.0,
+    "supply": 24.6667
+  },
+  "Electrical>Boxes & Enclosures>Electrical Boxes & Covers>Electrical Box Covers": {
+    "box": 74.0,
+    "cover": 74.0,
+    "duplex": 74.0,
+    "gfci": 18.5,
+    "gfi": 74.0,
+    "outlet": 14.8,
+    "sq": 4.625,
+    "sw": 74.0,
+    "upc": 74.0
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Accent & Display Lighting": {
+    "cct": 37.0,
+    "led": 4.3529,
+    "light": 6.7273,
+    "lt": 7.4,
+    "multi": 37.0,
+    "strip": 74.0
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Bath & Vanity Lights": {
+    "cpzled": 74.0,
+    "kichler": 37.0,
+    "lt": 7.4,
+    "wall": 24.6667
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures": {
+    "highbay": 74.0,
+    "light": 6.7273,
+    "nuvo": 74.0
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Ceiling Fixtures": {
+    "bn": 74.0,
+    "ceiling": 32.8889,
+    "led": 6.5294,
+    "light": 13.4545,
+    "lt": 14.8,
+    "satco": 37.0
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Strip & Tape Lighting": {
+    "light": 6.7273,
+    "satco": 18.5,
+    "tape": 74.0
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Panel & Troffer Light Fixtures": {
+    "flat": 74.0,
+    "led": 2.1765,
+    "panel": 74.0,
+    "satco": 18.5
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": {
+    "cct": 37.0,
+    "crimw": 74.0,
+    "down": 74.0,
+    "downlight": 74.0,
+    "fs": 18.5,
+    "hlbsl": 74.0,
+    "led": 4.3529,
+    "light": 33.6364,
+    "regsww": 74.0,
+    "wf": 74.0,
+    "wh": 10.2069,
+    "white": 24.6667
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Surface-Mount Fixtures": {
+    "bk": 16.4444,
+    "ceiling": 41.1111,
+    "led": 2.1765,
+    "lt": 37.0,
+    "wh": 5.1034
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wall Sconces": {
+    "kichler": 37.0,
+    "ni": 74.0,
+    "sconce": 74.0,
+    "wall": 24.6667
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wraparound Lights": {
+    "led": 4.3529,
+    "light": 6.7273,
+    "lt": 7.4,
+    "wrap": 74.0
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Fluorescent Light Bulbs": {
+    "flor": 74.0,
+    "led": 2.1765
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Halogen Light Bulbs": {
+    "bulb": 74.0,
+    "halogen": 74.0,
+    "pin": 74.0
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Incandescent Light Bulbs": {
+    "cand": 59.2,
+    "inc": 74.0,
+    "incan": 74.0,
+    "med": 16.8182,
+    "pk": 15.5789
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": {
+    "br": 59.2,
+    "cand": 14.8,
+    "edison": 74.0,
+    "led": 47.8824,
+    "med": 57.1818,
+    "motion": 74.0,
+    "pk": 50.6316,
+    "st": 74.0
+  },
+  "Electrical>Lamps & Lightings>Portable & Temporary Lightings>Headlamps": {
+    "headlight": 74.0,
+    "police": 74.0
+  },
+  "Electrical>Wires & Cables>Building Wires>Service Entrance & Underground Cables": {
+    "aluminum": 74.0,
+    "cable": 74.0,
+    "entrance": 74.0,
+    "foot": 37.0,
+    "linear": 37.0
+  },
+  "Electrical>Wires & Cables>Copper Data Cables": {
+    "cat": 74.0,
+    "foot": 37.0,
+    "linear": 37.0,
+    "wire": 74.0
+  },
+  "Electrical>Wiring Devices>GFCI & AFCI Devices>GFCI & AFCI Receptacles": {
+    "agtr": 74.0,
+    "br": 14.8,
+    "gfci": 55.5,
+    "gfnt": 74.0,
+    "gfta": 74.0,
+    "gfwt": 74.0,
+    "kw": 74.0,
+    "outler": 74.0,
+    "outlet": 44.4,
+    "wh": 7.6552
+  },
+  "Electrical>Wiring Devices>Straight Blade Devices>Receptacles & USB Ports": {
+    "bw": 74.0,
+    "guac": 74.0,
+    "outlet": 14.8,
+    "usb": 74.0,
+    "wh": 2.5517
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Beverage Coolers": {
+    "bcgs": 74.0,
+    "beverage": 37.0,
+    "center": 37.0,
+    "ss": 14.8,
+    "tall": 74.0,
+    "xou": 37.0
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Wine Coolers": {
+    "beverage": 37.0,
+    "bk": 8.2222,
+    "center": 37.0,
+    "wdzgbr": 74.0,
+    "xou": 37.0
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Built-In Microwaves": {
+    "beko": 74.0,
+    "oven": 74.0,
+    "ss": 14.8,
+    "wall": 24.6667,
+    "wosp": 74.0
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Electric Cooktops": {
+    "bk": 8.2222,
+    "cooktop": 37.0,
+    "dtbb": 74.0,
+    "ge": 18.5,
+    "pep": 74.0
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Induction Cooktops": {
+    "bk": 8.2222,
+    "caf": 74.0,
+    "chp": 74.0,
+    "cooktop": 37.0,
+    "tbb": 74.0
+  },
+  "Hardware & Fasteners>Cabinet & Drawer Hardware>Cabinet Hardware>Cabinet Hardware Installation Templates": {
+    "drilling": 74.0,
+    "hole": 37.0,
+    "system": 74.0,
+    "tp": 74.0
+  },
+  "Lawn, Garden & Patio>Fencing>Gate Openers & Hardware>Gate Latches & Slide Bolts": {
+    "black": 8.2222,
+    "gate": 74.0,
+    "gravity": 74.0,
+    "latch": 74.0,
+    "rdi": 74.0
+  },
+  "Safety>Eye Protection>Safety Glasses": {
+    "edge": 74.0,
+    "frame": 74.0,
+    "glasses": 74.0,
+    "lense": 74.0,
+    "makalu": 74.0,
+    "mk": 74.0,
+    "mpap": 74.0,
+    "pcvs": 74.0,
+    "photochromic": 74.0,
+    "polarized": 74.0,
+    "safety": 74.0,
+    "tacana": 74.0,
+    "tc": 74.0,
+    "vs": 74.0,
+    "xb": 74.0
+  },
+  "Safety>Fire Protection>Fire Extinguishers & Accessories>Fire Extinguishers": {
+    "extinguisher": 74.0,
+    "feefx": 74.0,
+    "fire": 74.0,
+    "lith": 74.0
+  },
+  "Test & Measurement>Measuring & Layout Tools>Levels>Rotary & Straight Line Laser Levels": {
+    "cg": 74.0,
+    "cross": 74.0,
+    "dcle": 74.0,
+    "dw": 74.0,
+    "ft": 74.0,
+    "gb": 74.0,
+    "laser": 74.0,
+    "level": 74.0,
+    "leveling": 74.0,
+    "line": 31.7143,
+    "plumb": 74.0,
+    "range": 74.0,
+    "self": 74.0,
+    "spot": 74.0,
+    "spots": 74.0
+  },
+  "Test & Measurement>Measuring & Layout Tools>Marking & Layout Tools>Mason's Lines": {
+    "blk": 24.6667,
+    "brd": 74.0,
+    "green": 31.7143,
+    "line": 42.2857,
+    "mason": 74.0,
+    "orange": 74.0,
+    "replacement": 74.0,
+    "twist": 74.0,
+    "yellow": 74.0,
+    "yellw": 74.0
+  },
+  "Tools & Equipment>Hand Tools>Hex, Torx & Spline Keys>Hex Key Sets": {
+    "hex": 74.0,
+    "multicolor": 74.0,
+    "plus": 74.0,
+    "spks": 74.0
+  },
+  "Tools & Equipment>Hand Tools>Snips & Shears>Snips": {
+    "avm": 74.0,
+    "ev": 74.0,
+    "green": 10.5714,
+    "mini": 74.0,
+    "red": 74.0,
+    "snip": 74.0
+  },
+  "Tools & Equipment>Power Tools>Cordless Tools>Cordless Blowers": {
+    "blower": 74.0,
+    "brushless": 37.0,
+    "milw": 3.7,
+    "precision": 74.0
+  },
+  "Tools & Equipment>Power Tools>Oscillating Tools>Oscillating Tool Sandpaper & Sanding Pads": {
+    "abranet": 74.0,
+    "rp": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": {
+    "bare": 6.7273,
+    "brushless": 37.0,
+    "compact": 74.0,
+    "dcd": 24.6667,
+    "dcf": 12.3333,
+    "dewalt": 5.92,
+    "drill": 37.0,
+    "driver": 44.4,
+    "head": 37.0,
+    "impact": 10.5714,
+    "milw": 3.7,
+    "multi": 37.0
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Hammer Drills": {
+    "bare": 6.7273,
+    "cordless": 74.0,
+    "dcd": 49.3333,
+    "dewalt": 5.92,
+    "drill": 24.6667,
+    "hammer": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": {
+    "bare": 13.4545,
+    "bl": 74.0,
+    "brad": 74.0,
+    "dcn": 74.0,
+    "degree": 74.0,
+    "dewalt": 5.92,
+    "framing": 74.0,
+    "ga": 37.0,
+    "kit": 5.6923,
+    "lxt": 74.0,
+    "makita": 29.6,
+    "nailer": 74.0,
+    "xnb": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Screwdrivers>Power Nut Setters & Bit Holders": {
+    "driver": 14.8,
+    "impact": 10.5714,
+    "magnetic": 74.0,
+    "milw": 3.7,
+    "pc": 18.5,
+    "set": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Staplers & Riveters>Cordless Staplers": {
+    "crown": 74.0,
+    "ga": 37.0,
+    "makita": 14.8,
+    "narrow": 74.0,
+    "stapler": 74.0,
+    "xts": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": {
+    "atomic": 74.0,
+    "dcf": 12.3333,
+    "dewalt": 2.96,
+    "driver": 14.8,
+    "impact": 10.5714,
+    "kit": 11.3846,
+    "milw": 3.7,
+    "surge": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": {
+    "bare": 13.4545,
+    "dcf": 24.6667,
+    "dewalt": 5.92,
+    "friction": 74.0,
+    "impact": 31.7143,
+    "milw": 3.7,
+    "ring": 74.0,
+    "tool": 74.0,
+    "wrench": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": {
+    "anvil": 74.0,
+    "bare": 6.7273,
+    "dcf": 24.6667,
+    "dewalt": 5.92,
+    "eb": 74.0,
+    "fuel": 74.0,
+    "head": 37.0,
+    "interchangeable": 74.0,
+    "milw": 7.4,
+    "open": 74.0,
+    "rachet": 74.0,
+    "ratchet": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Buffers & Polishers>Cordless Buffers & Polishers": {
+    "makita": 14.8,
+    "polisher": 74.0,
+    "sander": 74.0,
+    "xvp": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": {
+    "angle": 74.0,
+    "bare": 6.7273,
+    "dcg": 74.0,
+    "dewalt": 2.96,
+    "die": 74.0,
+    "grinder": 74.0,
+    "milw": 3.7,
+    "right": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Circular Saw Blades": {
+    "blade": 10.5714,
+    "circ": 37.0,
+    "diablo": 74.0,
+    "saw": 12.3333,
+    "ux": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Diamond Saw Blades": {
+    "blade": 52.8571,
+    "diamond": 74.0,
+    "milw": 18.5,
+    "tile": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Hole Saws & Accessories>Hole Saw Sets": {
+    "dozer": 74.0,
+    "hole": 37.0,
+    "kit": 5.6923,
+    "lock": 74.0,
+    "milw": 3.7,
+    "pc": 18.5,
+    "quik": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Planer Blades": {
+    "blade": 10.5714,
+    "cmt": 74.0,
+    "hs": 74.0,
+    "knives": 74.0,
+    "pc": 37.0,
+    "planer": 24.6667
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Band Saws>Corded Band Saws": {
+    "bandsaw": 74.0,
+    "jtp": 74.0,
+    "jwbs": 74.0,
+    "sfx": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Circular Saws>Cordless Circular Saws": {
+    "circ": 37.0,
+    "hd": 74.0,
+    "kit": 5.6923,
+    "milw": 3.7,
+    "saw": 12.3333
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Jig Saws>Cordless Jig Saws": {
+    "jig": 74.0,
+    "milw": 3.7,
+    "saw": 12.3333
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": {
+    "bare": 6.7273,
+    "bevel": 74.0,
+    "dcs": 74.0,
+    "dewalt": 5.92,
+    "double": 74.0,
+    "fixed": 74.0,
+    "gsl": 74.0,
+    "kit": 5.6923,
+    "makita": 14.8,
+    "miter": 74.0,
+    "saw": 37.0,
+    "sliding": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": {
+    "ah": 74.0,
+    "battery": 74.0,
+    "cp": 74.0,
+    "dcb": 74.0,
+    "flexvolt": 74.0,
+    "kit": 11.3846,
+    "lithium": 74.0,
+    "max": 74.0,
+    "pack": 74.0,
+    "powerpack": 74.0,
+    "senco": 74.0,
+    "starter": 74.0,
+    "two": 74.0,
+    "vb": 74.0,
+    "xr": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Battery Chargers": {
+    "charger": 24.6667,
+    "milw": 3.7,
+    "rapid": 74.0
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Power Supplies & Battery Adapters": {
+    "charger": 49.3333,
+    "milw": 7.4,
+    "power": 74.0,
+    "supply": 49.3333
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Dust Collector Accessories": {
+    "bag": 74.0,
+    "dewalt": 2.96,
+    "dwv": 74.0,
+    "paper": 74.0,
+    "pk": 3.8947
+  },
+  "Tools & Equipment>Power Tools>Power Tool Combination Kits": {
+    "dck": 74.0,
+    "dewalt": 2.96,
+    "drill": 12.3333,
+    "impact": 10.5714,
+    "kit": 5.6923
+  },
+  "Tools & Equipment>Woodworking Tools & Machinery>Woodworking Machinery>Woodworking Planer Machines": {
+    "benchtop": 74.0,
+    "hp": 74.0,
+    "oliver": 74.0,
+    "ph": 74.0,
+    "planer": 49.3333
+  }
+}

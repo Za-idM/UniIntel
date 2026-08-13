@@ -1,0 +1,7545 @@
+{
+  "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Number of Wash Cycles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 6,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Plug Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Depth With Door Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Minimum Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 11,
+      "label": "Maximum Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 12,
+      "label": "Sound Level",
+      "uom_hint": "dBA"
+    },
+    {
+      "slot": 13,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Appliances & Consumer Electronics>Laundry Appliances>Electric Dryers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "cu-ft"
+    },
+    {
+      "slot": 4,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 6,
+      "label": "Power Rating",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 7,
+      "label": "HP Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 8,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 9,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Rotational Speed",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "BTU Rating",
+      "uom_hint": "Btu/hr"
+    },
+    {
+      "slot": 12,
+      "label": "Drum Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Fuel Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Depth With Door Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 15,
+      "label": "Height With Lid Open",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Number of Cycles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Number of Temperature Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "cu-ft"
+    },
+    {
+      "slot": 4,
+      "label": "Rotational Speed",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "BTU Rating",
+      "uom_hint": "Btu/hr"
+    },
+    {
+      "slot": 6,
+      "label": "Drum Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fuel Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Depth With Door Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Height With Lid Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Number of Cycles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Temperature Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "cu-ft"
+    },
+    {
+      "slot": 4,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 6,
+      "label": "Power Rating",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 7,
+      "label": "HP Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 8,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 9,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Rotational Speed",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 11,
+      "label": "BTU Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Drum Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Fuel Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Depth With Door Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 15,
+      "label": "Height With Lid Open",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 16,
+      "label": "Number of Cycles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Number of Temperature Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Decking>Deck & Porch Railings>Deck Railing Kits": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Rail Profile Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Rail Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Rail Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Rail Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Rail Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Balusters/Spindles Design",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Balusters/Spindles Top Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Balusters/Spindles Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Balusters/Spindles Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 11,
+      "label": "Balusters/Spindles Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Balusters/Spindles Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Post Sleeves": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Fits Post Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Posts": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Actual Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Actual Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Actual Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Nominal Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Nominal Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Nominal Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Decking>Deck Stairs>Deck Stair Railing Kits": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Rail Profile Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Rail Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Rail Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Rail Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Rail Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Balusters/Spindles Design",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Balusters/Spindles Top Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Balusters/Spindles Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Balusters/Spindles Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 11,
+      "label": "Balusters/Spindles Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Balusters/Spindles Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Doors & Windows>Exterior Doors>Access Doors": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Door Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Door Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Door Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Opening Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Opening Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Gauge",
+      "uom_hint": "ga"
+    },
+    {
+      "slot": 10,
+      "label": "R-Value",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Door Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Frame Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Insulation Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Locking Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Hinge Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Doors & Windows>Exterior Doors>Patio Doors": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Door Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Door Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Door Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Opening Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Opening Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Door Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Door Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Door Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Frame Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Door Handing",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Texture Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Number of Panels/Lites",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Panel Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Glass Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Core Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Locking Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Hinge Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Paintable/Stainable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Doors & Windows>Skylights>Fixed Skylights": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Daylight Area",
+      "uom_hint": "sq-ft"
+    },
+    {
+      "slot": 3,
+      "label": "Glass Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Frame Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Frame Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Frame Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Frame Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Glazing Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Locking Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Roof Pitch",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 11,
+      "label": "UV Protection",
+      "uom_hint": "%"
+    },
+    {
+      "slot": 12,
+      "label": "U-Factor",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Rough Opening Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 15,
+      "label": "Rough Opening Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 16,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 17,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Overall Depth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Flooring>Floor Moulding & Trims>Thresholds": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Profile Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Resists",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>House Wraps & Tapes>House Wraps": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 3,
+      "label": "Width",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Perm Rating",
+      "uom_hint": "perm"
+    },
+    {
+      "slot": 6,
+      "label": "Insulation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Resists",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Coverage Area",
+      "uom_hint": "sq-ft"
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Building Materials>Lumber & Composites>Plywood>Oriented Strand Board (OSB)": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Nominal Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 3,
+      "label": "Nominal Width",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Nominal Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Actual Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 6,
+      "label": "Actual Width",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 7,
+      "label": "Actual Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Texture Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Appearance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Wood Species",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Batteries & Accessories>Battery Accessories>Battery Jump Starters": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Automatic/Manual",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Battery Voltage",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 6,
+      "label": "Input Voltage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Input Current",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 8,
+      "label": "Charging Current",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Peak Current",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 10,
+      "label": "Maintaining Current",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Cold Cranking Amperage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Charger Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Charge Time",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 14,
+      "label": "Interface/Ports",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Cable Gauge",
+      "uom_hint": "AWG"
+    },
+    {
+      "slot": 16,
+      "label": "Cable Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 17,
+      "label": "Cable Clamp Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Number of Batteries",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Power Cord Length",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Operating Temperature",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 21,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Boxes & Enclosures>Electrical Boxes & Covers>Electrical Box Covers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Cover Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Box Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Number of Gangs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Thickness",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Accent & Display Lighting": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Beam Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Beam Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 17,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 18,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Bath & Vanity Lights": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "VAC"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Orientation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Backplate/Canopy Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Hanging Device Maximum Length",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Ceiling Fixtures": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Backplate/Canopy Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Strip & Tape Lighting": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 11,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 12,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Beam Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Beam Angle",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Panel & Troffer Light Fixtures": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Beam Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Beam Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 17,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 18,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 12,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Recessed Trim Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Ceiling Opening Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Surface-Mount Fixtures": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Backplate/Canopy Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wall Sconces": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Backplate/Canopy Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wraparound Lights": [
+    {
+      "slot": 1,
+      "label": "Collection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fixture Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Fixture Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Fixture Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Bulbs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 13,
+      "label": "Color Temperature",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable/Non-Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Fixture Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Fixture Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Backplate/Canopy Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Bulb Included",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Light Bulbs>Fluorescent Light Bulbs": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 4,
+      "label": "Bulb Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Bulb Shape Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 7,
+      "label": "Light Appearance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Base Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 12,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Bulb Designation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 15,
+      "label": "Beam Angle",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Title 20 Compliant",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Light Bulbs>Halogen Light Bulbs": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 4,
+      "label": "Bulb Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Bulb Shape Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 7,
+      "label": "Light Appearance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Base Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 12,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Bulb Designation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 15,
+      "label": "Beam Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Title 20 Compliant",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Light Bulbs>Incandescent Light Bulbs": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 4,
+      "label": "Bulb Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Bulb Shape Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 7,
+      "label": "Light Appearance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Base Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 12,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Bulb Designation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 15,
+      "label": "Beam Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 16,
+      "label": "Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Wattage",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 3,
+      "label": "Lumens",
+      "uom_hint": "Lumens"
+    },
+    {
+      "slot": 4,
+      "label": "Bulb Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Bulb Shape Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color Temperature",
+      "uom_hint": "K"
+    },
+    {
+      "slot": 7,
+      "label": "Light Appearance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Bulb Base",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bulb Base Code",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Bulb Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 12,
+      "label": "Color Rendering Index (CRI)",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Bulb Designation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Average Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 15,
+      "label": "Beam Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 16,
+      "label": "Incandescent Wattage Equivalent",
+      "uom_hint": "W"
+    },
+    {
+      "slot": 17,
+      "label": "Halogen Wattage Equivalent",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Fluorescent Wattage Equivalent",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "HID Wattage Equivalent",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Dimmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Smart Compatible With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Energy Star Certified",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Title 20 Compliant",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Title 24 Compliant",
+      "uom_hint": ""
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Lamps & Lightings>Portable & Temporary Lightings>Headlamps": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Battery Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Lamp Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Lumens",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Beam Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Beam Distance",
+      "uom_hint": "m"
+    },
+    {
+      "slot": 9,
+      "label": "Body Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Body Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Strap Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of Batteries",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Battery Life",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Run Time",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Lamp Life",
+      "uom_hint": "hr"
+    },
+    {
+      "slot": 16,
+      "label": "Width",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Depth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Wires & Cables>Building Wires>Service Entrance & Underground Cables": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 3,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 4,
+      "label": "Frequency Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Number of Conductors",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Conductor Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Conductor Size",
+      "uom_hint": "AWG"
+    },
+    {
+      "slot": 8,
+      "label": "Material Standard",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Conductor Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Solid/Stranded",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Insulation Thickness",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Jacket Thickness",
+      "uom_hint": "mil"
+    },
+    {
+      "slot": 13,
+      "label": "End Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Strands",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Resistance",
+      "uom_hint": "Ohm/1000 ft"
+    },
+    {
+      "slot": 16,
+      "label": "Insulation Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Jacket Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Insulation Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Jacket Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Temperature Rating",
+      "uom_hint": "deg C"
+    },
+    {
+      "slot": 21,
+      "label": "Package Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Outside Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 24,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Wires & Cables>Copper Data Cables": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Cable Category",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Number of Conductors",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Conductor Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Conductor Size",
+      "uom_hint": "AWG"
+    },
+    {
+      "slot": 8,
+      "label": "Material Standard",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Conductor Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Solid/Stranded",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Outside Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 12,
+      "label": "Insulation Thickness",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Jacket Thickness",
+      "uom_hint": "mil"
+    },
+    {
+      "slot": 14,
+      "label": "Cross Sectional Area",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 16,
+      "label": "End Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Strands",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Plenum/Non-Plenum",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Shielded/Unshielded",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Resistance",
+      "uom_hint": "Ohm/100 m"
+    },
+    {
+      "slot": 21,
+      "label": "Attenuation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Dielectric Strength",
+      "uom_hint": "kV"
+    },
+    {
+      "slot": 23,
+      "label": "Bend Radius",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Mutual Capacitance",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Impedance",
+      "uom_hint": "Ohm"
+    },
+    {
+      "slot": 26,
+      "label": "Bandwidth",
+      "uom_hint": "MHz"
+    },
+    {
+      "slot": 27,
+      "label": "Frequency Rating",
+      "uom_hint": "MHz"
+    },
+    {
+      "slot": 28,
+      "label": "Pulling Force",
+      "uom_hint": ""
+    },
+    {
+      "slot": 29,
+      "label": "Insulation Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 30,
+      "label": "Jacket Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 31,
+      "label": "Insulation Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 32,
+      "label": "Jacket Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 33,
+      "label": "Temperature Rating",
+      "uom_hint": "deg C"
+    },
+    {
+      "slot": 34,
+      "label": "Package Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 35,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Wiring Devices>GFCI & AFCI Devices>GFCI & AFCI Receptacles": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 6,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Power Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 8,
+      "label": "Interrupt Rating",
+      "uom_hint": "kA"
+    },
+    {
+      "slot": 9,
+      "label": "Short Circuit Rating",
+      "uom_hint": "kA"
+    },
+    {
+      "slot": 10,
+      "label": "Number of Poles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Wires",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Wire Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Cord Diameter",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Grounding",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Enclosure Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "NEMA Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "IP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Dielectric Strength",
+      "uom_hint": "VAC"
+    },
+    {
+      "slot": 19,
+      "label": "Indicator Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Terminal Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Connection Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Body Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Contact Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Temperature Rating",
+      "uom_hint": "deg C"
+    },
+    {
+      "slot": 27,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 28,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 29,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 30,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Electrical>Wiring Devices>Straight Blade Devices>Receptacles & USB Ports": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 5,
+      "label": "HP Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 6,
+      "label": "Frequency Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Number of Poles",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Number of Gangs",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Number of Outlets",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Outlet Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of USB Ports",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "USB Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "USB Charging Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Type of Indicators",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Construction",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Number of Conductors",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Conductor Size",
+      "uom_hint": "AWG"
+    },
+    {
+      "slot": 19,
+      "label": "Terminal Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Grounding",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Short Circuit Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Dielectric Strength",
+      "uom_hint": "VAC"
+    },
+    {
+      "slot": 23,
+      "label": "Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "NEMA Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 25,
+      "label": "IP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 26,
+      "label": "Contact Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 27,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 28,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 29,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 30,
+      "label": "Temperature Rating",
+      "uom_hint": "deg C"
+    },
+    {
+      "slot": 31,
+      "label": "Length",
+      "uom_hint": ""
+    },
+    {
+      "slot": 32,
+      "label": "Width",
+      "uom_hint": ""
+    },
+    {
+      "slot": 33,
+      "label": "Height",
+      "uom_hint": ""
+    },
+    {
+      "slot": 34,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Beverage Coolers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "cu-ft"
+    },
+    {
+      "slot": 4,
+      "label": "Refrigerant Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Compressor Location",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "HP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 9,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 10,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Sections",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of Shelves",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Door Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Number of Doors",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 16,
+      "label": "Caster Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Wine Coolers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "mL"
+    },
+    {
+      "slot": 4,
+      "label": "Refrigerant Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Compressor Location",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "HP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 9,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 10,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Number of Sections",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of Shelves",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Door Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Number of Doors",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 16,
+      "label": "Caster Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Built-In Microwaves": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "cu-ft"
+    },
+    {
+      "slot": 4,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 6,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 7,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Power Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "HP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Number of Power Levels",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Maximum Cooking Time",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Programmable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Cooking Stages",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Display Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Control Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "See-Through Door",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Number of Racks",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Interior Light Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Temperature Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Interior Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Interior Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Interior Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Exterior Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 26,
+      "label": "Exterior Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 27,
+      "label": "Exterior Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 28,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Electric Cooktops": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "BTU Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Cooktop Surface Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Cooktop Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Cooktop Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Number of Burners",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Burner Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Number of Controls",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Control Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Ignition Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 13,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 14,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 15,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 16,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Power Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Cutout Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Cutout Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Induction Cooktops": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Cooktop Surface Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Burner Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "BTU Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 6,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 7,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 8,
+      "label": "Phase",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Power Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Control Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Control Location",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Ignition Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Fuel Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Installation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 16,
+      "label": "Cooktop Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 17,
+      "label": "Cooktop Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Number of Burners",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Number of Elements",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Number of Controls",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Cutout Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Cutout Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 26,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 27,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 28,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Hardware & Fasteners>Cabinet & Drawer Hardware>Cabinet Hardware>Cabinet Hardware Installation Templates": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Lawn, Garden & Patio>Fencing>Gate Openers & Hardware>Gate Latches & Slide Bolts": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Bolt Head Diameter",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Bolt Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Throw Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Number of Mounting Holes",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 12,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 13,
+      "label": "Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 14,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Safety>Eye Protection>Safety Glasses": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Gender",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Lens Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Lens Coating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Lens Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Lens Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Lens Size",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 9,
+      "label": "Frame Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Frame Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Frame Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Frame Size",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 13,
+      "label": "Temple Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Temple Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Temple Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "UV Protection Rating",
+      "uom_hint": "%"
+    },
+    {
+      "slot": 17,
+      "label": "Bridge Size",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 18,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Safety>Fire Protection>Fire Extinguishers & Accessories>Fire Extinguishers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Fire Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Capacity",
+      "uom_hint": "gal"
+    },
+    {
+      "slot": 4,
+      "label": "Extinguish Agent Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Operating Pressure",
+      "uom_hint": "psi"
+    },
+    {
+      "slot": 6,
+      "label": "Discharge Time",
+      "uom_hint": "s"
+    },
+    {
+      "slot": 7,
+      "label": "Rechargeable/Non-Rechargeable",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Fire Class",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Range Maximum",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 10,
+      "label": "Mounting Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Cylinder Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Valve Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Valve Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 18,
+      "label": "Diameter",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Domestic/Import",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Test & Measurement>Measuring & Layout Tools>Levels>Rotary & Straight Line Laser Levels": [
+    {
+      "slot": 1,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Working Range with Detector",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Working Range without Detector",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 5,
+      "label": "Accuracy",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Leveling Range",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 7,
+      "label": "Laser Projection",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Leveling Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Thread Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "IP Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Power Source",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of Lines",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Number of Beams",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Laser Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Dimensions",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Temperature Rating",
+      "uom_hint": "deg F"
+    },
+    {
+      "slot": 19,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Test & Measurement>Measuring & Layout Tools>Marking & Layout Tools>Mason's Lines": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Diameter",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 4,
+      "label": "Breaking Strength",
+      "uom_hint": "lb"
+    },
+    {
+      "slot": 5,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Hand Tools>Hex, Torx & Spline Keys>Hex Key Sets": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Model",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Tip Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Tip Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "System of Measurement",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Key Shape",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Short Leg Length",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Long Leg Length",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 9,
+      "label": "Working Angle",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Hand Tools>Snips & Shears>Snips": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Snip Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Cut Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Maximum Sheet Thickness",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Maximum Sheet Gauge",
+      "uom_hint": "ga"
+    },
+    {
+      "slot": 6,
+      "label": "Length of Cut",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Blade Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Blade Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 14,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Cordless Tools>Cordless Blowers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Air Flow Capacity",
+      "uom_hint": "cfm"
+    },
+    {
+      "slot": 4,
+      "label": "Run Time",
+      "uom_hint": "min"
+    },
+    {
+      "slot": 5,
+      "label": "Charge Time",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 7,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 9,
+      "label": "Speed Rating",
+      "uom_hint": "mph"
+    },
+    {
+      "slot": 10,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Oscillating Tools>Oscillating Tool Sandpaper & Sanding Pads": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Length",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 3,
+      "label": "Width",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 4,
+      "label": "Grit Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Grit Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Abrasive Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Backing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Backing Weight",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Bond Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Number of Sheets",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Torque Rating",
+      "uom_hint": "in-lb"
+    },
+    {
+      "slot": 4,
+      "label": "Chuck Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Chuck Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Chuck Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 10,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 11,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Hammer Drills": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Torque Rating",
+      "uom_hint": "in-lb"
+    },
+    {
+      "slot": 4,
+      "label": "Chuck Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Chuck Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Chuck Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Blows per Minute",
+      "uom_hint": "bpm"
+    },
+    {
+      "slot": 8,
+      "label": "No Load Speed",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 9,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 10,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Nail Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Nail Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Nail Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Nail Gauge",
+      "uom_hint": "ga"
+    },
+    {
+      "slot": 7,
+      "label": "Nail Head Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Magazine Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Magazine Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 10,
+      "label": "Magazine Loading Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Firing/Actuation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Fastening Rate",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 14,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 16,
+      "label": "Speed Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 26,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Screwdrivers>Power Nut Setters & Bit Holders": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Drive Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Drive Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Shank Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Shank Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Staplers & Riveters>Cordless Staplers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Staple Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Stable Leg Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Staple Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Staple Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Staple Gauge",
+      "uom_hint": "ga"
+    },
+    {
+      "slot": 8,
+      "label": "Firing/Actuation Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 10,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Speed Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Drive Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Drive Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Torque Rating",
+      "uom_hint": "in-lb"
+    },
+    {
+      "slot": 6,
+      "label": "Impacts per Minute",
+      "uom_hint": "ipm"
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 10,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 11,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Drive Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Drive Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Torque Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Impacts per Minute",
+      "uom_hint": "ipm"
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 11,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Drive Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Drive Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Torque Rating",
+      "uom_hint": "ft-lb"
+    },
+    {
+      "slot": 6,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 7,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 10,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Buffers & Polishers>Cordless Buffers & Polishers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Pad Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Spindle Thread Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 6,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Speed Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 18,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Wheel Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Collet Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Grinder Orientation",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 7,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 10,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 19,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 20,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saw Blades>Circular Saw Blades": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Cutting Edge Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Blade Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 6,
+      "label": "Teeth Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Number of Teeth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Teeth per Inch",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Arbor Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Arbor Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 11,
+      "label": "Cut Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Cut Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 13,
+      "label": "Maximum Cutting Depth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Kerf",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 15,
+      "label": "Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Hook Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 17,
+      "label": "Maximum Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 18,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saw Blades>Diamond Saw Blades": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Rim Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Cut Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Cut Width",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Maximum Cutting Depth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Arbor Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Arbor Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Grade",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Maximum Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 12,
+      "label": "Cutting Edge Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saw Blades>Hole Saws & Accessories>Hole Saw Sets": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Saw Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Arbor Hole Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Arbor Hole Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Cutting Depth",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Pilot Drill Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Pilot Drill Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Pilot Drill Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Shank Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Teeth per Inch",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Tooth Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Tooth Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Body Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Number of Hole Saws",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saw Blades>Planer Blades": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Length",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 3,
+      "label": "Width",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 4,
+      "label": "Thickness",
+      "uom_hint": "mm"
+    },
+    {
+      "slot": 5,
+      "label": "Cut Style",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Cut Materials",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saws>Band Saws>Corded Band Saws": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Cutting Capacity",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Blade Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 5,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Drive Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 8,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 9,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 10,
+      "label": "Power Rating",
+      "uom_hint": "kW"
+    },
+    {
+      "slot": 11,
+      "label": "HP Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 12,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 13,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Plug Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Cord Length",
+      "uom_hint": "ft"
+    },
+    {
+      "slot": 18,
+      "label": "Cord Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Sound Level",
+      "uom_hint": "dB"
+    },
+    {
+      "slot": 24,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 26,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 27,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saws>Circular Saws>Cordless Circular Saws": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Blade Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Blade Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Cutting Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Arbor Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Cutting Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 9,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 10,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 12,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 13,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saws>Jig Saws>Cordless Jig Saws": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Stroke Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Stroke",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Base Tilt Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 6,
+      "label": "Blade Size",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 9,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Speed Rating",
+      "uom_hint": "spm"
+    },
+    {
+      "slot": 12,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 13,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 21,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 22,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Tool/Kit",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Blade Diameter",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Blade Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Blade Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Cutting Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Cutting Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Arbor Size",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Cutting Angle",
+      "uom_hint": "deg"
+    },
+    {
+      "slot": 10,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 11,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 12,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 13,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 14,
+      "label": "Speed Setting",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 16,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Switch Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Sound Level",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 23,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 24,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 25,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Battery Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 4,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 5,
+      "label": "Battery Chemistry",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Number of Batteries",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Battery Chargers": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 3,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Battery Voltage",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 5,
+      "label": "Battery Chemistry",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Number of Ports",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Charger Class",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Charging Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "Charge Time",
+      "uom_hint": "min"
+    },
+    {
+      "slot": 10,
+      "label": "Plug Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 12,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 13,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 14,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 15,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Power Supplies & Battery Adapters": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 3,
+      "label": "Battery Capacity",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Number of Ports",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Number of Pieces",
+      "uom_hint": ""
+    },
+    {
+      "slot": 7,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Overall Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 10,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Dust Collector Accessories": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 3,
+      "label": "Finish",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Diameter",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 7,
+      "label": "Height",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 8,
+      "label": "Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 9,
+      "label": "Suitable For Use With",
+      "uom_hint": ""
+    },
+    {
+      "slot": 10,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Power Tools>Power Tool Combination Kits": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 3,
+      "label": "Number of Tools",
+      "uom_hint": ""
+    },
+    {
+      "slot": 4,
+      "label": "Number of Batteries",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Battery Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 6,
+      "label": "Battery Capacity",
+      "uom_hint": "Ah"
+    },
+    {
+      "slot": 7,
+      "label": "Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 8,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ],
+  "Tools & Equipment>Woodworking Tools & Machinery>Woodworking Machinery>Woodworking Planer Machines": [
+    {
+      "slot": 1,
+      "label": "Series",
+      "uom_hint": ""
+    },
+    {
+      "slot": 2,
+      "label": "Cutting Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 3,
+      "label": "Cutting Thickness",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 4,
+      "label": "Depth of Cut",
+      "uom_hint": ""
+    },
+    {
+      "slot": 5,
+      "label": "Voltage Rating",
+      "uom_hint": "V"
+    },
+    {
+      "slot": 6,
+      "label": "Amperage Rating",
+      "uom_hint": "A"
+    },
+    {
+      "slot": 7,
+      "label": "Frequency Rating",
+      "uom_hint": "Hz"
+    },
+    {
+      "slot": 8,
+      "label": "Wattage",
+      "uom_hint": ""
+    },
+    {
+      "slot": 9,
+      "label": "HP Rating",
+      "uom_hint": "hp"
+    },
+    {
+      "slot": 10,
+      "label": "Feed Rating",
+      "uom_hint": ""
+    },
+    {
+      "slot": 11,
+      "label": "Phase",
+      "uom_hint": "ph"
+    },
+    {
+      "slot": 12,
+      "label": "Speed Rating",
+      "uom_hint": "rpm"
+    },
+    {
+      "slot": 13,
+      "label": "Number of Speeds",
+      "uom_hint": ""
+    },
+    {
+      "slot": 14,
+      "label": "Table Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 15,
+      "label": "Table Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 16,
+      "label": "Tilt Angle",
+      "uom_hint": ""
+    },
+    {
+      "slot": 17,
+      "label": "Cuts per Minute",
+      "uom_hint": ""
+    },
+    {
+      "slot": 18,
+      "label": "Housing Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 19,
+      "label": "Housing Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 20,
+      "label": "Control Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 21,
+      "label": "Handle Type",
+      "uom_hint": ""
+    },
+    {
+      "slot": 22,
+      "label": "Handle Material",
+      "uom_hint": ""
+    },
+    {
+      "slot": 23,
+      "label": "Handle Color",
+      "uom_hint": ""
+    },
+    {
+      "slot": 24,
+      "label": "Sound Level",
+      "uom_hint": "dB"
+    },
+    {
+      "slot": 25,
+      "label": "Overall Length",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 26,
+      "label": "Overall Width",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 27,
+      "label": "Overall Depth",
+      "uom_hint": "in"
+    },
+    {
+      "slot": 28,
+      "label": "Additional Information",
+      "uom_hint": ""
+    }
+  ]
+}

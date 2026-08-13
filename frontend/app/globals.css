@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border-color: theme("colors.paper.300");
+}
+
+::selection {
+  background-color: theme("colors.accent.100");
+}
+
+/* Slim, low-contrast scrollbars -- a dense data UI shouldn't fight for
+   attention with its own scrollbars. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: theme("colors.paper.300");
+  border-radius: 999px;
+  border: 2px solid theme("colors.paper.DEFAULT");
+}

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: uniintel-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: DB_PATH
+        value: /data/uniintel.db
+    disk:
+      name: uniintel-data
+      mountPath: /data
+      sizeGB: 1
