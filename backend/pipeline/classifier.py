@@ -20,7 +20,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Protocol
 
-BOOTSTRAP = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap"
+BOOTSTRAP = Path(__file__).resolve().parent.parent / "data" / "bootstrap"
 
 _TOKEN_RE = re.compile(r"[a-z]+")
 _STOPWORDS = {"the", "a", "an", "with", "for", "and", "or", "in", "on", "of", "to"}

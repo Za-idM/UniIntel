@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-BOOTSTRAP_PATH = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap" / "leaf_templates.json"
+BOOTSTRAP_PATH = Path(__file__).resolve().parent.parent / "data" / "bootstrap" / "leaf_templates.json"
 
 
 @dataclass(frozen=True)

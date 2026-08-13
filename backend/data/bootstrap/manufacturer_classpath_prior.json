@@ -1,0 +1,168 @@
+{
+  "A-J Manufacturing Company": {
+    "Building Materials>Doors & Windows>Exterior Doors>Access Doors": 1
+  },
+  "Acuity Brands": {
+    "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": 1
+  },
+  "Alliance Laundry Systems LLC": {
+    "Appliances & Consumer Electronics>Laundry Appliances>Electric Dryers": 4,
+    "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": 6,
+    "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": 2
+  },
+  "Aspen Pumps Group Limited": {
+    "Tools & Equipment>Hand Tools>Snips & Shears>Snips": 2
+  },
+  "Beko": {
+    "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Built-In Microwaves": 1
+  },
+  "CMT ORANGE TOOLS": {
+    "Tools & Equipment>Power Tools>Power Saw Blades>Planer Blades": 2
+  },
+  "Cooper Lighting LLC": {
+    "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": 1
+  },
+  "Digger Specialties Inc": {
+    "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Posts": 1
+  },
+  "E-FireX": {
+    "Safety>Fire Protection>Fire Extinguishers & Accessories>Fire Extinguishers": 1
+  },
+  "Freud America, Inc": {
+    "Tools & Equipment>Power Tools>Power Saw Blades>Circular Saw Blades": 1
+  },
+  "HAGER COMPANIES": {
+    "Building Materials>Flooring>Floor Moulding & Trims>Thresholds": 2
+  },
+  "Haier": {
+    "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": 1,
+    "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": 2,
+    "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Electric Cooktops": 1,
+    "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Induction Cooktops": 1
+  },
+  "J.M. Huber Corporation": {
+    "Building Materials>House Wraps & Tapes>House Wraps": 1,
+    "Building Materials>Lumber & Composites>Plywood>Oriented Strand Board (OSB)": 1
+  },
+  "JPW Industries": {
+    "Tools & Equipment>Power Tools>Power Saws>Band Saws>Corded Band Saws": 1
+  },
+  "KYOCERA Corporation": {
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": 1
+  },
+  "Leviton": {
+    "Electrical>Wiring Devices>GFCI & AFCI Devices>GFCI & AFCI Receptacles": 4,
+    "Electrical>Wiring Devices>Straight Blade Devices>Receptacles & USB Ports": 1
+  },
+  "Makita": {
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": 2,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Staplers & Riveters>Cordless Staplers": 1,
+    "Tools & Equipment>Power Tools>Power Finishing Tools>Power Buffers & Polishers>Cordless Buffers & Polishers": 1,
+    "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": 1
+  },
+  "Milwaukee Tool": {
+    "Tools & Equipment>Power Tools>Cordless Tools>Cordless Blowers": 1,
+    "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": 1,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Screwdrivers>Power Nut Setters & Bit Holders": 1,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": 1,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": 1,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": 2,
+    "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": 1,
+    "Tools & Equipment>Power Tools>Power Saw Blades>Diamond Saw Blades": 5,
+    "Tools & Equipment>Power Tools>Power Saw Blades>Hole Saws & Accessories>Hole Saw Sets": 1,
+    "Tools & Equipment>Power Tools>Power Saws>Circular Saws>Cordless Circular Saws": 1,
+    "Tools & Equipment>Power Tools>Power Saws>Jig Saws>Cordless Jig Saws": 1,
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": 1,
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Battery Chargers": 1,
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Power Supplies & Battery Adapters": 2
+  },
+  "Mirka Ltd": {
+    "Tools & Equipment>Power Tools>Oscillating Tools>Oscillating Tool Sandpaper & Sanding Pads": 2
+  },
+  "Oldcastle APG": {
+    "Lawn, Garden & Patio>Fencing>Gate Openers & Hardware>Gate Latches & Slide Bolts": 1
+  },
+  "Oliver Machinery Company": {
+    "Tools & Equipment>Woodworking Tools & Machinery>Woodworking Machinery>Woodworking Planer Machines": 4
+  },
+  "Police Security Flashlights": {
+    "Electrical>Lamps & Lightings>Portable & Temporary Lightings>Headlamps": 1
+  },
+  "Rheem Manufacturing": {
+    "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": 1
+  },
+  "Satco Products, Inc": {
+    "Electrical>Lamps & Lightings>Indoor Lighting>Accent & Display Lighting": 2,
+    "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures": 1,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Ceiling Fixtures": 4,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Strip & Tape Lighting": 1,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Panel & Troffer Light Fixtures": 1,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": 6,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Surface-Mount Fixtures": 5,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Wraparound Lights": 2,
+    "Electrical>Lamps & Lightings>Light Bulbs>Halogen Light Bulbs": 2,
+    "Electrical>Lamps & Lightings>Light Bulbs>Incandescent Light Bulbs": 11,
+    "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": 3
+  },
+  "Schumacher Electric Corporation": {
+    "Electrical>Batteries & Accessories>Battery Accessories>Battery Jump Starters": 1
+  },
+  "Signify Holding": {
+    "Electrical>Lamps & Lightings>Light Bulbs>Fluorescent Light Bulbs": 3,
+    "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": 19
+  },
+  "Southwire Company, LLC": {
+    "Electrical>Boxes & Enclosures>Electrical Boxes & Covers>Electrical Box Covers": 3,
+    "Electrical>Wires & Cables>Building Wires>Service Entrance & Underground Cables": 1,
+    "Electrical>Wires & Cables>Copper Data Cables": 1
+  },
+  "Stanley Black & Decker": {
+    "Test & Measurement>Measuring & Layout Tools>Levels>Rotary & Straight Line Laser Levels": 6,
+    "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": 2,
+    "Tools & Equipment>Power Tools>Power Drills>Cordless Hammer Drills": 2,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": 2,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": 1,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": 2,
+    "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": 2,
+    "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": 1,
+    "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": 2,
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": 4,
+    "Tools & Equipment>Power Tools>Power Tool Accessories>Dust Collector Accessories": 1,
+    "Tools & Equipment>Power Tools>Power Tool Combination Kits": 1
+  },
+  "The L.D. Kichler Co": {
+    "Electrical>Lamps & Lightings>Indoor Lighting>Bath & Vanity Lights": 1,
+    "Electrical>Lamps & Lightings>Indoor Lighting>Wall Sconces": 1
+  },
+  "Trex Company, Inc": {
+    "Building Materials>Decking>Deck & Porch Railings>Deck Railing Kits": 4,
+    "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Post Sleeves": 2,
+    "Building Materials>Decking>Deck Stairs>Deck Stair Railing Kits": 2
+  },
+  "True Position Tools": {
+    "Hardware & Fasteners>Cabinet & Drawer Hardware>Cabinet Hardware>Cabinet Hardware Installation Templates": 1
+  },
+  "U.S. Tape Company": {
+    "Test & Measurement>Measuring & Layout Tools>Marking & Layout Tools>Mason's Lines": 8
+  },
+  "United Window & Door": {
+    "Building Materials>Doors & Windows>Exterior Doors>Patio Doors": 4
+  },
+  "VELUX Group": {
+    "Building Materials>Doors & Windows>Skylights>Fixed Skylights": 3
+  },
+  "Wera": {
+    "Tools & Equipment>Hand Tools>Hex, Torx & Spline Keys>Hex Key Sets": 1
+  },
+  "Whirlpool Corporation": {
+    "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": 1,
+    "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": 1
+  },
+  "Wolf Peak International": {
+    "Safety>Eye Protection>Safety Glasses": 4
+  },
+  "XO Ventilation": {
+    "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Beverage Coolers": 1,
+    "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Wine Coolers": 1
+  }
+}

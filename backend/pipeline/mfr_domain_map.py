@@ -4,7 +4,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-BOOTSTRAP = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap"
+BOOTSTRAP = Path(__file__).resolve().parent.parent / "data" / "bootstrap"
 
 
 @lru_cache(maxsize=1)

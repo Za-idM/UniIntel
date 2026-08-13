@@ -18,7 +18,7 @@ from rapidfuzz import fuzz
 from pipeline.normalizer import apply_casing, format_uom
 from schemas.product import AttributeValue, ValidationResult
 
-BOOTSTRAP = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap"
+BOOTSTRAP = Path(__file__).resolve().parent.parent / "data" / "bootstrap"
 
 LOV_REPAIR_THRESHOLD = 90  # rapidfuzz 0-100 scale; >0.9 per locked plan
 

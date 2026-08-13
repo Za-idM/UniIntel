@@ -26,7 +26,7 @@ from pathlib import Path
 
 from rapidfuzz import fuzz, process
 
-BOOTSTRAP = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap"
+BOOTSTRAP = Path(__file__).resolve().parent.parent / "data" / "bootstrap"
 
 ACCEPT_THRESHOLD = 85
 REVIEW_THRESHOLD = 70

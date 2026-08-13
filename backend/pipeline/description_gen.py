@@ -32,7 +32,7 @@ from pipeline.normalizer import format_uom
 
 logger = logging.getLogger(__name__)
 
-BOOTSTRAP = Path(__file__).resolve().parent.parent.parent / "data" / "bootstrap"
+BOOTSTRAP = Path(__file__).resolve().parent.parent / "data" / "bootstrap"
 
 MAX_RETRIES = 4
 BACKOFF_BASE_SECONDS = 2.0

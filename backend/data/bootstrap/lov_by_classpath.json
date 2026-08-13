@@ -1,0 +1,4345 @@
+{
+  "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": {
+    "Additional Information": [
+      "240 kW-hr Annual Energy, 1 to 12 hr Delay Start Hours",
+      "Alerts and More, Connect to Wi-Fi For Real-Time Feedback, Optimized Performance",
+      "Folding Tines, Leak Detection System, Moisture Repellent Silverware Basket, Normal Cycle, Quick Wash Cycle, Sani Rinse Option, Sensor Cycle, Triple Wash Spray"
+    ],
+    "Amperage Rating": [
+      "10",
+      "15",
+      "9.4"
+    ],
+    "Color": [
+      "Stainless Steel"
+    ],
+    "Depth With Door Open": [
+      "21-9/16",
+      "50-1/4",
+      "50-3/16"
+    ],
+    "Material": [
+      "Stainless Steel",
+      "Steel"
+    ],
+    "Maximum Height": [
+      "10-3/8 in Upper Rack, 13-1/4 in Lower Rack",
+      "36-3/8"
+    ],
+    "Minimum Height": [
+      "33-7/16",
+      "34",
+      "8-1/2 in Upper Rack, 11-1/4 in Lower Rack"
+    ],
+    "Mounting Type": [
+      "Built-in",
+      "Leg"
+    ],
+    "Number of Wash Cycles": [
+      "5",
+      "6"
+    ],
+    "Series": [
+      "Eco Series",
+      "Professional Series"
+    ],
+    "Size": [
+      "24 in W x 24-1/4 in D",
+      "33-7/16 in H x 23-7/8 in W x 22-5/8 in D",
+      "34 in H x 23.8125 in W x 22.562 in D"
+    ],
+    "Sound Level": [
+      "41",
+      "45",
+      "47"
+    ],
+    "Voltage Rating": [
+      "120"
+    ]
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Electric Dryers": {
+    "Additional Information": [
+      "Adaptive Cool-Down Technology, Cylinder Light, Durable 3-Coat Finish, Eco Dry, End-of-Cycle Signal, 220 cfm Heavy-Duty Fan, Lint Filter Guard, Moisture Sensor, Multiple Vent Options, Time Remaining Display, Up-Front Lint Filter",
+      "Mechanical Knob Control Option, 7 cu-ft Cylinder Volume, 220 cfm Exhaust Airflow, 4 in Dia Exhaust Outlet, 3/8 in Gas Inlet",
+      "Moisture Sensing, Sanitize, Steam Boost, Steam Refresh, Status Section for Awareness on Cycle Progression"
+    ],
+    "Amperage Rating": [
+      "30"
+    ],
+    "BTU Rating": [
+      "22500"
+    ],
+    "Capacity": [
+      "18",
+      "7"
+    ],
+    "Color": [
+      "Matte Black",
+      "White"
+    ],
+    "Depth With Door Open": [
+      "15.44",
+      "51-1/2"
+    ],
+    "Dimensions": [
+      "42 3/4 in H x 26 7/8 in W x 28 in D",
+      "42-3/4 in H x 26-7/8 in W x 28 in D",
+      "43 in H x 26-7/8 in W x 28 in D"
+    ],
+    "Drum Type": [
+      "Galvanized",
+      "Stainless Steel"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Fuel Type": [
+      "Electric"
+    ],
+    "HP Rating": [
+      "1/3"
+    ],
+    "Model": [
+      "ADE6ARYS177TB01",
+      "ADE6ARYS177TW01",
+      "ADEE9RYS178TB01",
+      "LDG30RGS113TW01"
+    ],
+    "Number of Cycles": [
+      "10",
+      "3",
+      "6"
+    ],
+    "Number of Temperature Setting": [
+      "4"
+    ],
+    "Power Rating": [
+      "4750/5350",
+      "5350"
+    ],
+    "Series": [
+      "DC5 Series",
+      "DR7 Series",
+      "DV2 Series"
+    ],
+    "Voltage Rating": [
+      "120/208/240",
+      "208/240"
+    ]
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": {
+    "Additional Information": [
+      "1/3 hp Horsepower Extended Tumble, Moisture Sensor, Pet Plus\u2122, Sanitize, Steam Boost, Steam Refresh, Status Section for Awareness on Cycle Progression",
+      "120 V Voltage Rating, 220 cfm Exhaust Airflow, 4 in Dia Exhaust Outlet, 3/8 in Gas Inlet",
+      "Anti-Static, Commercial Cool-Down Technology, Extended Tumble, Lint Filter Guard, Moisture Sensor, Sanitize, Steam Boost, Steam Refresh, Steam Sanitize",
+      "Commercial Cool-Down Technology, Moisture Sensor, Pet Plus\u2122 Cycles, Steam Boost, Steam Sanitize"
+    ],
+    "BTU Rating": [
+      "22000",
+      "22500"
+    ],
+    "Capacity": [
+      "18",
+      "6.9",
+      "7",
+      "7.4"
+    ],
+    "Color": [
+      "Diamond Gray",
+      "Matte Black",
+      "White",
+      "White On White with Silver Backsplash"
+    ],
+    "Depth With Door Open": [
+      "51-1/2",
+      "53"
+    ],
+    "Dimensions": [
+      "42-3/4 in H x 26-7/8 in W x 28 in D",
+      "43 in H x 26-7/8 in W x 28 in D",
+      "43 in H x 27 in W x 28 in D",
+      "43-7/8 in H x 27 in W x 31 in D"
+    ],
+    "Drum Type": [
+      "Aluminized Alloy",
+      "Galvanized",
+      "Galvanized Steel"
+    ],
+    "Fuel Type": [
+      "Gas",
+      "Liquid Propane Gas",
+      "Natural Gas"
+    ],
+    "Height With Lid Open": [
+      "38-1/4"
+    ],
+    "Model": [
+      "ADG6ARYS117TB01",
+      "ADG6ARYS117TW01",
+      "ADG6HRYS118TW01",
+      "ADGE9RYS118TB01",
+      "ADGE9RYS118TW01",
+      "LDE30RGS173TW01"
+    ],
+    "Number of Cycles": [
+      "10",
+      "11",
+      "3",
+      "6",
+      "9"
+    ],
+    "Number of Temperature Setting": [
+      "4",
+      "5"
+    ],
+    "Series": [
+      "DC5 Series",
+      "DR5 Series",
+      "DR7 Series",
+      "DV2 Series"
+    ]
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": {
+    "Additional Information": [
+      "4.5 ft L Drain Hose, Commercial Grade",
+      "Automatic Balancing System, Durable 3-Coat Finish, End-of-Cycle Signal, No Lid Lock Before First Spin, No Lid Lock Full Cycle",
+      "Mechanical Knob Control Option, 3.19 cu-ft Cylinder Volume, 106 L Water Consumption per Cycle, 20 to 120 psi Water Pressure"
+    ],
+    "Amperage Rating": [
+      "15"
+    ],
+    "Capacity": [
+      "16",
+      "3.2",
+      "4"
+    ],
+    "Color": [
+      "White"
+    ],
+    "Depth With Door Open": [
+      "26",
+      "53"
+    ],
+    "Dimensions": [
+      "42 3/4 in H x 25 5/8 in W x 28 in D",
+      "43 in H x 25-5/8 in W x 28 in D",
+      "43 in H x 27 in W x 26 in D"
+    ],
+    "Drum Type": [
+      "Stainless Steel"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Fuel Type": [
+      "Electric"
+    ],
+    "HP Rating": [
+      "1",
+      "1/2"
+    ],
+    "Height With Lid Open": [
+      "52"
+    ],
+    "Model": [
+      "AWNE9RSN119TW01",
+      "LWN432SP115TW01"
+    ],
+    "Number of Cycles": [
+      "16",
+      "4",
+      "7"
+    ],
+    "Number of Temperature Setting": [
+      "3",
+      "4",
+      "5"
+    ],
+    "Power Rating": [
+      "720"
+    ],
+    "Rotational Speed": [
+      "700",
+      "710"
+    ],
+    "Series": [
+      "TR7 Series",
+      "TV2 Series"
+    ],
+    "Voltage Rating": [
+      "120"
+    ]
+  },
+  "Building Materials>Decking>Deck & Porch Railings>Deck Railing Kits": {
+    "Additional Information": [
+      "Trex Select\u00ae Classic Collection"
+    ],
+    "Balusters/Spindles Color": [
+      "Black",
+      "White"
+    ],
+    "Balusters/Spindles Design": [
+      "Round",
+      "Square"
+    ],
+    "Balusters/Spindles Diameter": [
+      "1",
+      "3/4"
+    ],
+    "Balusters/Spindles Length": [
+      "30-1/4",
+      "32"
+    ],
+    "Balusters/Spindles Material": [
+      "Aluminum",
+      "Composite"
+    ],
+    "Installation Type": [
+      "Horizontal"
+    ],
+    "Rail Color": [
+      "White"
+    ],
+    "Rail Length": [
+      "6",
+      "8"
+    ],
+    "Rail Material": [
+      "Composite"
+    ],
+    "Rail Profile Type": [
+      "T-Top"
+    ],
+    "Rail Width": [
+      "36"
+    ]
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Post Sleeves": {
+    "Color": [
+      "Black"
+    ],
+    "Depth": [
+      "4"
+    ],
+    "Finish": [
+      "Powder-Coated"
+    ],
+    "Fits Post Size": [
+      "4 x 4"
+    ],
+    "Height": [
+      "37",
+      "43"
+    ],
+    "Material": [
+      "Aluminum"
+    ],
+    "Shape": [
+      "Square"
+    ],
+    "Width": [
+      "4"
+    ]
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Posts": {
+    "Actual Height": [
+      "120"
+    ],
+    "Actual Length": [
+      "120"
+    ],
+    "Actual Width": [
+      "6"
+    ],
+    "Additional Information": [
+      "6 in Deco Post"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Finish": [
+      "Fine Textured"
+    ],
+    "Material": [
+      "Aluminum"
+    ],
+    "Nominal Height": [
+      "120"
+    ],
+    "Nominal Length": [
+      "120"
+    ],
+    "Nominal Width": [
+      "6"
+    ]
+  },
+  "Building Materials>Decking>Deck Stairs>Deck Stair Railing Kits": {
+    "Balusters/Spindles Color": [
+      "White"
+    ],
+    "Balusters/Spindles Design": [
+      "Square"
+    ],
+    "Balusters/Spindles Diameter": [
+      "1"
+    ],
+    "Balusters/Spindles Length": [
+      "32"
+    ],
+    "Balusters/Spindles Material": [
+      "Composite"
+    ],
+    "Installation Type": [
+      "Stair"
+    ],
+    "Rail Color": [
+      "White"
+    ],
+    "Rail Length": [
+      "6",
+      "8"
+    ],
+    "Rail Material": [
+      "Composite"
+    ],
+    "Rail Profile Type": [
+      "T-Top"
+    ],
+    "Rail Width": [
+      "36"
+    ]
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Access Doors": {
+    "Additional Information": [
+      "Egress Pull Cord"
+    ],
+    "Color": [
+      "White"
+    ],
+    "Door Height": [
+      "48"
+    ],
+    "Door Material": [
+      "Polystyrene/Steel"
+    ],
+    "Door Thickness": [
+      "1"
+    ],
+    "Door Width": [
+      "24"
+    ],
+    "Finish": [
+      "Polyester-Painted"
+    ],
+    "Frame Material": [
+      "Aluminum"
+    ],
+    "Gauge": [
+      "24"
+    ],
+    "Hinge Type": [
+      "Fixed Pin"
+    ],
+    "Insulation Material": [
+      "Polystyrene"
+    ],
+    "Opening Height": [
+      "46-7/16"
+    ],
+    "Opening Width": [
+      "22-7/16"
+    ],
+    "R-Value": [
+      "R6.5"
+    ]
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Patio Doors": {
+    "Additional Information": [
+      "5-1/16 in D Frame, DP-50 Structural Rating, Dual Corrosion-Resistant Rollers, Dual-Walled Sill Tower, Fiberglass Mesh Screen, Fusion Welded Heavy-Duty Vinyl, Multi-Chambered Frame Design, Stainless Steel Ball Bearing Rollers"
+    ],
+    "Core Type": [
+      "Solid"
+    ],
+    "Door Color": [
+      "Black/White",
+      "White"
+    ],
+    "Door Handing": [
+      "Left",
+      "Right"
+    ],
+    "Door Height": [
+      "79-1/2"
+    ],
+    "Door Material": [
+      "Vinyl"
+    ],
+    "Door Thickness": [
+      "0.075"
+    ],
+    "Door Width": [
+      "71-1/2"
+    ],
+    "Frame Material": [
+      "Vinyl"
+    ],
+    "Glass Type": [
+      "Tempered"
+    ],
+    "Locking Type": [
+      "1-Point Mortise"
+    ],
+    "Number of Panels/Lites": [
+      "2"
+    ],
+    "Opening Height": [
+      "80"
+    ],
+    "Opening Width": [
+      "72"
+    ],
+    "Panel Type": [
+      "Nailing Fin"
+    ],
+    "Series": [
+      "4500 Series"
+    ]
+  },
+  "Building Materials>Doors & Windows>Skylights>Fixed Skylights": {
+    "Additional Information": [
+      "Aluminum Neutral Gray Cladding, White Room-Darkening Solar Powered Shade"
+    ],
+    "Daylight Area": [
+      "0.28",
+      "4.43"
+    ],
+    "Frame Color": [
+      "Gray/White"
+    ],
+    "Frame Finish": [
+      "Pre-Finished"
+    ],
+    "Frame Material": [
+      "Wood"
+    ],
+    "Frame Type": [
+      "Fixed"
+    ],
+    "Glass Type": [
+      "Laminated, Low-E3"
+    ],
+    "Glazing Type": [
+      "Double Glazed"
+    ],
+    "Installation Type": [
+      "Deck-Mount"
+    ],
+    "Overall Height": [
+      "27-3/8",
+      "38-3/8",
+      "46-1/4"
+    ],
+    "Overall Width": [
+      "21-1/2"
+    ],
+    "Roof Pitch": [
+      "14 to 85"
+    ],
+    "Rough Opening Height": [
+      "26-7/8",
+      "37-7/8",
+      "45-3/4"
+    ],
+    "Rough Opening Width": [
+      "21"
+    ],
+    "Series": [
+      "FS Series"
+    ],
+    "UV Protection": [
+      "99"
+    ]
+  },
+  "Building Materials>Flooring>Floor Moulding & Trims>Thresholds": {
+    "Finish": [
+      "Dark Bronze Anodized"
+    ],
+    "Height": [
+      "1/4"
+    ],
+    "Installation Type": [
+      "Screw"
+    ],
+    "Length": [
+      "36",
+      "72"
+    ],
+    "Material": [
+      "Aluminum"
+    ],
+    "Profile Type": [
+      "Saddle"
+    ],
+    "Resists": [
+      "Moisture"
+    ],
+    "Series": [
+      "413S Series"
+    ],
+    "Suitable For Use With": [
+      "Hollow-Metal-Type Fire Doors, Wood and Plastic Covered Composite-Type Fire Doors, Wood Core Doors"
+    ],
+    "Width": [
+      "5"
+    ]
+  },
+  "Building Materials>House Wraps & Tapes>House Wraps": {
+    "Additional Information": [
+      "5/8 in Cap Mails or Cap Staples"
+    ],
+    "Coverage Area": [
+      "260"
+    ],
+    "Length": [
+      "65"
+    ],
+    "Material": [
+      "Polymeric"
+    ],
+    "Perm Rating": [
+      "7"
+    ],
+    "Resists": [
+      "Water"
+    ],
+    "Thickness": [
+      "1/4"
+    ],
+    "Width": [
+      "4"
+    ]
+  },
+  "Building Materials>Lumber & Composites>Plywood>Oriented Strand Board (OSB)": {
+    "Actual Length": [
+      "4"
+    ],
+    "Actual Thickness": [
+      "23/32"
+    ],
+    "Actual Width": [
+      "8"
+    ],
+    "Appearance": [
+      "Tongue and Groove"
+    ],
+    "Grade": [
+      "Exposure 1"
+    ],
+    "Nominal Length": [
+      "4"
+    ],
+    "Nominal Thickness": [
+      "23/32"
+    ],
+    "Nominal Width": [
+      "8"
+    ],
+    "Texture Type": [
+      "Sanded"
+    ]
+  },
+  "Electrical>Batteries & Accessories>Battery Accessories>Battery Jump Starters": {
+    "Automatic/Manual": [
+      "Manual"
+    ],
+    "Battery Capacity": [
+      "23.68"
+    ],
+    "Battery Type": [
+      "Lithium-Ion Polymer"
+    ],
+    "Battery Voltage": [
+      "12"
+    ],
+    "Cable Clamp Type": [
+      "Non-Sparking"
+    ],
+    "Cable Gauge": [
+      "10"
+    ],
+    "Cable Length": [
+      "18"
+    ],
+    "Charge Time": [
+      "2 to 3"
+    ],
+    "Charger Type": [
+      "USB"
+    ],
+    "Charging Current": [
+      "1.5 A, 2 A"
+    ],
+    "Dimensions": [
+      "3.43 in L x 1.42 in W x 6.98 in H"
+    ],
+    "Input Current": [
+      "3"
+    ],
+    "Input Voltage": [
+      "5 V, 12 V"
+    ],
+    "Interface/Ports": [
+      "USB-A Output, USB-C Input, USB-C Output, Wireless Charging Pad"
+    ],
+    "Number of Batteries": [
+      "4"
+    ],
+    "Operating Temperature": [
+      "-4 to 122"
+    ],
+    "Peak Current": [
+      "1000"
+    ]
+  },
+  "Electrical>Boxes & Enclosures>Electrical Boxes & Covers>Electrical Box Covers": {
+    "Additional Information": [
+      "(2) 1/2 in, (2) 3/4 in Bottom Knockout, (2) GFCI, 1/2 in Raised",
+      "1/2 in Raised",
+      "1/2 in, 3/4 in Knockout Size, 7 cc Capacity, 1/2 in Raised"
+    ],
+    "Box Type": [
+      "Square"
+    ],
+    "Color": [
+      "Silver"
+    ],
+    "Cover Type": [
+      "Duplex Receptacle, GFCI Receptacle",
+      "Duplex Receptacle, Toggle Switch",
+      "GFCI Receptacle"
+    ],
+    "Finish": [
+      "Galvanized"
+    ],
+    "Length": [
+      "0.56",
+      "4"
+    ],
+    "Material": [
+      "Steel"
+    ],
+    "Width": [
+      "4"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Accent & Display Lighting": {
+    "Additional Information": [
+      "Warm White to Natural Light Color"
+    ],
+    "Amperage Rating": [
+      "0.09",
+      "0.25"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Beam Angle": [
+      "110"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90+"
+    ],
+    "Color Temperature": [
+      "2700 K, 3000 K, 3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "1 ft L",
+      "4 ft L"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Non-Dimmable"
+    ],
+    "Fixture Finish": [
+      "White"
+    ],
+    "Fixture Material": [
+      "Steel"
+    ],
+    "Fixture Shape": [
+      "Linear"
+    ],
+    "Fixture Style": [
+      "Utility"
+    ],
+    "Fixture Wattage": [
+      "10",
+      "30"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Lens Material": [
+      "Polycarbonate"
+    ],
+    "Lens Type": [
+      "White"
+    ],
+    "Lumens": [
+      "2700 to 3100",
+      "800 to 1000"
+    ],
+    "Voltage Rating": [
+      "120"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Bath & Vanity Lights": {
+    "Additional Information": [
+      "6 in L Lead Wire"
+    ],
+    "Backplate/Canopy Size": [
+      "5 in H x 7-1/2 in W x 1-1/2 in D"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "Integrated LED"
+    ],
+    "Collection": [
+      "Laurene"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90"
+    ],
+    "Color Temperature": [
+      "3000"
+    ],
+    "Dimensions": [
+      "5 in H x 31 in W x 4-3/4 in D"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Fixture Finish": [
+      "Champagne Bronze"
+    ],
+    "Fixture Material": [
+      "Steel"
+    ],
+    "Fixture Shape": [
+      "Cylinder"
+    ],
+    "Fixture Wattage": [
+      "35"
+    ],
+    "Lens Material": [
+      "Glass"
+    ],
+    "Lens Type": [
+      "Clear"
+    ],
+    "Lumens": [
+      "2450"
+    ],
+    "Mounting Orientation": [
+      "Horizontal, Vertical"
+    ],
+    "Mounting Type": [
+      "Wall"
+    ],
+    "Number of Bulbs": [
+      "1"
+    ],
+    "Voltage Rating": [
+      "108 to 132"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures": {
+    "Additional Information": [
+      "Up to 20 ft H Mounting, Warm White to Natural Light Color, 72 in L Wire"
+    ],
+    "Amperage Rating": [
+      "1.25 to 0.432/1.458 to 0.504/1.667 to 0.576"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "80+"
+    ],
+    "Color Temperature": [
+      "3000 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "13.4 in Dia"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Enclosure Type": [
+      "IP65"
+    ],
+    "Fixture Finish": [
+      "Black"
+    ],
+    "Fixture Material": [
+      "Aluminum"
+    ],
+    "Fixture Shape": [
+      "Round"
+    ],
+    "Fixture Style": [
+      "Utility"
+    ],
+    "Fixture Wattage": [
+      "150/175/200"
+    ],
+    "Frequency Rating": [
+      "50/60"
+    ],
+    "Lens Material": [
+      "Polycarbonate"
+    ],
+    "Lens Type": [
+      "Clear"
+    ],
+    "Lumens": [
+      "22200 to 28800"
+    ],
+    "Voltage Rating": [
+      "120 to 347"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Ceiling Fixtures": {
+    "Additional Information": [
+      "110 deg Beam Angle, Warm White to Natural Light Color",
+      "Warm White to Natural Light Color, Flush-Mount"
+    ],
+    "Amperage Rating": [
+      "0.104",
+      "0.125",
+      "0.15",
+      "0.208"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Collection": [
+      "Glamour"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90+"
+    ],
+    "Color Temperature": [
+      "2700 K, 3000 K, 3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "11 in Dia",
+      "12.99 in Dia",
+      "13.98 in Dia",
+      "9.84 in Dia"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Fixture Finish": [
+      "Brushed Nickel",
+      "White"
+    ],
+    "Fixture Material": [
+      "Steel"
+    ],
+    "Fixture Shape": [
+      "Round"
+    ],
+    "Fixture Style": [
+      "Transitional",
+      "Utility"
+    ],
+    "Fixture Wattage": [
+      "12.5",
+      "15",
+      "18",
+      "25"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Lens Material": [
+      "Acrylic",
+      "PMMA"
+    ],
+    "Lens Type": [
+      "White"
+    ],
+    "Lumens": [
+      "1100 to 1180",
+      "1340 to 1440",
+      "1473 Lumens, 1539 Lumens, 1635 Lumens, 1653 Lumens, 1634 Lumens",
+      "968 Lumens, 991 Lumens, 1050 Lumens, 1091 Lumens, 1104 Lumens"
+    ],
+    "Mounting Type": [
+      "Flush"
+    ],
+    "Voltage Rating": [
+      "120"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Strip & Tape Lighting": {
+    "Additional Information": [
+      "RGB and Tunable White Light Color"
+    ],
+    "Amperage Rating": [
+      "0.1"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Bulb Base": [
+      "Plug"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "80+"
+    ],
+    "Color Temperature": [
+      "2700 to 6500"
+    ],
+    "Dimensions": [
+      "16 ft L"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Enclosure Type": [
+      "IP20"
+    ],
+    "Fixture Finish": [
+      "White"
+    ],
+    "Fixture Material": [
+      "Plastic"
+    ],
+    "Fixture Wattage": [
+      "12"
+    ],
+    "Frequency Rating": [
+      "50/60"
+    ],
+    "Lumens": [
+      "1120"
+    ],
+    "Voltage Rating": [
+      "24"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Panel & Troffer Light Fixtures": {
+    "Additional Information": [
+      "Warm to Cool White Light Color"
+    ],
+    "Amperage Rating": [
+      "0.25 to 0.108/0.333 to 0.144/0.417 to 0.181"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Beam Angle": [
+      "120"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "80+"
+    ],
+    "Color Temperature": [
+      "3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "2 ft L x 4 ft W"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Enclosure Type": [
+      "IP20"
+    ],
+    "Fixture Finish": [
+      "White"
+    ],
+    "Fixture Material": [
+      "Aluminum/Steel"
+    ],
+    "Fixture Shape": [
+      "Rectangular"
+    ],
+    "Fixture Style": [
+      "Utility"
+    ],
+    "Fixture Wattage": [
+      "30/40/50"
+    ],
+    "Frequency Rating": [
+      "50/60"
+    ],
+    "Lens Material": [
+      "PMMA"
+    ],
+    "Lens Type": [
+      "Frosted"
+    ],
+    "Lumens": [
+      "3300 to 5750"
+    ],
+    "Voltage Rating": [
+      "120 to 277"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": {
+    "Additional Information": [
+      "4 in Trim Size",
+      "Air-Tight, IC Rated, 100 deg Beam Angle, Warm White to Natural Light Color",
+      "Air-Tight, IC Rated, 108 deg Beam Angle, Warm to Cool White Light Color, Remote Driver",
+      "Air-Tight, IC Rated, 110 deg Beam Angle, Warm White to Natural Light Color, Remote Driver",
+      "Air-Tight, IC Rated, 40 deg Beam Angle, Warm to Cool White Light Color, Remote Driver",
+      "Air-Tight, IC Rated, 90 deg Beam Angle, Warm White to Natural Light Color"
+    ],
+    "Amperage Rating": [
+      "0.075",
+      "0.096",
+      "0.104",
+      "0.125",
+      "0.2",
+      "0.28",
+      "0.36"
+    ],
+    "Bulb Base": [
+      "E26"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Ceiling Opening Size": [
+      "10",
+      "12",
+      "4-1/4",
+      "5 to 6",
+      "6",
+      "8"
+    ],
+    "Collection": [
+      "Contractor Select\u2122"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90",
+      "90+",
+      "93"
+    ],
+    "Color Temperature": [
+      "2700 K, 3000 K, 3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "10.94 in Dia",
+      "13.03 in Dia",
+      "5 in Dia x 1.4 in H",
+      "6.62 in Dia x 6.5 in H",
+      "7.36 in Dia",
+      "7.4 in Dia",
+      "7.48 in Dia",
+      "8.86 in Dia"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Enclosure Type": [
+      "IP20",
+      "IP42",
+      "IP44"
+    ],
+    "Fixture Finish": [
+      "Matte White",
+      "White"
+    ],
+    "Fixture Material": [
+      "Aluminum",
+      "Plastic",
+      "Steel"
+    ],
+    "Fixture Style": [
+      "Canless, Wafer",
+      "Round",
+      "Slim Canless"
+    ],
+    "Fixture Wattage": [
+      "10.8 to 11.3",
+      "12.5",
+      "15",
+      "24",
+      "30",
+      "38",
+      "9"
+    ],
+    "Frequency Rating": [
+      "50/60",
+      "60"
+    ],
+    "Lens Material": [
+      "PMMA",
+      "Plastic",
+      "Polycarbonate",
+      "Polymer"
+    ],
+    "Lens Type": [
+      "Clear Lens",
+      "Frosted",
+      "Matte Frosted",
+      "Regressed",
+      "Smooth Diffuse"
+    ],
+    "Lumens": [
+      "1100",
+      "1280 to 1400",
+      "2000",
+      "3000",
+      "4000",
+      "650",
+      "800",
+      "915 to 940"
+    ],
+    "Mounting Type": [
+      "Ceiling, Recessed",
+      "Recessed"
+    ],
+    "Recessed Trim Type": [
+      "Flat Face",
+      "Gimbal",
+      "Round Baffle",
+      "Slim Dead Front"
+    ],
+    "Voltage Rating": [
+      "120",
+      "120 to 277"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Surface-Mount Fixtures": {
+    "Additional Information": [
+      "110 deg Beam Angle, Warm White to Natural Light Color, Surface-Mount"
+    ],
+    "Amperage Rating": [
+      "0.242/0.105",
+      "0.246/0.106",
+      "0.283/0.123",
+      "0.392/0.17"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90+"
+    ],
+    "Color Temperature": [
+      "2700 K, 3000 K, 3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "15 in Dia",
+      "19 in Dia",
+      "24 in L x 24 in W"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Fixture Finish": [
+      "Black",
+      "White"
+    ],
+    "Fixture Material": [
+      "Aluminum"
+    ],
+    "Fixture Shape": [
+      "Round",
+      "Square"
+    ],
+    "Fixture Style": [
+      "Contemporary"
+    ],
+    "Fixture Wattage": [
+      "29",
+      "29.5",
+      "34",
+      "47"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Lens Material": [
+      "PMMA"
+    ],
+    "Lens Type": [
+      "Frosted"
+    ],
+    "Lumens": [
+      "2100 to 2220",
+      "2200 to 2320",
+      "2500 to 2640",
+      "2600 to 2740",
+      "3550 to 3900"
+    ],
+    "Voltage Rating": [
+      "120/277"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wall Sconces": {
+    "Additional Information": [
+      "6 in L Lead Wire"
+    ],
+    "Backplate/Canopy Size": [
+      "5 in W x 1 in D"
+    ],
+    "Bulb Base": [
+      "E26 Medium"
+    ],
+    "Bulb Included": [
+      "No"
+    ],
+    "Bulb Type": [
+      "T10"
+    ],
+    "Bulb Wattage": [
+      "75"
+    ],
+    "Collection": [
+      "Kavi"
+    ],
+    "Dimensions": [
+      "13 in H x 5 in W x 6 in D"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Dimmable"
+    ],
+    "Fixture Finish": [
+      "Brushed Nickel"
+    ],
+    "Fixture Material": [
+      "Steel"
+    ],
+    "Fixture Shape": [
+      "Cylinder"
+    ],
+    "Fixture Style": [
+      "Modern"
+    ],
+    "Fixture Wattage": [
+      "75"
+    ],
+    "Lens Material": [
+      "Glass"
+    ],
+    "Lens Type": [
+      "Clear Glass"
+    ],
+    "Mounting Type": [
+      "Wall"
+    ],
+    "Number of Bulbs": [
+      "1"
+    ],
+    "Voltage Rating": [
+      "120"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wraparound Lights": {
+    "Additional Information": [
+      "110 deg Beam Angle, Warm White to Natural Light Color"
+    ],
+    "Amperage Rating": [
+      "0.17",
+      "0.33"
+    ],
+    "Average Life": [
+      "50000"
+    ],
+    "Bulb Included": [
+      "Yes"
+    ],
+    "Bulb Type": [
+      "LED"
+    ],
+    "Color Rendering Index (CRI)": [
+      "90+"
+    ],
+    "Color Temperature": [
+      "2700 K, 3000 K, 3500 K, 4000 K, 5000 K"
+    ],
+    "Dimensions": [
+      "2 ft L",
+      "4 ft L"
+    ],
+    "Dimmable/Non-Dimmable": [
+      "Non-Dimmable"
+    ],
+    "Fixture Finish": [
+      "White"
+    ],
+    "Fixture Material": [
+      "Steel"
+    ],
+    "Fixture Shape": [
+      "Linear"
+    ],
+    "Fixture Style": [
+      "Utility"
+    ],
+    "Fixture Wattage": [
+      "20",
+      "39"
+    ],
+    "Frequency Rating": [
+      "50/60"
+    ],
+    "Lens Material": [
+      "Polycarbonate"
+    ],
+    "Lens Type": [
+      "White"
+    ],
+    "Lumens": [
+      "1600 to 1650",
+      "3200 to 3400"
+    ],
+    "Mounting Type": [
+      "Ceiling"
+    ],
+    "Voltage Rating": [
+      "120 to 277"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Fluorescent Light Bulbs": {
+    "Additional Information": [
+      "Non-Dimmable"
+    ],
+    "Average Life": [
+      "13000",
+      "9000"
+    ],
+    "Bulb Base": [
+      "4-Pin",
+      "Medium Bi-Pin"
+    ],
+    "Bulb Base Code": [
+      "G10q",
+      "G13"
+    ],
+    "Bulb Designation": [
+      "F15T12/SOFT WHITE/18 6PK",
+      "FC12T9/SOFTWHITE/32W/12 12PK"
+    ],
+    "Bulb Finish": [
+      "Soft White"
+    ],
+    "Bulb Shape": [
+      "Circline",
+      "Tube"
+    ],
+    "Bulb Shape Code": [
+      "CT29",
+      "T12",
+      "T9"
+    ],
+    "Color Rendering Index (CRI)": [
+      "80",
+      "85"
+    ],
+    "Color Temperature": [
+      "3000"
+    ],
+    "Diameter": [
+      "1-1/4"
+    ],
+    "Length": [
+      "12",
+      "18",
+      "3.5"
+    ],
+    "Light Appearance": [
+      "Soft White"
+    ],
+    "Lumens": [
+      "1150",
+      "1900",
+      "800"
+    ],
+    "Series": [
+      "Retail Sales T12 Series"
+    ],
+    "Voltage Rating": [
+      "61",
+      "84"
+    ],
+    "Wattage": [
+      "15",
+      "22",
+      "32"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Halogen Light Bulbs": {
+    "Additional Information": [
+      "C-8 Filament",
+      "CC-2V Filament"
+    ],
+    "Average Life": [
+      "1500",
+      "2000"
+    ],
+    "Beam Angle": [
+      "360"
+    ],
+    "Bulb Base": [
+      "Bi-Pin",
+      "Double Ended Recessed Single Contact"
+    ],
+    "Bulb Base Code": [
+      "G8",
+      "R7s"
+    ],
+    "Bulb Designation": [
+      "20JCD G8 120V SHORT 35MM",
+      "300T3Q/CL/L 118MM CARDED 120V"
+    ],
+    "Bulb Finish": [
+      "Clear"
+    ],
+    "Bulb Shape": [
+      "Linear"
+    ],
+    "Bulb Shape Code": [
+      "T3",
+      "T4"
+    ],
+    "Color Rendering Index (CRI)": [
+      "100"
+    ],
+    "Color Temperature": [
+      "2900"
+    ],
+    "Diameter": [
+      "0.38",
+      "1/2"
+    ],
+    "Dimmable": [
+      "Dimmable"
+    ],
+    "Length": [
+      "1.81",
+      "4.69"
+    ],
+    "Light Appearance": [
+      "Warm White"
+    ],
+    "Lumens": [
+      "180",
+      "5300"
+    ],
+    "Title 20 Compliant": [
+      "Title 20 Compliant"
+    ],
+    "Voltage Rating": [
+      "120"
+    ],
+    "Wattage": [
+      "20",
+      "300"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Incandescent Light Bulbs": {
+    "Additional Information": [
+      "C-5A Filament",
+      "C-5V Filament",
+      "C-7A Filament",
+      "C-8 Filament",
+      "C-9 Filament"
+    ],
+    "Average Life": [
+      "1500",
+      "2000",
+      "2500",
+      "3000"
+    ],
+    "Beam Angle": [
+      "360"
+    ],
+    "Bulb Base": [
+      "Candelabra",
+      "Intermediate",
+      "Medium"
+    ],
+    "Bulb Base Code": [
+      "E12",
+      "E17",
+      "E26"
+    ],
+    "Bulb Designation": [
+      "25T6.5/CL/E17/130V CARDED",
+      "25T8N CD/1 INT BASE CLEAR 130V",
+      "40W A15 APPLIANCE CLR",
+      "40W T10 CLEAR CARDED MED BASE",
+      "40W T10 STD FROST CARDED",
+      "4C7 CAND CL",
+      "4C7 CAND CLEAR 120V 4/CD",
+      "6S6 CAND CLEAR 130V 2/CD",
+      "7 1/2W S11 STD CLR",
+      "7 1/2W S11 STD WHT",
+      "7C7/W CAND WHITE 120V CD/4"
+    ],
+    "Bulb Finish": [
+      "Clear",
+      "Frosted",
+      "Gloss White",
+      "White"
+    ],
+    "Bulb Shape": [
+      "Tube",
+      "Type A",
+      "Type C",
+      "Type S"
+    ],
+    "Bulb Shape Code": [
+      "A15",
+      "C7",
+      "S11",
+      "S6",
+      "T10",
+      "T6.5",
+      "T8"
+    ],
+    "Color Rendering Index (CRI)": [
+      "100"
+    ],
+    "Color Temperature": [
+      "2700"
+    ],
+    "Diameter": [
+      "0.81",
+      "0.88",
+      "1",
+      "1-1/4",
+      "1.38",
+      "1.88",
+      "3/4"
+    ],
+    "Dimmable": [
+      "Dimmable"
+    ],
+    "Length": [
+      "1.88",
+      "2-1/4",
+      "2.13",
+      "2.63",
+      "3-1/2",
+      "5",
+      "5.38"
+    ],
+    "Light Appearance": [
+      "Warm White"
+    ],
+    "Lumens": [
+      "16",
+      "180",
+      "190",
+      "20",
+      "28",
+      "280",
+      "30",
+      "300 Lumens, 225 Lumens",
+      "40"
+    ],
+    "Voltage Rating": [
+      "120",
+      "130",
+      "130/120"
+    ],
+    "Wattage": [
+      "25",
+      "4",
+      "40",
+      "6",
+      "7",
+      "7.5"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": {
+    "Additional Information": [
+      "0.7 Power Factor, 100 W Equivalent Wattage, Plastic Bulb Material",
+      "0.7 Power Factor, 150 W Equivalent Wattage, Plastic Bulb Material",
+      "0.7 Power Factor, 40 W Equivalent Wattage",
+      "0.7 Power Factor, 40 W Equivalent Wattage, Glass Bulb Material",
+      "0.7 Power Factor, 45 W Equivalent Wattage, Plastic Bulb Material",
+      "0.7 Power Factor, 60 W Equivalent Wattage, Glass Bulb",
+      "0.7 Power Factor, 60 W Equivalent Wattage, Glass Bulb Material",
+      "0.7 Power Factor, 65 W Equivalent Wattage, Plastic Bulb Material",
+      "0.7 Power Factor, 75 W Equivalent Wattage",
+      "Frosted Lens"
+    ],
+    "Average Life": [
+      "15000"
+    ],
+    "Beam Angle": [
+      "110",
+      "230",
+      "250",
+      "300"
+    ],
+    "Bulb Base": [
+      "Candelabra",
+      "Medium"
+    ],
+    "Bulb Base Code": [
+      "E12",
+      "E26"
+    ],
+    "Bulb Designation": [
+      "10BR40/PER/UD/27/P/E26/WG/T20 4/1PF",
+      "12A19/PIR/930/120V/ND",
+      "15BR30/PER/927/P/E26/WG/HO/T20 4/1PF",
+      "15BR30/PER/950/P/E26/D/HO/T20 4/1PF",
+      "29A21/PER/827/FR/P/E26/WG/HO 4/1PF",
+      "3.5B11/PER/UD/CL/G/E26/WGD 6/3PF T20",
+      "4.4ST19/VIN/927/CL/G/E26/DIM 4/4PF T20",
+      "4.4ST19/VIN/950/CL/G/E26/DIM 4/4PF T20",
+      "5.5R20/PER/UD/27/P/E26/WG/T20 4/1PF",
+      "5A15/PER/UD/CL/G/E12/WGD 6/2PF T20",
+      "5A15/PER/UD/CL/G/E26/WGD 6/2PF T20",
+      "5A19/PER/UD/CL/G/E26/WGD 4/2PFT20",
+      "5A19/PER/UD/FR/G/E26/WGD 4/2PF T20",
+      "5B11/PER/UD/CL/G/E26/WGD 6/3PF T20",
+      "5G25/PER/UD50/E26/FR/G/D 4/2PFT20",
+      "7.5BR30/PER/UD/27/P/E26/WG/T20 3/3CT",
+      "8.8ST19/VIN/820/Amber/G/E26/DIM 4/4PFT20",
+      "8.8ST19/VIN/950/CL/G/E26/DIM 4/2PF T20",
+      "8A19/PER/UD/FR/G/E26/WGD 4/2PFT20",
+      "8ST19/CL/LED/927/E26",
+      "8ST19/VIN/927-922/CL/G/E26/WGD 4/2PF T20",
+      "8T9/LED/CL/927/120V/E26"
+    ],
+    "Bulb Finish": [
+      "Clear",
+      "Frosted"
+    ],
+    "Bulb Shape": [
+      "Globe",
+      "Tube",
+      "Type A",
+      "Type B",
+      "Type BR",
+      "Type R",
+      "Type ST"
+    ],
+    "Bulb Shape Code": [
+      "A15",
+      "A19",
+      "A21",
+      "B11",
+      "BR30",
+      "BR40",
+      "G25",
+      "R20",
+      "ST19",
+      "T19",
+      "T9"
+    ],
+    "Color Rendering Index (CRI)": [
+      "80",
+      "90",
+      "90+",
+      "95"
+    ],
+    "Color Temperature": [
+      "2000",
+      "2200 to 2700",
+      "2700",
+      "3000",
+      "5000"
+    ],
+    "Diameter": [
+      "1-3/8",
+      "1-7/8",
+      "1.18",
+      "1/4",
+      "2-1/2",
+      "2-9/16",
+      "2.28",
+      "2.36",
+      "3-1/16",
+      "3-3/16",
+      "3-3/4",
+      "4-15/16"
+    ],
+    "Dimmable": [
+      "Dimmable"
+    ],
+    "Energy Star Certified": [
+      "Energy Star Certified"
+    ],
+    "Incandescent Wattage Equivalent": [
+      "40",
+      "60",
+      "75"
+    ],
+    "Length": [
+      "3-15/16",
+      "3-5/16",
+      "3-7/16",
+      "3-9/16",
+      "4-11/16",
+      "5-1/8",
+      "5-7/16",
+      "5.11",
+      "5.43",
+      "6-3/8",
+      "7.2",
+      "7/16"
+    ],
+    "Light Appearance": [
+      "Amber",
+      "Natural Light",
+      "Soft White",
+      "Warm Glow",
+      "Warm White"
+    ],
+    "Lumens": [
+      "1050",
+      "1400",
+      "2610",
+      "300",
+      "400",
+      "450",
+      "500",
+      "650",
+      "700",
+      "800"
+    ],
+    "Title 20 Compliant": [
+      "Title 20 Compliant"
+    ],
+    "Voltage Rating": [
+      "120"
+    ],
+    "Wattage": [
+      "10",
+      "12",
+      "15",
+      "29",
+      "3.5",
+      "4.4",
+      "5",
+      "5.5",
+      "7.5",
+      "8",
+      "8.8"
+    ]
+  },
+  "Electrical>Lamps & Lightings>Portable & Temporary Lightings>Headlamps": {
+    "Additional Information": [
+      "Built-in Rechargeable Battery"
+    ],
+    "Battery Life": [
+      "4 hr Low Rechargeable, 2.5 hr High Rechargeable, 13 hr Low Alkaline, 3 hr High Alkaline"
+    ],
+    "Battery Size": [
+      "AAA"
+    ],
+    "Battery Type": [
+      "Alkaline, Lithium Polymer"
+    ],
+    "Beam Distance": [
+      "80"
+    ],
+    "Beam Type": [
+      "Twist to Focus"
+    ],
+    "Body Material": [
+      "ABS/Polycarbonate"
+    ],
+    "Height": [
+      "2.44"
+    ],
+    "Lamp Life": [
+      "100000"
+    ],
+    "Lamp Type": [
+      "LED"
+    ],
+    "Lumens": [
+      "200 Lumens Low Rechargeable, 800 Lumens High Rechargeable, 100 Lumens Low Alkaline, 410 Lumens High Alkaline"
+    ],
+    "Number of Batteries": [
+      "3"
+    ],
+    "Run Time": [
+      "4 hr Low Rechargeable, 2.5 hr High Rechargeable, 13 hr Low Alkaline, 3 hr High Alkaline"
+    ],
+    "Strap Material": [
+      "Latex/Polyester"
+    ]
+  },
+  "Electrical>Wires & Cables>Building Wires>Service Entrance & Underground Cables": {
+    "Additional Information": [
+      "600 V Voltage Rating, Gray PVC Jacket, 55 mil THK Insulation, 30 mil THK Jacket"
+    ],
+    "Amperage Rating": [
+      "205"
+    ],
+    "Conductor Material": [
+      "Aluminum Alloy"
+    ],
+    "Conductor Size": [
+      "4/0"
+    ],
+    "Conductor Type": [
+      "Stranded"
+    ],
+    "Insulation Material": [
+      "PVC/XLPE"
+    ],
+    "Jacket Color": [
+      "Gray"
+    ],
+    "Jacket Material": [
+      "PVC"
+    ],
+    "Jacket Thickness": [
+      "30"
+    ],
+    "Length": [
+      "250"
+    ],
+    "Material Standard": [
+      "ASTM B800, ASTM B801"
+    ],
+    "Number of Conductors": [
+      "3"
+    ],
+    "Outside Diameter": [
+      "0.896 x 1.493"
+    ],
+    "Package Type": [
+      "Reel"
+    ],
+    "Resistance": [
+      "0.08"
+    ],
+    "Solid/Stranded": [
+      "Stranded"
+    ],
+    "Strands": [
+      "19"
+    ],
+    "Temperature Rating": [
+      "90"
+    ],
+    "Voltage Rating": [
+      "600"
+    ]
+  },
+  "Electrical>Wires & Cables>Copper Data Cables": {
+    "Attenuation": [
+      "65.3 dB/100 m at 1 MHz, 56.3 dB/100 m at 4 MHz, 51.8 dB/100 m at 8 MHz, 50.3 dB/100 m at 10 MHz"
+    ],
+    "Bandwidth": [
+      "350"
+    ],
+    "Cable Category": [
+      "Cat 5e"
+    ],
+    "Conductor Material": [
+      "Bare Copper"
+    ],
+    "Conductor Size": [
+      "24"
+    ],
+    "Conductor Type": [
+      "Solid, Twisted"
+    ],
+    "Dielectric Strength": [
+      "2.5"
+    ],
+    "Frequency Rating": [
+      "350"
+    ],
+    "Impedance": [
+      "100"
+    ],
+    "Insulation Material": [
+      "PVC"
+    ],
+    "Jacket Color": [
+      "Blue"
+    ],
+    "Jacket Material": [
+      "PVC"
+    ],
+    "Jacket Thickness": [
+      "18"
+    ],
+    "Length": [
+      "1000"
+    ],
+    "Mutual Capacitance": [
+      "<5.6 nF/100 m"
+    ],
+    "Number of Conductors": [
+      "8"
+    ],
+    "Outside Diameter": [
+      "0.193"
+    ],
+    "Package Type": [
+      "Pull Out Box, Reel In a Box"
+    ],
+    "Plenum/Non-Plenum": [
+      "Non-Plenum"
+    ],
+    "Resistance": [
+      "<9.38"
+    ],
+    "Series": [
+      "13163 Series"
+    ],
+    "Shielded/Unshielded": [
+      "Unshielded"
+    ],
+    "Solid/Stranded": [
+      "Solid"
+    ],
+    "Strands": [
+      "24"
+    ],
+    "Temperature Rating": [
+      "75"
+    ]
+  },
+  "Electrical>Wiring Devices>GFCI & AFCI Devices>GFCI & AFCI Receptacles": {
+    "Additional Information": [
+      "14-18 lb Torque Range",
+      "Residential/Commercial Grade, 14-18 lb Torque Range"
+    ],
+    "Amperage Rating": [
+      "15"
+    ],
+    "Body Material": [
+      "Thermoplastic"
+    ],
+    "Color": [
+      "Brown",
+      "White"
+    ],
+    "Connection Type": [
+      "Back Wired, Side Wired"
+    ],
+    "Contact Material": [
+      "Brass"
+    ],
+    "Cord Diameter": [
+      "12 to 10 AWG, 14 to 10 AWG"
+    ],
+    "Dielectric Strength": [
+      "1250"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Grounding": [
+      "Grounding",
+      "Self-Grounding"
+    ],
+    "Height": [
+      "4.19"
+    ],
+    "Indicator Type": [
+      "Audible, LED",
+      "LED"
+    ],
+    "Interrupt Rating": [
+      "10"
+    ],
+    "Length": [
+      "1.35",
+      "1.68"
+    ],
+    "Model": [
+      "AGTR1-W",
+      "GFNT1",
+      "GFTA1-W",
+      "GFWT1-W"
+    ],
+    "Mounting Type": [
+      "Flush"
+    ],
+    "NEMA Rating": [
+      "NEMA 5-15R"
+    ],
+    "Number of Poles": [
+      "2"
+    ],
+    "Number of Wires": [
+      "3"
+    ],
+    "Power Rating": [
+      "1"
+    ],
+    "Series": [
+      "SmartlockPro Series"
+    ],
+    "Short Circuit Rating": [
+      "10"
+    ],
+    "Temperature Rating": [
+      "-35 to 66"
+    ],
+    "Terminal Type": [
+      "Back Wired, Side Wired"
+    ],
+    "Voltage Rating": [
+      "125"
+    ],
+    "Width": [
+      "1.31",
+      "1.74"
+    ],
+    "Wire Size": [
+      "12 to 10 AWG, 14 to 10 AWG",
+      "14 to 10 AWG, 12 to 10 AWG"
+    ]
+  },
+  "Electrical>Wiring Devices>Straight Blade Devices>Receptacles & USB Ports": {
+    "Additional Information": [
+      "Tamper-Resistant"
+    ],
+    "Amperage Rating": [
+      "15"
+    ],
+    "Conductor Size": [
+      "12"
+    ],
+    "Contact Material": [
+      "Brass"
+    ],
+    "Dielectric Strength": [
+      "1250"
+    ],
+    "Grade": [
+      "Commercial, Residential"
+    ],
+    "Grounding": [
+      "Self-Grounding"
+    ],
+    "HP Rating": [
+      "1"
+    ],
+    "Housing Color": [
+      "White"
+    ],
+    "Housing Material": [
+      "Thermoplastic"
+    ],
+    "Model": [
+      "GUAC1-W"
+    ],
+    "Mounting Type": [
+      "Wall"
+    ],
+    "NEMA Rating": [
+      "NEMA 5-15R"
+    ],
+    "Number of Conductors": [
+      "5"
+    ],
+    "Number of Outlets": [
+      "1"
+    ],
+    "Number of Poles": [
+      "2"
+    ],
+    "Number of USB Ports": [
+      "2"
+    ],
+    "Outlet Type": [
+      "NEMA 5-15R"
+    ],
+    "Series": [
+      "SmartlockPro Series"
+    ],
+    "Temperature Rating": [
+      "-10 to 40"
+    ],
+    "Terminal Type": [
+      "Lead Wire"
+    ],
+    "Type of Indicators": [
+      "Green/Red Status LED"
+    ],
+    "USB Charging Capacity": [
+      "4.8 A, 5 V"
+    ],
+    "USB Type": [
+      "Type A, Type C"
+    ],
+    "Voltage Rating": [
+      "125 VAC, 5 VDC"
+    ]
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Beverage Coolers": {
+    "Additional Information": [
+      "Built-in, Commercial Grade Indoor, Outdoor"
+    ],
+    "Amperage Rating": [
+      "2.5"
+    ],
+    "Capacity": [
+      "15"
+    ],
+    "Color": [
+      "Stainless Steel"
+    ],
+    "Depth": [
+      "26-11/16"
+    ],
+    "Door Type": [
+      "Reversible"
+    ],
+    "Finish": [
+      "Stainless Steel"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Height": [
+      "69 7/16"
+    ],
+    "Material": [
+      "Glass/Stainless Steel"
+    ],
+    "Number of Doors": [
+      "1"
+    ],
+    "Number of Shelves": [
+      "2"
+    ],
+    "Refrigerant Type": [
+      "R-600A"
+    ],
+    "Temperature Rating": [
+      "60 to 90"
+    ],
+    "Voltage Rating": [
+      "120"
+    ],
+    "Width": [
+      "23-7/16"
+    ]
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Wine Coolers": {
+    "Additional Information": [
+      "Open Door Alarm, Sabbath Mode"
+    ],
+    "Amperage Rating": [
+      "1.2"
+    ],
+    "Capacity": [
+      "750"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Depth": [
+      "23-1/4"
+    ],
+    "Door Type": [
+      "Non-Reversible"
+    ],
+    "Finish": [
+      "Black"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Height": [
+      "34-1/8"
+    ],
+    "Material": [
+      "Glass/Stainless Steel"
+    ],
+    "Number of Sections": [
+      "2"
+    ],
+    "Number of Shelves": [
+      "5"
+    ],
+    "Refrigerant Type": [
+      "R-600A"
+    ],
+    "Temperature Rating": [
+      "60 to 90"
+    ],
+    "Voltage Rating": [
+      "115"
+    ],
+    "Width": [
+      "23-7/8"
+    ]
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Built-In Microwaves": {
+    "Additional Information": [
+      "NEMA 6-20 Plug Type, 82-5/8 in L Power Cord"
+    ],
+    "Amperage Rating": [
+      "15"
+    ],
+    "Capacity": [
+      "1.6"
+    ],
+    "Color": [
+      "Stainless Steel with Black"
+    ],
+    "Control Type": [
+      "Electronic, Touch"
+    ],
+    "Cooking Stages": [
+      "4-Stage"
+    ],
+    "Display Type": [
+      "LED"
+    ],
+    "Exterior Depth": [
+      "22-1/4"
+    ],
+    "Exterior Height": [
+      "17-7/8"
+    ],
+    "Exterior Width": [
+      "29-3/4"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Interior Depth": [
+      "16-15/16"
+    ],
+    "Interior Height": [
+      "17-1/16"
+    ],
+    "Interior Width": [
+      "9-7/16"
+    ],
+    "Maximum Cooking Time": [
+      "99 min, 99 sec"
+    ],
+    "Number of Power Levels": [
+      "10"
+    ],
+    "Number of Racks": [
+      "2"
+    ],
+    "Power Rating": [
+      "950 W, 1600 W"
+    ],
+    "Programmable": [
+      "Yes"
+    ],
+    "See-Through Door": [
+      "Yes"
+    ],
+    "Voltage Rating": [
+      "220 to 240"
+    ]
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Electric Cooktops": {
+    "Additional Information": [
+      "Frameless, Radiant Smoothtop, Built-in Wi-Fi Connectivity, Front Center Control Location, Electric Fuel Type, 5-Elements"
+    ],
+    "Amperage Rating": [
+      "40"
+    ],
+    "Burner Type": [
+      "5 Ribbon, Smoothtop"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Control Type": [
+      "Electronic, Glide Touch"
+    ],
+    "Cooktop Depth": [
+      "21-3/8"
+    ],
+    "Cooktop Surface Type": [
+      "Ceramic Glass"
+    ],
+    "Cooktop Width": [
+      "29-3/4"
+    ],
+    "Cutout Height": [
+      "5.56"
+    ],
+    "Cutout Width": [
+      "28-1/2"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Material": [
+      "Ceramic Glass"
+    ],
+    "Number of Burners": [
+      "5"
+    ],
+    "Number of Controls": [
+      "2"
+    ],
+    "Overall Depth": [
+      "21.38"
+    ],
+    "Overall Height": [
+      "3-1/4"
+    ],
+    "Overall Width": [
+      "29-3/4"
+    ],
+    "Temperature Rating": [
+      "100 to 500"
+    ],
+    "Voltage Rating": [
+      "208/240"
+    ]
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Induction Cooktops": {
+    "Additional Information": [
+      "Frameless"
+    ],
+    "Amperage Rating": [
+      "40"
+    ],
+    "Burner Type": [
+      "4 Induction Elements"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Control Location": [
+      "Front Center"
+    ],
+    "Control Type": [
+      "Electronic, Glide Touch"
+    ],
+    "Cooktop Depth": [
+      "21-1/2"
+    ],
+    "Cooktop Surface Type": [
+      "Ceramic Glass"
+    ],
+    "Cooktop Width": [
+      "29-7/8"
+    ],
+    "Cutout Height": [
+      "4-5/8"
+    ],
+    "Cutout Width": [
+      "28-1/2"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "Fuel Type": [
+      "Electric"
+    ],
+    "Material": [
+      "Ceramic Glass"
+    ],
+    "Number of Controls": [
+      "2"
+    ],
+    "Number of Elements": [
+      "4"
+    ],
+    "Overall Depth": [
+      "21-1/2"
+    ],
+    "Overall Height": [
+      "3-1/4"
+    ],
+    "Overall Width": [
+      "29-7/8"
+    ],
+    "Power Rating": [
+      "6.9 kW at 208 V, 7.7 kW at 240 V"
+    ],
+    "Temperature Rating": [
+      "100 to 500"
+    ],
+    "Voltage Rating": [
+      "208/240"
+    ]
+  },
+  "Hardware & Fasteners>Cabinet & Drawer Hardware>Cabinet Hardware>Cabinet Hardware Installation Templates": {
+    "Additional Information": [
+      "38 in Center-to-Center W Handle, Infinite Centering with Center Mark, 42 in Centering (with End Stop), 16 in H Drawer Front Centering, 1/2 in Minimum Door Panel, 1/4 in Minimum Placement From Edge, 25-Hole Shelf Pin Pattern"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Finish": [
+      "Anodized"
+    ],
+    "Height": [
+      "2"
+    ],
+    "Length": [
+      "9-1/2"
+    ],
+    "Material": [
+      "Anodized Aluminum/Stainless Steel/Steel"
+    ],
+    "Suitable For Use With": [
+      "Cabinet Doors, Drawers, Shaker Drawer Fronts"
+    ],
+    "Width": [
+      "12-1/2"
+    ]
+  },
+  "Lawn, Garden & Patio>Fencing>Gate Openers & Hardware>Gate Latches & Slide Bolts": {
+    "Additional Information": [
+      "1-1/2 in Gate Post Size"
+    ],
+    "Bolt Length": [
+      "1"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Depth": [
+      "2-1/4"
+    ],
+    "Height": [
+      "2-5/16"
+    ],
+    "Material": [
+      "Steel"
+    ],
+    "Mounting Type": [
+      "Through-Bolt"
+    ],
+    "Number of Mounting Holes": [
+      "6"
+    ],
+    "Style": [
+      "Self-Latching"
+    ],
+    "Width": [
+      "4-9/16"
+    ]
+  },
+  "Safety>Eye Protection>Safety Glasses": {
+    "Bridge Size": [
+      "14",
+      "16",
+      "20"
+    ],
+    "Frame Color": [
+      "Black",
+      "Matte Black"
+    ],
+    "Frame Material": [
+      "Nylon"
+    ],
+    "Frame Shape": [
+      "Shield Style",
+      "Wayfarer",
+      "Wraparound",
+      "Zorge Style"
+    ],
+    "Frame Size": [
+      "146",
+      "44",
+      "47 mm H x 149 mm W",
+      "52"
+    ],
+    "Lens Coating": [
+      "Mirror",
+      "Vapor Shield"
+    ],
+    "Lens Color": [
+      "AP+ Blue",
+      "AP+ Green",
+      "Smoke",
+      "Vapor Shield Photochromic"
+    ],
+    "Lens Material": [
+      "Polycarbonate"
+    ],
+    "Lens Size": [
+      "148",
+      "65"
+    ],
+    "Lens Type": [
+      "Anti-Fog",
+      "Anti-Fog, Scratch-Resistant",
+      "Polarized"
+    ],
+    "Series": [
+      "Brazeau Series",
+      "Lassen Series",
+      "Makalu Series",
+      "Tacana Series"
+    ],
+    "Temple Color": [
+      "Black",
+      "Matte Black"
+    ],
+    "Temple Material": [
+      "Thermoplastic Rubber"
+    ],
+    "Temple Type": [
+      "Anti-Slip",
+      "Edge-Flex"
+    ],
+    "UV Protection Rating": [
+      "99.9"
+    ]
+  },
+  "Safety>Fire Protection>Fire Extinguishers & Accessories>Fire Extinguishers": {
+    "Capacity": [
+      "9"
+    ],
+    "Color": [
+      "Black"
+    ],
+    "Cylinder Material": [
+      "Stainless Steel"
+    ],
+    "Discharge Time": [
+      "50"
+    ],
+    "Extinguish Agent Type": [
+      "Water-Based Suspended Encapsulator Agent"
+    ],
+    "Fire Class": [
+      "2-A:D:C"
+    ],
+    "Fire Rating": [
+      "2-A"
+    ],
+    "Height": [
+      "25-1/2"
+    ],
+    "Mounting Type": [
+      "Wall"
+    ],
+    "Operating Pressure": [
+      "100"
+    ],
+    "Range Maximum": [
+      "55"
+    ],
+    "Rechargeable/Non-Rechargeable": [
+      "Rechargeable"
+    ],
+    "Temperature Rating": [
+      "40 to 120"
+    ],
+    "Valve Material": [
+      "Brass"
+    ],
+    "Valve Type": [
+      "Positive On-Off Operation, Squeeze Grip"
+    ],
+    "Width": [
+      "9"
+    ]
+  },
+  "Test & Measurement>Measuring & Layout Tools>Levels>Rotary & Straight Line Laser Levels": {
+    "Accuracy": [
+      "+/-1/8 in at 30 ft",
+      "+/-3.2 mm at 9.1 m",
+      "1/4 in at 30 ft"
+    ],
+    "Dimensions": [
+      "11 in L x 9.7 in W x 4.5 in H",
+      "14 in L x 10.9 in W x 5.5 in H",
+      "17 in L x 13.6 in W x 6.9 in H",
+      "8.6 in L x 8.9 in W x 3.98 in H",
+      "8.7 in L x 3.8 in W x 7 in H",
+      "8.9 in L x 8.6 in W x 4.3 in H"
+    ],
+    "IP Rating": [
+      "IP54"
+    ],
+    "Laser Color": [
+      "Green"
+    ],
+    "Laser Projection": [
+      "Cross-Line",
+      "Horizontal, Vertical"
+    ],
+    "Leveling Range": [
+      "+/- 4"
+    ],
+    "Leveling Type": [
+      "Self-Leveling"
+    ],
+    "Material": [
+      "Plastic/Rubber"
+    ],
+    "Model": [
+      "DCLE34031B",
+      "DCLE34520GB",
+      "DW0822CG",
+      "DW08802CG",
+      "DW088CG",
+      "DW089CG"
+    ],
+    "Number of Beams": [
+      "2",
+      "3"
+    ],
+    "Number of Lines": [
+      "2",
+      "3"
+    ],
+    "Power Source": [
+      "(2) AA Alkaline Batteries",
+      "2 Ah Batteries",
+      "20 V Battery"
+    ],
+    "Temperature Rating": [
+      "14 to 104",
+      "14 to 113",
+      "14 to 122",
+      "20 to 115",
+      "39.2 to 104"
+    ],
+    "Thread Size": [
+      "1/4-20",
+      "1/4-20, 5/8-11"
+    ],
+    "Working Range with Detector": [
+      "165",
+      "230",
+      "30",
+      "330",
+      "55"
+    ],
+    "Working Range without Detector": [
+      "100",
+      "130",
+      "280",
+      "30"
+    ]
+  },
+  "Test & Measurement>Measuring & Layout Tools>Marking & Layout Tools>Mason's Lines": {
+    "Additional Information": [
+      "1 lb Weight",
+      "1/2 lb Weight",
+      "1/4 lb Weight"
+    ],
+    "Breaking Strength": [
+      "165"
+    ],
+    "Color": [
+      "Black/Fluorescent Yellow",
+      "Fluorescent Green",
+      "Fluorescent Orange",
+      "Fluorescent Yellow"
+    ],
+    "Diameter": [
+      "#18"
+    ],
+    "Length": [
+      "1000",
+      "250",
+      "270",
+      "500"
+    ],
+    "Material": [
+      "Nylon",
+      "Polyethylene"
+    ]
+  },
+  "Tools & Equipment>Hand Tools>Hex, Torx & Spline Keys>Hex Key Sets": {
+    "Finish": [
+      "BlackLaser"
+    ],
+    "Key Shape": [
+      "L"
+    ],
+    "Long Leg Length": [
+      "50 to 125"
+    ],
+    "Material": [
+      "Plastic"
+    ],
+    "Model": [
+      "950/9"
+    ],
+    "Number of Pieces": [
+      "9"
+    ],
+    "Suitable For Use With": [
+      "Hexagon Socket Screws"
+    ],
+    "System of Measurement": [
+      "Metric"
+    ],
+    "Tip Size": [
+      "1.5 mm, 2 mm, 2.5 mm, 3 mm, 4 mm, 5 mm, 6 mm, 8 mm, 10 mm"
+    ],
+    "Tip Type": [
+      "Ball, Hex"
+    ]
+  },
+  "Tools & Equipment>Hand Tools>Snips & Shears>Snips": {
+    "Additional Information": [
+      "Precision Ground Serrations"
+    ],
+    "Blade Material": [
+      "Steel"
+    ],
+    "Blade Type": [
+      "Offset, Serrated"
+    ],
+    "Cut Materials": [
+      "Cold Rolled Steel, Galvanized Steel"
+    ],
+    "Cut Type": [
+      "Left, Offset",
+      "Right, Offset"
+    ],
+    "Handle Color": [
+      "Green",
+      "Red"
+    ],
+    "Handle Material": [
+      "Hardened Steel"
+    ],
+    "Handle Type": [
+      "Non-Slip, Self Opening Latch, Torsion Spring Actuated"
+    ],
+    "Length of Cut": [
+      "3/4"
+    ],
+    "Maximum Sheet Gauge": [
+      "24"
+    ],
+    "Maximum Sheet Thickness": [
+      "0.71 mm Galvanized Steel, 0.61 mm Cold Rolled Steel"
+    ],
+    "Overall Length": [
+      "7-1/8"
+    ],
+    "Snip Type": [
+      "Aviation"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Cordless Tools>Cordless Blowers": {
+    "Additional Information": [
+      "Brushless Motor"
+    ],
+    "Air Flow Capacity": [
+      "39"
+    ],
+    "Battery Capacity": [
+      "5"
+    ],
+    "Battery Type": [
+      "M18\u2122 REDLITHIUM\u2122 XC5.0"
+    ],
+    "Handle Type": [
+      "Comfort Grip"
+    ],
+    "Housing Color": [
+      "Black/Gray"
+    ],
+    "Overall Depth": [
+      "9"
+    ],
+    "Overall Length": [
+      "7"
+    ],
+    "Overall Width": [
+      "3-3/4"
+    ],
+    "Run Time": [
+      "30"
+    ],
+    "Series": [
+      "M18\u2122 Series"
+    ],
+    "Speed Rating": [
+      "570"
+    ],
+    "Speed Setting": [
+      "Variable"
+    ],
+    "Switch Type": [
+      "Lock-On, Trigger"
+    ],
+    "Tool/Kit": [
+      "Kit"
+    ],
+    "Voltage Rating": [
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Oscillating Tools>Oscillating Tool Sandpaper & Sanding Pads": {
+    "Abrasive Material": [
+      "Aluminum Oxide"
+    ],
+    "Additional Information": [
+      "Closed Coating"
+    ],
+    "Backing Material": [
+      "Polyamide Net"
+    ],
+    "Bond Type": [
+      "Resin On Resin"
+    ],
+    "Color": [
+      "Light Brown"
+    ],
+    "Cut Materials": [
+      "Ash, Beech, Birch, Body Filler, Brass, Bronze, Carbon Steel, Cast Iron, Chipboard, Copper Alloys, Dupont\u2122 Corian\u00ae, Filler, Hardwood, HDF, Karonia Mistral, Lacquers, LG Hi-macs\u00ae, Mahogany, MDF, Melamine, Mild Steel, Non-Ferrous Metal, Oak, Paint Sanding, Paint Stripping, Pine, Plaster, Plastic, Primer, Removal, Resinous Wood, Samsung\u2122 Staron\u00ae, Soft, Solid Surface, Stainless Steel, Steel, Teak, Veneer"
+    ],
+    "Grit Grade": [
+      "Very Fine"
+    ],
+    "Grit Size": [
+      "120",
+      "180"
+    ],
+    "Length": [
+      "152"
+    ],
+    "Series": [
+      "Abranet Series"
+    ],
+    "Width": [
+      "100"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": {
+    "Additional Information": [
+      "4500 bpm No Load Speed, Brushless Motor",
+      "Brushless Motor",
+      "Spindle Lock, 0 to 125 deg F Operating Temperature, Brushless Motor"
+    ],
+    "Battery Capacity": [
+      "2"
+    ],
+    "Battery Type": [
+      "M12\u2122 REDLITHIUM\u2122 CP2.0",
+      "MAX Atomic\u2122",
+      "MAX XR\u00ae Lithium-Ion"
+    ],
+    "Chuck Material": [
+      "Metal"
+    ],
+    "Chuck Size": [
+      "1/2",
+      "1/4",
+      "3/8"
+    ],
+    "Chuck Type": [
+      "Keyless",
+      "Quick-Connect Hex",
+      "Quick-Release"
+    ],
+    "Handle Color": [
+      "Black/Yellow"
+    ],
+    "Handle Type": [
+      "Main"
+    ],
+    "Housing Color": [
+      "Black/Red",
+      "Black/Yellow"
+    ],
+    "Housing Material": [
+      "Rubber"
+    ],
+    "Overall Depth": [
+      "5.6",
+      "8.38"
+    ],
+    "Overall Length": [
+      "11.06",
+      "5.63",
+      "54"
+    ],
+    "Overall Width": [
+      "3.38",
+      "6.13"
+    ],
+    "Series": [
+      "M12\u2122 Series",
+      "MAX Atomic\u2122 Series",
+      "MAX XR\u00ae Series"
+    ],
+    "Speed Rating": [
+      "0 to 3800",
+      "0 to 450 rpm Low, 0 to 1550 rpm High"
+    ],
+    "Speed Setting": [
+      "2",
+      "3",
+      "Variable"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Kit",
+      "Tool"
+    ],
+    "Torque Rating": [
+      "2500",
+      "350"
+    ],
+    "Voltage Rating": [
+      "12",
+      "20"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Hammer Drills": {
+    "Additional Information": [
+      "Brushless Motor",
+      "Brushless Motor, 11 Clutch Settings"
+    ],
+    "Battery Type": [
+      "MAX Atomic\u2122",
+      "MAX XR\u00ae Lithium-Ion"
+    ],
+    "Blows per Minute": [
+      "0 to 28050",
+      "38250"
+    ],
+    "Chuck Material": [
+      "Metal"
+    ],
+    "Chuck Size": [
+      "1/2"
+    ],
+    "Chuck Type": [
+      "Keyless",
+      "Keyless, Ratcheting"
+    ],
+    "Handle Type": [
+      "Main",
+      "Main, Side"
+    ],
+    "No Load Speed": [
+      "1650"
+    ],
+    "Overall Depth": [
+      "8-1/2",
+      "8.38"
+    ],
+    "Overall Length": [
+      "15.2",
+      "7.1"
+    ],
+    "Overall Width": [
+      "2.93",
+      "3.94"
+    ],
+    "Series": [
+      "MAX Atomic\u2122 Compact Series",
+      "MAX XR\u00ae Series"
+    ],
+    "Speed Setting": [
+      "2",
+      "3"
+    ],
+    "Switch Type": [
+      "Forward/Reverse Control Button, Trigger"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Torque Rating": [
+      "2100"
+    ],
+    "Voltage Rating": [
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": {
+    "Additional Information": [
+      "1000 Nails per Charge",
+      "4250 Nails with 5 Ah Battery, 1700 Nails with 2 Ah Battery",
+      "Brushless Motor, Paper Collation Type, 530 sq-ft per Charge Framing Capacity"
+    ],
+    "Battery Capacity": [
+      "2 Ah, 5 Ah",
+      "5",
+      "6"
+    ],
+    "Battery Type": [
+      "LXT Lithium-Ion",
+      "MAX Lithium-Ion",
+      "MAX XR\u00ae Lithium-Ion"
+    ],
+    "Firing/Actuation Type": [
+      "Bump, Selectable, Sequential",
+      "Bump, Sequential"
+    ],
+    "Handle Material": [
+      "Rubber"
+    ],
+    "Handle Type": [
+      "Ergonomic, Soft Grip",
+      "Main"
+    ],
+    "Magazine Angle": [
+      "30",
+      "30 to 34"
+    ],
+    "Magazine Loading Type": [
+      "Rear",
+      "Side"
+    ],
+    "Magazine Style": [
+      "Strip"
+    ],
+    "Nail Capacity": [
+      "110",
+      "2-Strip",
+      "58"
+    ],
+    "Nail Diameter": [
+      "0.113 to 0.131"
+    ],
+    "Nail Gauge": [
+      "18",
+      "30"
+    ],
+    "Nail Head Style": [
+      "Brad",
+      "Clipped",
+      "Clipped, Full Round, Full Round Offset"
+    ],
+    "Nail Length": [
+      "2 to 3-1/2",
+      "5/8 to 2"
+    ],
+    "Overall Depth": [
+      "11-7/8",
+      "14-1/8",
+      "6",
+      "7"
+    ],
+    "Overall Length": [
+      "12-7/8",
+      "15.13",
+      "17.63",
+      "9-11/16"
+    ],
+    "Overall Width": [
+      "14.81",
+      "17.17",
+      "3-3/4",
+      "7-3/8"
+    ],
+    "Series": [
+      "LXT Series",
+      "MAX Series",
+      "MAX XR\u00ae Series"
+    ],
+    "Switch Type": [
+      "Lock\u2011Off, Trigger",
+      "Selector"
+    ],
+    "Tool/Kit": [
+      "Kit",
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "18",
+      "20"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Screwdrivers>Power Nut Setters & Bit Holders": {
+    "Color": [
+      "Black/Red"
+    ],
+    "Drive Size": [
+      "1/4 in, 5/16 in, 3/8 in, 7/16 in, 1/2 in, 9/16 in"
+    ],
+    "Drive Type": [
+      "Hex"
+    ],
+    "Material": [
+      "ALLOY76\u2122 Steel"
+    ],
+    "Overall Length": [
+      "6"
+    ],
+    "Series": [
+      "SHOCKWAVE\u2122 Series"
+    ],
+    "Shank Size": [
+      "1/4"
+    ],
+    "Suitable For Use With": [
+      "Impact Drivers, Drill Drivers"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Staplers & Riveters>Cordless Staplers": {
+    "Battery Capacity": [
+      "2 Ah, 5 Ah"
+    ],
+    "Battery Type": [
+      "LXT Lithium-Ion"
+    ],
+    "Firing/Actuation Type": [
+      "Sequential, Contact"
+    ],
+    "Handle Material": [
+      "Rubber"
+    ],
+    "Handle Type": [
+      "Soft Grip"
+    ],
+    "Overall Depth": [
+      "11-1/8"
+    ],
+    "Overall Length": [
+      "9-11/16"
+    ],
+    "Overall Width": [
+      "3-3/4"
+    ],
+    "Series": [
+      "LXT Series"
+    ],
+    "Stable Leg Length": [
+      "3/8 to 1-1/2"
+    ],
+    "Staple Capacity": [
+      "110"
+    ],
+    "Staple Gauge": [
+      "18"
+    ],
+    "Staple Type": [
+      "Narrow Crown"
+    ],
+    "Staple Width": [
+      "1/4"
+    ],
+    "Switch Type": [
+      "Selector"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": {
+    "Additional Information": [
+      "5.1 in L Tool"
+    ],
+    "Battery Capacity": [
+      "2",
+      "5"
+    ],
+    "Battery Type": [
+      "M18\u2122",
+      "MAX Atomic\u2122 Lithium-Ion"
+    ],
+    "Drive Size": [
+      "1/4"
+    ],
+    "Drive Type": [
+      "Hex",
+      "Hex, Quick-Release"
+    ],
+    "Handle Type": [
+      "Ergonomic"
+    ],
+    "Housing Color": [
+      "Black/Red",
+      "Yellow"
+    ],
+    "Impacts per Minute": [
+      "0 to 3200",
+      "0 to 6300"
+    ],
+    "Overall Depth": [
+      "11.97",
+      "7.78"
+    ],
+    "Overall Length": [
+      "4.33",
+      "9.57"
+    ],
+    "Overall Width": [
+      "2.46",
+      "3.82"
+    ],
+    "Series": [
+      "Atomic\u2122 Compact Series",
+      "M18 Fuel\u2122 SURGE\u2122 Series"
+    ],
+    "Speed Rating": [
+      "0 to 2800",
+      "0 to 3200"
+    ],
+    "Speed Setting": [
+      "3",
+      "Variable"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Kit"
+    ],
+    "Torque Rating": [
+      "1000",
+      "1700"
+    ],
+    "Voltage Rating": [
+      "18",
+      "20"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": {
+    "Additional Information": [
+      "Brushless Motor",
+      "POWERSTATE\u2122 Brushless Motor"
+    ],
+    "Battery Type": [
+      "Lithium-Ion",
+      "M12\u2122"
+    ],
+    "Drive Size": [
+      "1/2",
+      "3/4",
+      "3/8"
+    ],
+    "Drive Type": [
+      "Square"
+    ],
+    "Handle Material": [
+      "Rubber"
+    ],
+    "Housing Color": [
+      "Black/Red",
+      "Black/Yellow"
+    ],
+    "Housing Material": [
+      "Glass Filled Nylon"
+    ],
+    "Impacts per Minute": [
+      "0 to 1890",
+      "0 to 3600"
+    ],
+    "Overall Depth": [
+      "4-1/2",
+      "4.7"
+    ],
+    "Overall Length": [
+      "4-1/2",
+      "8.43",
+      "8.78"
+    ],
+    "Overall Width": [
+      "11",
+      "11.1",
+      "2"
+    ],
+    "Series": [
+      "M12 Fuel\u2122 Series",
+      "MAX XR\u00ae Series"
+    ],
+    "Speed Rating": [
+      "0 to 1200",
+      "0 to 3400"
+    ],
+    "Speed Setting": [
+      "3",
+      "4"
+    ],
+    "Switch Type": [
+      "Lock-Off, Trigger",
+      "Pushbutton/Trigger"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Torque Rating": [
+      "1200 ft-lb Fastening, 1750 ft-lb Breakaway",
+      "1420 ft-lb Fastening, 1900 ft-lb Breakaway",
+      "200 ft-lb Fastening, 225 ft-lb Breakaway, 15 ft-lb Working"
+    ],
+    "Voltage Rating": [
+      "12",
+      "20"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": {
+    "Additional Information": [
+      "0 to 125 deg F Operating Temperature, POWERSTATE\u2122 Brushless Motor",
+      "Brushless Motor"
+    ],
+    "Battery Type": [
+      "M12\u2122",
+      "MAX Lithium-Ion"
+    ],
+    "Drive Size": [
+      "1/2",
+      "1/4",
+      "3/8",
+      "3/8 in, 1/2 in"
+    ],
+    "Drive Type": [
+      "Square"
+    ],
+    "Handle Color": [
+      "Black"
+    ],
+    "Handle Type": [
+      "Contoured Grip",
+      "Ergonomic, Contoured Grip",
+      "Main"
+    ],
+    "Housing Color": [
+      "Black/Yellow",
+      "Red"
+    ],
+    "Housing Material": [
+      "Glass Filled Nylon",
+      "Metal"
+    ],
+    "Overall Depth": [
+      "12",
+      "12.2",
+      "2.94",
+      "2.99"
+    ],
+    "Overall Length": [
+      "16.73",
+      "19.56",
+      "2.2"
+    ],
+    "Overall Width": [
+      "1.6",
+      "2.91",
+      "3"
+    ],
+    "Series": [
+      "M12 Fuel\u2122 Series",
+      "MAX Atomic\u2122 Series",
+      "MAX XR\u00ae Series"
+    ],
+    "Speed Rating": [
+      "0 to 250",
+      "0 to 300",
+      "0 to 550"
+    ],
+    "Speed Setting": [
+      "Variable"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Torque Rating": [
+      "0 to 70",
+      "45",
+      "75",
+      "80"
+    ],
+    "Voltage Rating": [
+      "12",
+      "20"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Buffers & Polishers>Cordless Buffers & Polishers": {
+    "Additional Information": [
+      "2 in Sanding Disc Size"
+    ],
+    "Battery Type": [
+      "LXT Lithium-Ion"
+    ],
+    "Handle Material": [
+      "Rubber"
+    ],
+    "Handle Type": [
+      "T-Handle"
+    ],
+    "Overall Depth": [
+      "8-1/8"
+    ],
+    "Overall Length": [
+      "6-11/16"
+    ],
+    "Overall Width": [
+      "3-1/8"
+    ],
+    "Pad Size": [
+      "3"
+    ],
+    "Series": [
+      "LXT Series"
+    ],
+    "Speed Rating": [
+      "0 to 2800 rpm Polish Mode, 0 to 9500 rpm Sanding"
+    ],
+    "Speed Setting": [
+      "Variable"
+    ],
+    "Spindle Thread Size": [
+      "5/16-24"
+    ],
+    "Switch Type": [
+      "Lock-On, Trigger"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": {
+    "Additional Information": [
+      "0 to 125 deg F Operating Temperature, 3 in Sanding Pad Size, POWERSTATE\u2122 Brushless Motor",
+      "Brushless Motor"
+    ],
+    "Battery Type": [
+      "M12\u2122 REDLITHIUM\u2122",
+      "MAX Lithium-Ion"
+    ],
+    "Collet Size": [
+      "1/4"
+    ],
+    "Grinder Orientation": [
+      "Right Angle"
+    ],
+    "Handle Type": [
+      "Barrel Grip, Ergonomic"
+    ],
+    "Housing Color": [
+      "Black/Red",
+      "Black/Yellow"
+    ],
+    "Housing Material": [
+      "Alloy Steel/Glass Filled Nylon",
+      "Glass Filled Nylon"
+    ],
+    "Overall Depth": [
+      "3-1/2",
+      "8.2"
+    ],
+    "Overall Length": [
+      "10.79",
+      "4.1"
+    ],
+    "Overall Width": [
+      "2.2",
+      "4.17"
+    ],
+    "Series": [
+      "M12 Fuel\u2122 Series",
+      "MAX Atomic\u2122 Series"
+    ],
+    "Speed Rating": [
+      "0 to 20000",
+      "10000 to 24500"
+    ],
+    "Speed Setting": [
+      "4"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "12",
+      "20"
+    ],
+    "Wheel Diameter": [
+      "2"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Circular Saw Blades": {
+    "Arbor Size": [
+      "5/8"
+    ],
+    "Arbor Type": [
+      "Diamond Knock Out"
+    ],
+    "Blade Material": [
+      "Steel"
+    ],
+    "Blade Thickness": [
+      "0.04"
+    ],
+    "Cut Materials": [
+      "Crosscut Wood, Hardwood, Laminate, Melamine, Plywood, Softwood, Veneered Plywood"
+    ],
+    "Cut Type": [
+      "Cross, Rip"
+    ],
+    "Cut Width": [
+      "0.059"
+    ],
+    "Cutting Edge Material": [
+      "Carbide"
+    ],
+    "Diameter": [
+      "7-1/4"
+    ],
+    "Finish": [
+      "Perma-Shield-Coated"
+    ],
+    "Hook Angle": [
+      "7"
+    ],
+    "Kerf": [
+      "0.059"
+    ],
+    "Maximum Speed Rating": [
+      "8000"
+    ],
+    "Number of Pieces": [
+      "1"
+    ],
+    "Number of Teeth": [
+      "60"
+    ],
+    "Series": [
+      "Wood Demon\u2122 Series"
+    ],
+    "Suitable For Use With": [
+      "Cordless Circular Saws, Corded Circular Saws, Cordless Slide Miter Saws, Corded Slide Miter Saws"
+    ],
+    "Teeth Type": [
+      "Hi-ATB"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Diamond Saw Blades": {
+    "Arbor Size": [
+      "5/8",
+      "5/8 in, 7/8 in, 20 mm"
+    ],
+    "Blade Material": [
+      "Steel"
+    ],
+    "Color": [
+      "Red"
+    ],
+    "Cut Materials": [
+      "Ceramic Tile, Marble and Granite, Porcelain Tile"
+    ],
+    "Cut Type": [
+      "Dry/Wet"
+    ],
+    "Cutting Edge Material": [
+      "Diamond"
+    ],
+    "Diameter": [
+      "10",
+      "4",
+      "4-1/2",
+      "5",
+      "7"
+    ],
+    "Maximum Speed Rating": [
+      "12000",
+      "13300",
+      "15000",
+      "6115",
+      "8730"
+    ],
+    "Number of Pieces": [
+      "1"
+    ],
+    "Rim Type": [
+      "Continuous"
+    ],
+    "Series": [
+      "DIAMOND MAX Series"
+    ],
+    "Suitable For Use With": [
+      "Milwaukee\u00ae Angle Grinders",
+      "Milwaukee\u00ae Tile Saws"
+    ],
+    "Thickness": [
+      "0.055",
+      "0.063",
+      "0.065"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Hole Saws & Accessories>Hole Saw Sets": {
+    "Additional Information": [
+      "4.6 in L x 9.25 in W x 16.5 in H Dimensions"
+    ],
+    "Arbor Hole Size": [
+      "1/2-20, 5/8-18"
+    ],
+    "Arbor Hole Type": [
+      "Threaded"
+    ],
+    "Body Material": [
+      "Bi-Metal"
+    ],
+    "Cut Materials": [
+      "Aluminum, Drywall, Metal, Nail, Wood"
+    ],
+    "Number of Hole Saws": [
+      "9"
+    ],
+    "Number of Pieces": [
+      "13"
+    ],
+    "Pilot Drill Diameter": [
+      "1/4"
+    ],
+    "Pilot Drill Length": [
+      "4"
+    ],
+    "Pilot Drill Material": [
+      "HSS"
+    ],
+    "Saw Diameter": [
+      "3/4 to 2-1/2"
+    ],
+    "Series": [
+      "QUIK LOK\u2122 HOLE DOZER\u2122 Series"
+    ],
+    "Shank Size": [
+      "7/16"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Planer Blades": {
+    "Additional Information": [
+      "Blister Case, 90.3 HRA Hardness, 377000 psi Transverse Rupture Strength"
+    ],
+    "Cut Materials": [
+      "Glulam, Hardwood, Softwood",
+      "Hardwood, Plywood, Softwood"
+    ],
+    "Length": [
+      "12-1/2",
+      "82"
+    ],
+    "Material": [
+      "Carbide",
+      "HSS"
+    ],
+    "Number of Pieces": [
+      "2",
+      "3"
+    ],
+    "Series": [
+      "790 Series",
+      "794 Series"
+    ],
+    "Suitable For Use With": [
+      "AEG EH82, EH825, EH822, EH450, EH700, EH82-1, H500, H750, EH700R, Black and Decker DN76, Bosch PHO 100, PHO 150, PHO 200, PHO 300, 4387, PHO 2-82, PHO 3-82, Gustav HOO882, Casals CE82, DeWALT DW678, DW678EK, DW680, ELU HH15, HH40, HH40K, HH40EK, FEIN HS2151, Felisatti TP282 Portable Planers"
+    ],
+    "Thickness": [
+      "1.1",
+      "1/8"
+    ],
+    "Width": [
+      "11/16",
+      "5.5"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Band Saws>Corded Band Saws": {
+    "Additional Information": [
+      "1 ph Phase, JWBS-14SFX Model, 14 in Blade Wheel Diameter, 1/8 to 3/4 in Saw Blade Width, 4 in Dust Port, 350 cfm Air Flow Rate, 21 x 17 in Table Size, 45 deg Right Table Tilt Angle, 40 in Table Height from Floor, 13-1/2 in Throat Capacity, 3000 fpm Blade Speed"
+    ],
+    "Amperage Rating": [
+      "7.5 to 15"
+    ],
+    "Blade Length": [
+      "116"
+    ],
+    "Cord Length": [
+      "6"
+    ],
+    "Cutting Capacity": [
+      "13"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "HP Rating": [
+      "1-3/4"
+    ],
+    "Handle Type": [
+      "Handwheel"
+    ],
+    "Housing Material": [
+      "Steel"
+    ],
+    "Overall Depth": [
+      "75-3/8"
+    ],
+    "Overall Length": [
+      "37"
+    ],
+    "Overall Width": [
+      "27-1/2"
+    ],
+    "Plug Type": [
+      "5-15P"
+    ],
+    "Power Rating": [
+      "1.3"
+    ],
+    "Sound Level": [
+      "75"
+    ],
+    "Speed Rating": [
+      "765"
+    ],
+    "Switch Type": [
+      "Industrial-Style Pushbutton On/Off"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "115/230"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Circular Saws>Cordless Circular Saws": {
+    "Additional Information": [
+      "0 to 125 deg F Operating Temperature, POWERSTATE\u2122 Brushless Motor"
+    ],
+    "Arbor Size": [
+      "5/8"
+    ],
+    "Battery Capacity": [
+      "12"
+    ],
+    "Battery Type": [
+      "M18\u2122 REDLITHIUM\u2122 FORGE\u2122 HD12.0"
+    ],
+    "Blade Diameter": [
+      "7-1/4"
+    ],
+    "Blade Type": [
+      "Thick Kerf Framing"
+    ],
+    "Cutting Angle": [
+      "22.5 to 45"
+    ],
+    "Cutting Depth": [
+      "2-5/8"
+    ],
+    "Handle Type": [
+      "Top"
+    ],
+    "Housing Material": [
+      "Magnesium"
+    ],
+    "Overall Depth": [
+      "8-1/2"
+    ],
+    "Overall Length": [
+      "17-1/2"
+    ],
+    "Overall Width": [
+      "7.4"
+    ],
+    "Series": [
+      "M18 Fuel\u2122 Series"
+    ],
+    "Speed Rating": [
+      "6000"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Kit"
+    ],
+    "Voltage Rating": [
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Jig Saws>Cordless Jig Saws": {
+    "Additional Information": [
+      "0 to 125 deg F Operating Temperature, POWERSTATE\u2122 Brushless Motor"
+    ],
+    "Base Tilt Angle": [
+      "0 to 45"
+    ],
+    "Battery Type": [
+      "M12\u2122"
+    ],
+    "Handle Type": [
+      "Barrel Grip, Ergonomic"
+    ],
+    "Housing Color": [
+      "Black/Red"
+    ],
+    "Housing Material": [
+      "Metal"
+    ],
+    "Overall Depth": [
+      "7.2"
+    ],
+    "Overall Length": [
+      "8.9"
+    ],
+    "Overall Width": [
+      "2.9"
+    ],
+    "Series": [
+      "M12 Fuel\u2122 Series"
+    ],
+    "Speed Rating": [
+      "800 to 3000"
+    ],
+    "Speed Setting": [
+      "5"
+    ],
+    "Stroke": [
+      "Orbital"
+    ],
+    "Stroke Length": [
+      "7/8"
+    ],
+    "Tool/Kit": [
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "12"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": {
+    "Additional Information": [
+      "3/32 in Kerf",
+      "Brushless Motor"
+    ],
+    "Arbor Size": [
+      "1",
+      "5/8"
+    ],
+    "Battery Capacity": [
+      "4",
+      "8"
+    ],
+    "Battery Type": [
+      "MAX Lithium-Ion",
+      "MAX XGT\u00ae Lithium-Ion"
+    ],
+    "Blade Diameter": [
+      "10",
+      "12",
+      "8-1/2"
+    ],
+    "Blade Material": [
+      "Carbide"
+    ],
+    "Blade Type": [
+      "Crosscut"
+    ],
+    "Cutting Angle": [
+      "0 to 60 deg Miter, 0 to 48 deg Bevel",
+      "0/22.5/33.9/45/90"
+    ],
+    "Cutting Height": [
+      "1-3/16 to 2-3/4",
+      "5-1/4",
+      "6-1/2"
+    ],
+    "Cutting Width": [
+      "14",
+      "6",
+      "6-1/8 to 12-1/4"
+    ],
+    "Handle Color": [
+      "Black/Yellow"
+    ],
+    "Handle Type": [
+      "Lever/Carry",
+      "Lock, Carry"
+    ],
+    "Housing Color": [
+      "Black/Yellow"
+    ],
+    "Overall Depth": [
+      "19-1/2",
+      "20-3/4",
+      "22"
+    ],
+    "Overall Length": [
+      "22-3/4",
+      "27-5/8",
+      "33.57"
+    ],
+    "Overall Width": [
+      "19.35",
+      "21-3/4",
+      "23.81"
+    ],
+    "Series": [
+      "MAX XR\u00ae Series",
+      "XGT\u00ae Series"
+    ],
+    "Speed Rating": [
+      "3800",
+      "4800",
+      "4900"
+    ],
+    "Switch Type": [
+      "Trigger"
+    ],
+    "Tool/Kit": [
+      "Kit",
+      "Tool"
+    ],
+    "Voltage Rating": [
+      "20",
+      "40"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": {
+    "Additional Information": [
+      "100 W-hr Energy Rating",
+      "37 W-hr Energy Rating, 18650 Cell Type",
+      "90 min Charge Time",
+      "Black/Red Color"
+    ],
+    "Battery Capacity": [
+      "2",
+      "5",
+      "6",
+      "8"
+    ],
+    "Battery Chemistry": [
+      "Lithium-Ion"
+    ],
+    "Battery Series": [
+      "FLEXVOLT\u00ae MAX",
+      "M12\u2122 REDLITHIUM\u2122 CP2.0",
+      "MAX",
+      "MAX XR\u00ae"
+    ],
+    "Number of Batteries": [
+      "1",
+      "2"
+    ],
+    "Overall Height": [
+      "2-1/4",
+      "3.35",
+      "5.6",
+      "6.94",
+      "7.06",
+      "7.15"
+    ],
+    "Overall Length": [
+      "11.94",
+      "2.02",
+      "5-5/8",
+      "5.88",
+      "7.1",
+      "9.43"
+    ],
+    "Overall Width": [
+      "1.83",
+      "3-1/2",
+      "3.8",
+      "3.9",
+      "5-5/8"
+    ],
+    "Suitable For Use With": [
+      "DeWALT 20 V MAX Tools",
+      "DeWALT 20 V, 60 V MAX Tools",
+      "Milwaukee\u00ae M12\u2122 Cordless Power Tools",
+      "SENCO DuraSpin, Fusion Tools"
+    ],
+    "Voltage Rating": [
+      "12",
+      "18",
+      "20",
+      "20/60"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Battery Chargers": {
+    "Additional Information": [
+      "6 A Output Amperage Rating, 2.8 A Input Amperage Rating, Corded, Polycarbonate Material"
+    ],
+    "Battery Chemistry": [
+      "Lithium-Ion"
+    ],
+    "Battery Voltage": [
+      "12/18"
+    ],
+    "Charge Time": [
+      "130"
+    ],
+    "Charger Class": [
+      "Rapid"
+    ],
+    "Charging Type": [
+      "Simultaneous, Rapid"
+    ],
+    "Number of Ports": [
+      "4"
+    ],
+    "Overall Height": [
+      "5.2"
+    ],
+    "Overall Length": [
+      "7.2"
+    ],
+    "Overall Width": [
+      "24.4"
+    ],
+    "Suitable For Use With": [
+      "All M18 and M12 Batteries, Work Lights"
+    ],
+    "Voltage Rating": [
+      "120 to 127"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Power Supplies & Battery Adapters": {
+    "Additional Information": [
+      "6 A Amperage, Overload Protection, 105 min Charge Time",
+      "Red Color"
+    ],
+    "Battery Type": [
+      "Lithium-Ion"
+    ],
+    "Number of Pieces": [
+      "3"
+    ],
+    "Number of Ports": [
+      "2"
+    ],
+    "Overall Height": [
+      "1.8",
+      "1.9"
+    ],
+    "Overall Length": [
+      "3.71",
+      "4-1/2"
+    ],
+    "Overall Width": [
+      "2",
+      "3.04"
+    ],
+    "Series": [
+      "M12\u2122 TOP-OFF\u2122 Series",
+      "M18\u2122 TOP-OFF\u2122 Series"
+    ],
+    "Suitable For Use With": [
+      "M12 Batteries, M12 Heated Gears",
+      "M18 Batteries"
+    ],
+    "Voltage Rating": [
+      "12",
+      "18"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Dust Collector Accessories": {
+    "Additional Information": [
+      "3 gal Capacity"
+    ],
+    "Color": [
+      "Brown"
+    ],
+    "Depth": [
+      "18-1/2"
+    ],
+    "Height": [
+      "2.23"
+    ],
+    "Material": [
+      "Paper"
+    ],
+    "Suitable For Use With": [
+      "DeWALT Dust Extractors"
+    ],
+    "Width": [
+      "12-1/2"
+    ]
+  },
+  "Tools & Equipment>Power Tools>Power Tool Combination Kits": {
+    "Additional Information": [
+      "Brushless Motor, Black/Yellow Color, 1/4 in Compact Impact Driver"
+    ],
+    "Battery Capacity": [
+      "2"
+    ],
+    "Battery Type": [
+      "MAX Atomic\u2122 Lithium-Ion"
+    ],
+    "Number of Batteries": [
+      "2"
+    ],
+    "Number of Tools": [
+      "2"
+    ],
+    "Series": [
+      "MAX Atomic\u2122 Compact Series"
+    ],
+    "Voltage Rating": [
+      "20"
+    ]
+  },
+  "Tools & Equipment>Woodworking Tools & Machinery>Woodworking Machinery>Woodworking Planer Machines": {
+    "Additional Information": [
+      "10014 Model",
+      "10045 Model",
+      "10055 Model",
+      "4430 Model"
+    ],
+    "Amperage Rating": [
+      "12",
+      "15",
+      "18"
+    ],
+    "Control Type": [
+      "Digital, Magnetic Switch",
+      "Digital, Paddle Switch",
+      "Safety Lock-Out Switch"
+    ],
+    "Cutting Thickness": [
+      "6",
+      "8"
+    ],
+    "Cutting Width": [
+      "13",
+      "15",
+      "20"
+    ],
+    "Depth of Cut": [
+      "1/16 in, 1/64 in",
+      "1/4 in, 1/8 in",
+      "1/8 in, 3/16 in"
+    ],
+    "Feed Rating": [
+      "12 fpm, 22 fpm",
+      "16 fpm, 20 fpm",
+      "17 fpm, 26 fpm"
+    ],
+    "Frequency Rating": [
+      "60"
+    ],
+    "HP Rating": [
+      "2",
+      "2-1/2",
+      "3",
+      "5"
+    ],
+    "Handle Material": [
+      "Steel"
+    ],
+    "Handle Type": [
+      "Crank",
+      "Handwheel"
+    ],
+    "Housing Material": [
+      "Iron"
+    ],
+    "Number of Speeds": [
+      "2"
+    ],
+    "Overall Depth": [
+      "16",
+      "23",
+      "32",
+      "46-1/2"
+    ],
+    "Overall Length": [
+      "20-1/2",
+      "47-1/2",
+      "48-3/4",
+      "51"
+    ],
+    "Overall Width": [
+      "23",
+      "28",
+      "29",
+      "40"
+    ],
+    "Phase": [
+      "1"
+    ],
+    "Sound Level": [
+      "103",
+      "85",
+      "90"
+    ],
+    "Speed Rating": [
+      "10000",
+      "3450",
+      "5000",
+      "5600"
+    ],
+    "Table Length": [
+      "10.2",
+      "19-5/8",
+      "21",
+      "23"
+    ],
+    "Table Width": [
+      "13",
+      "15",
+      "20"
+    ],
+    "Voltage Rating": [
+      "115",
+      "230"
+    ]
+  }
+}
