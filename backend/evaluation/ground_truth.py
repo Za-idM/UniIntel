@@ -3,7 +3,7 @@ import csv
 from functools import lru_cache
 from pathlib import Path
 
-GT_DELIVERY = Path(__file__).resolve().parent.parent.parent / "data" / "ground_truth" / "gt_delivery_200.csv"
+GT_DELIVERY = Path(__file__).resolve().parent.parent / "data" / "ground_truth" / "gt_delivery_200.csv"
 
 
 @lru_cache(maxsize=1)
