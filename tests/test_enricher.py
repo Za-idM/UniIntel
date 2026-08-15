@@ -42,18 +42,22 @@ def test_enrich_no_url_short_circuits_without_network_call():
 
 
 def test_enrich_success_extracts_evidence_text():
+    # XO Ventilation (xoappliance.com), not Satco: Satco now fails fast
+    # before ever reaching the network (see the FETCH_BLOCKED tests below),
+    # so it's no longer a usable stand-in for exercising the normal
+    # fetch-succeeds path.
     def handler(request):
-        return httpx.Response(200, text="<html><body><h1>S21354 LED Filament Bulb</h1><p>8W, 2700K, T9, Medium base.</p></body></html>")
+        return httpx.Response(200, text="<html><body><h1>XOU2470BCGS Range Hood</h1><p>Stainless steel, 30in.</p></body></html>")
 
     async def run():
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
-            return await enrich("Satco Products, Inc", "S21354", client=client)
+            return await enrich("XO Ventilation", "XOU2470BCGS", client=client)
 
     result = _run(run())
     assert result.status == "FETCHED"
     assert result.http_status == 200
-    assert "8W" in result.evidence_text
-    assert result.source_url == "https://www.satco.com/products/S21354"
+    assert "Stainless steel" in result.evidence_text
+    assert result.source_url == "https://xoappliance.com/xo_products/XOU2470BCGS/"
 
 
 def test_enrich_retries_on_429_and_recovers():
@@ -67,7 +71,7 @@ def test_enrich_retries_on_429_and_recovers():
 
     async def run():
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
-            return await enrich("Satco Products, Inc", "S21354", client=client)
+            return await enrich("XO Ventilation", "XOU2470BCGS", client=client)
 
     result = _run(run())
     assert result.status == "FETCHED"
@@ -80,11 +84,56 @@ def test_enrich_gives_up_after_max_retries_on_persistent_429():
 
     async def run():
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
-            return await enrich("Satco Products, Inc", "S21354", client=client)
+            return await enrich("XO Ventilation", "XOU2470BCGS", client=client)
 
     result = _run(run())
     assert result.status == "FETCH_FAILED"
     assert result.http_status == 429
+
+
+def test_satco_fails_fast_without_any_network_call():
+    """The real regression this is pinning: satco.com is confirmed
+    persistently 429-blocked (not transient), so it must never even reach
+    the retry loop -- zero requests, immediate FETCH_BLOCKED."""
+    calls = {"n": 0}
+
+    def handler(request):
+        calls["n"] += 1
+        return httpx.Response(429)
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            return await enrich("Satco Products, Inc", "S21354", client=client)
+
+    result = _run(run())
+    assert result.status == "FETCH_BLOCKED"
+    assert result.source_url == "https://www.satco.com/products/S21354"
+    assert calls["n"] == 0, "Satco must skip the network call entirely, not just skip retries after one attempt"
+
+
+def test_satco_fast_fail_does_not_construct_client_when_none_given():
+    """No injected client at all (production path, not just the mocked-
+    transport test path) -- still short-circuits before constructing a
+    real httpx.AsyncClient or making any request."""
+    result = _run(enrich("Satco Products, Inc", "S21354"))
+    assert result.status == "FETCH_BLOCKED"
+    assert result.source_url == "https://www.satco.com/products/S21354"
+
+
+def test_non_satco_manufacturer_unaffected_by_fast_fail():
+    """Scope check: the fast-fail path is keyed on the satco.com domain
+    specifically -- a different manufacturer hitting persistent 429s still
+    goes through the normal retry/backoff and lands on FETCH_FAILED, not
+    FETCH_BLOCKED."""
+    def handler(request):
+        return httpx.Response(429)
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            return await enrich("XO Ventilation", "XOU2470BCGS", client=client)
+
+    result = _run(run())
+    assert result.status == "FETCH_FAILED"
 
 
 if __name__ == "__main__":
@@ -94,4 +143,7 @@ if __name__ == "__main__":
     test_enrich_success_extracts_evidence_text()
     test_enrich_retries_on_429_and_recovers()
     test_enrich_gives_up_after_max_retries_on_persistent_429()
+    test_satco_fails_fast_without_any_network_call()
+    test_satco_fast_fail_does_not_construct_client_when_none_given()
+    test_non_satco_manufacturer_unaffected_by_fast_fail()
     print("All enricher tests passed.")

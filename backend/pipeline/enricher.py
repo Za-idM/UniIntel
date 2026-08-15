@@ -20,10 +20,20 @@ TIMEOUT = 10.0
 MAX_RETRIES = 3
 BACKOFF_BASE_SECONDS = 1.0
 
+# satco.com bot-blocks with a persistent 429 regardless of backoff/pacing --
+# confirmed live (see CLAUDE.md "Live-tested finding"), not transient rate
+# limiting that a retry could ever get past. Paying the full MAX_RETRIES
+# backoff (up to ~7-15s) on every Satco row for a result that's already
+# known was pure waste, so this domain skips the retry loop (and the network
+# call) entirely rather than discovering the same 429 three times per row.
+# Scoped to this one domain -- every other source still gets normal
+# retry/backoff treatment.
+KNOWN_PERSISTENTLY_BLOCKED_DOMAINS = {"satco.com"}
+
 
 @dataclass
 class EnrichmentResult:
-    status: str  # FETCHED, NO_URL, BLOCKED_SOURCE, FETCH_FAILED
+    status: str  # FETCHED, NO_URL, BLOCKED_SOURCE, FETCH_FAILED, FETCH_BLOCKED
     source_url: str | None = None
     evidence_text: str | None = None
     http_status: int | None = None
@@ -31,6 +41,10 @@ class EnrichmentResult:
 
 def _is_blocked(url: str) -> bool:
     return any(domain in url.lower() for domain in BLOCKED_DOMAINS)
+
+
+def _is_known_persistently_blocked(url: str) -> bool:
+    return any(domain in url.lower() for domain in KNOWN_PERSISTENTLY_BLOCKED_DOMAINS)
 
 
 async def enrich(manufacturer_name: str, mpn: str, client: httpx.AsyncClient | None = None) -> EnrichmentResult:
@@ -42,6 +56,12 @@ async def enrich(manufacturer_name: str, mpn: str, client: httpx.AsyncClient | N
 
     if _is_blocked(url):
         return EnrichmentResult(status="BLOCKED_SOURCE", source_url=url)
+
+    if _is_known_persistently_blocked(url):
+        # Fail fast, once, per row -- no request, no backoff sleep. This is
+        # a confirmed-persistent block, not a guess, so retrying would just
+        # rediscover the same 429 at ~7-15s of wasted cost per row.
+        return EnrichmentResult(status="FETCH_BLOCKED", source_url=url)
 
     owns_client = client is None
     if owns_client:

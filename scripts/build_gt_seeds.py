@@ -17,7 +17,13 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 GT_DELIVERY = ROOT / "data" / "ground_truth" / "gt_delivery_200.csv"
-BOOTSTRAP = ROOT / "data" / "bootstrap"
+# Write bootstrap artifacts to the directory the pipeline actually reads from
+# at runtime. All loader sites resolve `Path(__file__).resolve().parent.parent
+# / "data" / "bootstrap"` from backend/{pipeline,leaf_templates,validation}/*,
+# which lands in backend/data/bootstrap -- so the builder must write there too
+# (previously wrote to top-level data/bootstrap, which the pipeline never read,
+# silently going stale on every re-mine).
+BOOTSTRAP = ROOT / "backend" / "data" / "bootstrap"
 MAX_SLOTS = 50
 
 
@@ -220,6 +226,75 @@ def build_manufacturer_classpath_prior(rows):
     return {mfr: dict(cp_counts) for mfr, cp_counts in prior.items()}
 
 
+_LOV_CANON_SYNONYMS = {
+    "med": "Medium",
+    "med base": "Medium",
+    "cand": "Candelabra",
+    "cand base": "Candelabra",
+    "int": "Intermediate",
+    "int base": "Intermediate",
+    "std": "Standard",
+    "std base": "Standard",
+    "mog": "Mogul",
+    "mog base": "Mogul",
+    "gu24": "GU24",
+    "gu10": "GU10",
+    "e26": "E26",
+    "e27": "E27",
+    "e12": "E12",
+    "e17": "E17",
+    "led": "LED",
+    "cfl": "CFL",
+    "hal": "Halogen",
+    "halogen": "Halogen",
+    "inc": "Incandescent",
+    "incandescent": "Incandescent",
+    "ss": "Stainless Steel",
+    "stain": "Stainless Steel",
+    "stainless": "Stainless Steel",
+    "brass": "Brass",
+    "brs": "Brass",
+    "plastic": "Plastic",
+    "plst": "Plastic",
+    "alum": "Aluminum",
+    "aluminum": "Aluminum",
+    "wht": "White",
+    "blk": "Black",
+    "blkfinish": "Black",
+    "brz": "Bronze",
+    "chr": "Chrome",
+    "nickel": "Nickel",
+    "nat": "Natural",
+    "oilrubbedbronze": "Oil Rubbed Bronze",
+}
+
+_LOV_TRUNCATE_COMMON = {
+    "yes": {"yes", "y", "true", "t"},
+    "no": {"no", "n", "false", "f"},
+}
+
+
+def _lov_canonicalize(value: str) -> set[str]:
+    """Return the canonical forms to register for a single GT-seen value:
+    the original literal plus a canonical/expanded form when the raw text
+    is a known abbreviating alias. The original is kept so an exact GT
+    match still passes V2; the expanded form lets the extractor's verbatim
+    'Med' (from a terse Part_Desc) match the LOV 'Medium' via V2's fuzzy
+    repair path."""
+    out = {value}
+    cleaned = " ".join(value.lower().replace(".", " ").split())
+    cleaned_nospc = cleaned.replace(" ", "")
+    if cleaned in _LOV_CANON_SYNONYMS:
+        out.add(_LOV_CANON_SYNONYMS[cleaned])
+    if cleaned_nospc in _LOV_CANON_SYNONYMS and _LOV_CANON_SYNONYMS[cleaned_nospc] != value:
+        out.add(_LOV_CANON_SYNONYMS[cleaned_nospc])
+    # collapse interior multi-whitespace into one canonical form
+    collapsed = " ".join(value.split())
+    if collapsed and collapsed != value:
+        out.add(collapsed)
+    return out
+
+
 def build_lov_by_classpath(rows):
     lov = defaultdict(lambda: defaultdict(set))
     for row in rows:
@@ -230,7 +305,12 @@ def build_lov_by_classpath(rows):
             label = row.get(f"ATTRIBUTE_LABEL {i}", "").strip()
             value = row.get(f"ATTRIBUTE_VALUE {i}", "").strip()
             if label and value:
-                lov[classpath][label].add(value)
+                # Canonicalize + register synonym aliases so the extractor's
+                # raw-Part_Desc matches (e.g. 'Med' aliasing 'Medium') can
+                # fuzzy-repair through V2 rather than scoring zero on a
+                # legitimate near-miss. Original literal always retained.
+                for v in _lov_canonicalize(value):
+                    lov[classpath][label].add(v)
     # sets -> sorted lists for JSON
     return {
         classpath: {label: sorted(values) for label, values in labels.items()}

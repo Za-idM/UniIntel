@@ -27,7 +27,8 @@ from pathlib import Path
 from groq import AsyncGroq, PermissionDeniedError, RateLimitError
 
 from config import GROQ_API_KEY, GROQ_DESC_MODEL
-from pipeline.llm_client import _make_http_client
+from pipeline.llm_client import GROQ_70B_PACER, _make_http_client, is_daily_quota_exhausted, mark_quota_exhausted, quota_is_exhausted
+from persistence import llm_cache
 from pipeline.normalizer import format_uom
 
 logger = logging.getLogger(__name__)
@@ -306,41 +307,68 @@ async def generate_prose_descriptions(
     from the reconciled, already-validated attribute set. Empty dict on
     any failure (rate limit exhausted, bad JSON) -- caller leaves the
     fields empty rather than getting a half-formed value, per "never hide
-    uncertainty, don't invent."""
+    uncertainty, don't invent."
+
+    Caching: raw completion cached under namespace='prose' (model-aware
+    key). Re-runs of the same (mpn, classpath, attrs) tuple return the
+    prior long_desc1+marketing_description for zero tokens -- the entire
+    reason a 200-row eval can be re-iterated after a 100K TPD wall hit."""
     non_empty = {k: v for k, v in attrs.items() if v}
     if not non_empty:
         return {}
 
-    client = client or AsyncGroq(api_key=api_key or GROQ_API_KEY, http_client=_make_http_client())
+    model_name = model or GROQ_DESC_MODEL
+    skip_live = quota_is_exhausted(model_name)
     prompt = _build_prose_prompt(mpn, manufacturer_name, classpath, attrs)
 
-    for attempt in range(MAX_RETRIES + 1):
-        try:
-            response = await client.chat.completions.create(
-                model=model or GROQ_DESC_MODEL,
-                messages=[
-                    {"role": "system", "content": _PROSE_SYSTEM_PROMPT},
-                    {"role": "user", "content": prompt},
-                ],
-                temperature=0.4,
-                max_tokens=600,
-                response_format={"type": "json_object"},
-            )
-            break
-        except RateLimitError:
-            if attempt < MAX_RETRIES:
-                await asyncio.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
-                continue
-            return {}
-        except PermissionDeniedError:
-            # 403 -- not retryable like a 429. Log and skip prose
-            # generation for this row; caller leaves long_desc1/
-            # marketing_description empty rather than getting a half-
-            # formed value, same as any other failure here.
-            logger.warning("Groq generate_prose_descriptions() got 403 PermissionDenied -- skipping prose generation")
-            return {}
+    async def _live() -> str | None:
+        if skip_live:
+            return None
+        nonlocal client
+        client = client or AsyncGroq(api_key=api_key or GROQ_API_KEY, http_client=_make_http_client())
+        for attempt in range(MAX_RETRIES + 1):
+            await GROQ_70B_PACER.wait()
+            try:
+                response = await client.chat.completions.create(
+                    model=model_name,
+                    messages=[
+                        {"role": "system", "content": _PROSE_SYSTEM_PROMPT},
+                        {"role": "user", "content": prompt},
+                    ],
+                    temperature=0.4,
+                    max_tokens=600,
+                    response_format={"type": "json_object"},
+                )
+                return response.choices[0].message.content
+            except RateLimitError as exc:
+                if is_daily_quota_exhausted(exc):
+                    logger.warning(
+                        "Groq generate_prose_descriptions() hit daily token quota -- "
+                        "skipping retries, prose generation unavailable until quota resets"
+                    )
+                    mark_quota_exhausted(model_name)
+                    return None
+                if attempt < MAX_RETRIES:
+                    await asyncio.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
+                    continue
+                return None
+            except PermissionDeniedError:
+                logger.warning("Groq generate_prose_descriptions() got 403 PermissionDenied -- skipping prose generation")
+                return None
+        return None
 
-    raw = response.choices[0].message.content
+    raw = await llm_cache.cached_call(
+        namespace="prose",
+        model=model_name,
+        system_prompt=_PROSE_SYSTEM_PROMPT,
+        user_prompt=prompt,
+        temperature=0.4,
+        max_tokens=600,
+        response_format="json_object",
+        live_fn=_live,
+    )
+    if raw is None:
+        return {}
     try:
         parsed = json.loads(raw)
     except json.JSONDecodeError:

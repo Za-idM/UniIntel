@@ -22,12 +22,14 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "backend"))
 
 from pipeline.orchestrator import process_job  # noqa: E402
+from persistence.db import init_db  # noqa: E402
 
 GT_DELIVERY = ROOT / "data" / "ground_truth" / "gt_delivery_200.csv"
 LED_CLASSPATH = "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs"
 
+# See evaluate_orchestrator_full.py for why these 5 answer-leak cribs
+# (PART_NUMBER, Dept, Class, Fine, SKU - MY_PART_NUMBER) are dropped.
 INPUT_COLS = [
-    "PART_NUMBER", "Dept", "Class", "Fine", "SKU - MY_PART_NUMBER",
     "Mfg_Part_Num", "Part_Desc", "E1_Brand", "Unilog_Brand", "DIB_Brand", "Part_Manuf",
 ]
 
@@ -50,6 +52,10 @@ def gt_attribute_values(gt_row: dict) -> dict[str, str]:
 
 
 def main():
+    # See evaluate_orchestrator_full.py: standalone eval has no FastAPI
+    # lifespan to run init_db(), so do it here (idempotent).
+    init_db()
+
     gt_rows = load_led_rows()
     assert len(gt_rows) == 22, f"expected 22 LED Light Bulb GT rows, found {len(gt_rows)}"
 

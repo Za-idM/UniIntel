@@ -33,8 +33,22 @@ DB_PATH = os.getenv("DB_PATH") or str(
 # model_decommissioned error) -- llama-3.3-70b-versatile is the current
 # equivalent per `Groq().models.list()`. Re-check that listing if this
 # breaks again; Groq deprecates models on their own schedule.
+#
+# GROQ_EXTRACT_MODEL: swapped to llama-3.1-8b-instant on 2026-08-15 based on
+# the ab_8b_vs_70b.py A/B result -- 8B scored 45.2% attribute accuracy on a
+# clean 30-row run vs 70B's 1.1% (admittedly quota-throttled mid-run, but
+# every historical 70B number in this project was similarly throttled and
+# never came close to 8B's figure). 8B is on a separate quota pool so it
+# sidesteps the shared 100K TPD org-level wall the 70B model keeps hitting.
+# For the constrained-select extraction task (LOV allowed-values + JSON
+# object output) 8B's tighter context appears to help, not hurt. JSON-mode
+# reliably honored -- no parse failures observed in the A/B. The 70B model
+# is NOT deleted: callers can still override via the GROQ_EXTRACT_MODEL env
+# var to A/B test, and descriptions (GROQ_DESC_MODEL below) still default
+# to 70B because prose generation is a different cognitive profile and
+# hasn't been A/B tested yet.
 GROQ_CLASSIFY_MODEL = os.getenv("GROQ_CLASSIFY_MODEL", "llama-3.1-8b-instant")
-GROQ_EXTRACT_MODEL = os.getenv("GROQ_EXTRACT_MODEL", "llama-3.3-70b-versatile")
+GROQ_EXTRACT_MODEL = os.getenv("GROQ_EXTRACT_MODEL", "llama-3.1-8b-instant")
 GROQ_DESC_MODEL = os.getenv("GROQ_DESC_MODEL", "llama-3.3-70b-versatile")
 
 
