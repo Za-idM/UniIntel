@@ -38,7 +38,7 @@ from pipeline.description_gen import (
     invoice_desc, mobile_desc, short_desc, retail_desc, generate_prose_descriptions,
 )
 from pipeline.entity_resolver import resolve_manufacturer
-from pipeline.enricher import enrich, EnrichmentResult, USER_AGENT, TIMEOUT
+from pipeline.enricher import enrich, EnrichmentResult, BROWSER_HEADERS, TIMEOUT
 from pipeline.extractor import extract_attributes, fallback_extract_attributes, reconcile
 from pipeline.llm_client import GroqClassifierClient
 from pipeline.rule_preextractor import extract_uom_priors
@@ -351,7 +351,7 @@ async def process_job(
     semaphore = asyncio.Semaphore(CONCURRENCY)
 
     async with httpx.AsyncClient(
-        headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT, follow_redirects=True
+        headers=BROWSER_HEADERS, timeout=TIMEOUT, follow_redirects=True
     ) as http_client:
 
         async def _bounded(row: dict) -> EnrichedProduct:
