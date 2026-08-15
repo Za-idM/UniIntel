@@ -197,7 +197,16 @@ async def extract_attributes(
         return {}
 
     valid_labels = {s.label for s in slots}
-    _BAD = {None, "", "none", "null", "n/a", "na", "unknown", "unspecified", "-"}
+    # "not found" is the 8B extractor's stock absence phrase -- observed
+    # 26x across the 1000-row submission+229 cached completions (scan of
+    # 2026-08-15 via scripts/scan_garbage). Case-insensitive: the existing
+    # `str(v).strip().lower() not in _BAD` check below catches any casing
+    # of it. KEEP THIS SET IN SYNC with the identical one inside
+    # fallback_extract_attributes() below -- the two filters drift silently
+    # otherwise (only the function containing the line you're editing knows
+    # the other exists).
+    _BAD = {None, "", "none", "null", "n/a", "na", "unknown",
+            "unspecified", "-", "not found"}
     return {
         k: str(v) for k, v in parsed.items()
         if k in valid_labels and v not in _BAD and str(v).strip().lower() not in _BAD
@@ -285,7 +294,11 @@ async def fallback_extract_attributes(
         return {}
 
     valid_labels = {s.label for s in slots}
-    _BAD = {None, "", "none", "null", "n/a", "na", "unknown", "unspecified", "-"}
+    # KEEP IN SYNC with extract_attributes()'s _BAD set above. "not found"
+    # is the 8B extractor's stock absence phrase -- see the comment there
+    # for the observation scan that justified adding it.
+    _BAD = {None, "", "none", "null", "n/a", "na", "unknown",
+            "unspecified", "-", "not found"}
     return {
         k: str(v) for k, v in parsed.items()
         if k in valid_labels and v not in _BAD and str(v).strip().lower() not in _BAD
