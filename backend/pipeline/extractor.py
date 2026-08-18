@@ -260,7 +260,25 @@ async def fallback_extract_attributes(
 
     Caching: raw completion cached under namespace='extract_fallback'.
     Re-runs of the same prompt+model are free; this is the main lever
-    for iterating accuracy without burning the daily quota wall."""
+    for iterating accuracy without burning the daily quota wall.
+
+    Legacy-cache fallback: manufacturer_name is embedded in this prompt's
+    text (see _build_fallback_prompt), so a row whose manufacturer newly
+    resolves to something real -- e.g. entity_resolver's ADC secondary-
+    signal disambiguation -- gets a DIFFERENT prompt, and therefore a
+    different cache key, than whatever this exact row was extracted under
+    before its manufacturer resolved. GROQ_EXTRACT_MODEL is intentionally
+    pinned to a decommissioned model (see config.py's rationale), so any
+    fresh/uncached prompt returns nothing at all -- a manufacturer
+    resolution fix could silently turn a previously-cached real extraction
+    into an empty one purely by changing the prompt text, with no change
+    to the underlying product. If the current prompt misses, we also check
+    the cache under the "unknown manufacturer" version of this exact
+    prompt (what it would have been before resolution) and use that
+    instead of accepting empty. This only ever serves data that was
+    already sitting in the cache -- it triggers no new API call and
+    changes nothing for a row whose manufacturer was already known when
+    it was first cached."""
     slots = get_template(classpath)
     if not slots or not part_desc:
         return {}
@@ -271,6 +289,15 @@ async def fallback_extract_attributes(
     # entire reason the cache exists.
     skip_live = quota_is_exhausted(model_name)
     prompt = _build_fallback_prompt(part_desc, classpath, manufacturer_name, slots)
+
+    legacy_raw = None
+    if manufacturer_name:
+        legacy_prompt = _build_fallback_prompt(part_desc, classpath, None, slots)
+        if legacy_prompt != prompt:
+            legacy_hash = llm_cache._hash_prompt(
+                _FALLBACK_SYSTEM_PROMPT, legacy_prompt, 0, 600, "json_object", model_name,
+            )
+            legacy_raw = llm_cache.get("extract_fallback", legacy_hash, model_name)
 
     async def _live() -> str | None:
         if skip_live:
@@ -340,6 +367,13 @@ async def fallback_extract_attributes(
         response_format="json_object",
         live_fn=_live,
     )
+    if raw is None and legacy_raw is not None:
+        logger.info(
+            "fallback_extract_attributes(): current-manufacturer prompt missed "
+            "cache and the live model is unavailable -- serving the cached "
+            "'unknown manufacturer' extraction for this row instead of empty."
+        )
+        raw = legacy_raw
     if raw is None:
         return {}
     try:

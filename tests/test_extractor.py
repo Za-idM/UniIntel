@@ -25,7 +25,16 @@ from groq import PermissionDeniedError
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "backend"))
 
-from pipeline.extractor import extract_attributes, reconcile  # noqa: E402
+from config import GROQ_EXTRACT_MODEL  # noqa: E402
+from persistence import llm_cache  # noqa: E402
+from persistence.db import init_db  # noqa: E402
+from pipeline.extractor import (  # noqa: E402
+    _FALLBACK_SYSTEM_PROMPT,
+    _build_fallback_prompt,
+    extract_attributes,
+    fallback_extract_attributes,
+    reconcile,
+)
 from pipeline.rule_preextractor import extract_uom_priors  # noqa: E402
 
 
@@ -96,6 +105,65 @@ def test_extraction_403_returns_empty_dict_not_raise():
     assert result == {}
 
 
+def test_fallback_extract_serves_legacy_unknown_manufacturer_cache_on_miss():
+    """Regression pin for the ADC-manufacturer-fix side effect found
+    2026-08-19: manufacturer_name is embedded in fallback_extract_attributes'
+    prompt text, so a row whose manufacturer newly resolves to something
+    real (e.g. entity_resolver's ADC secondary-signal disambiguation) gets
+    a DIFFERENT cache key than whatever this exact row was cached under
+    when its manufacturer was still unknown -- and GROQ_EXTRACT_MODEL is
+    intentionally pinned to a decommissioned model, so a fresh/uncached
+    prompt returns nothing. This seeds a cache entry under the "unknown
+    manufacturer" version of a prompt (simulating a real historical cache
+    hit from before manufacturer resolution), then calls
+    fallback_extract_attributes with a resolved manufacturer_name AND a
+    client that raises like the dead model does -- the legacy cache entry
+    must still be served instead of an empty dict."""
+    init_db()
+    classpath = LED_CLASSPATH
+    part_desc = "adc-legacy-cache-probe-unique-9f3e1c 8W Led T9 Med 27k"
+    from leaf_templates.registry import get_template
+    slots = get_template(classpath)
+
+    legacy_prompt = _build_fallback_prompt(part_desc, classpath, None, slots)
+    legacy_hash = llm_cache._hash_prompt(
+        _FALLBACK_SYSTEM_PROMPT, legacy_prompt, 0, 600, "json_object", GROQ_EXTRACT_MODEL,
+    )
+    seeded_response = json.dumps({"Wattage": "8", "Bulb Shape Code": "T9"})
+    llm_cache.set_("extract_fallback", legacy_hash, GROQ_EXTRACT_MODEL, seeded_response)
+    try:
+        result = asyncio.run(
+            fallback_extract_attributes(
+                part_desc, classpath, "Some Newly Resolved Manufacturer", client=_403_client(),
+            )
+        )
+        assert result == {"Wattage": "8", "Bulb Shape Code": "T9"}
+    finally:
+        from persistence.db import get_connection
+        conn = get_connection()
+        try:
+            conn.execute(
+                "DELETE FROM llm_cache WHERE namespace='extract_fallback' AND prompt_hash=? AND model=?",
+                (legacy_hash, GROQ_EXTRACT_MODEL),
+            )
+            conn.commit()
+        finally:
+            conn.close()
+
+
+def test_fallback_extract_no_legacy_cache_still_returns_empty_not_crash():
+    """No manufacturer-less cache entry exists for this row at all (a
+    genuinely new product, never seen before) -- must degrade to {}, same
+    as the pre-existing 403/dead-model behaviour, not raise or fabricate."""
+    result = asyncio.run(
+        fallback_extract_attributes(
+            "adc-legacy-cache-probe-truly-novel-2b7a", LED_CLASSPATH,
+            "Some Other Manufacturer", client=_403_client(),
+        )
+    )
+    assert result == {}
+
+
 def test_reconcile_emits_full_27_slot_template_in_order():
     reconciled = reconcile(LED_CLASSPATH, _S21354_LIVE_VERIFIED_EXTRACTION, [])
     assert len(reconciled) == 27
@@ -122,6 +190,8 @@ if __name__ == "__main__":
     test_extraction_drops_keys_not_in_the_template()
     test_extraction_drops_empty_values()
     test_extraction_403_returns_empty_dict_not_raise()
+    test_fallback_extract_serves_legacy_unknown_manufacturer_cache_on_miss()
+    test_fallback_extract_no_legacy_cache_still_returns_empty_not_crash()
     test_reconcile_emits_full_27_slot_template_in_order()
     test_reconcile_prefers_rule_prior_uom_when_value_matches()
     print("All extractor tests passed.")
