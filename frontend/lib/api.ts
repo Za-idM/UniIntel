@@ -181,3 +181,23 @@ export async function getEvaluation(jobId: string): Promise<EvaluateResponse> {
   const res = await fetch(`${API_BASE}/api/evaluate/${jobId}`);
   return asJson<EvaluateResponse>(res);
 }
+
+// GET /api/export/{jobId} -> 252-col delivery CSV streamed from SQLite.
+// Returns the body as a Blob so the Download button in UploadView can build
+// an object URL + temp <a download> for a single-click save -- mirroring the
+// CLI script output byte-for-byte, since both paths share the row mapping in
+// backend/export/delivery_csv.py (EnrichedProduct.raw_input_cols keeps the
+// raw "-- Unbranded --" / "-- No Unilog Brand --" input cells intact
+// end-to-end so the sponsor's original placeholder text round-trips verbatim).
+// Note: error handling is intentionally different from asJson<T> above -- the
+// route returns text/csv on success, but on a 4xx/5xx FastAPI sends a JSON
+// error body, so we sniff res.ok and surface the raw text either way without
+// forcing a JSON parse on a buffer that may be binary-grade CSV bytes.
+export async function exportJob(jobId: string): Promise<Blob> {
+  const res = await fetch(`${API_BASE}/api/export/${jobId}`);
+  if (!res.ok) {
+    const detail = await res.text().catch(() => "");
+    throw new Error(`${res.status} ${res.statusText}${detail ? `: ${detail}` : ""}`);
+  }
+  return res.blob();
+}

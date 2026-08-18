@@ -1,4 +1,11 @@
 {
+  "leviton.com": {
+    "confirmed_on": 5,
+    "manual": true,
+    "mpn_transform": "_leviton_short_sku",
+    "of_total": 5,
+    "template": "https://leviton.com/products/{mpn}"
+  },
   "makitatools.com": {
     "confirmed_on": 5,
     "of_total": 5,

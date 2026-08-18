@@ -11,6 +11,11 @@ UPCs / weights / item features / spec sheet URLs we never fetched):
   * Pass-through (from the 6-col input row): Part_Desc, E1_Brand,
     Unilog_Brand, DIB_Brand, Part_Manuf -- these are the sponsor's raw
     input, so the submission must round-trip them verbatim.
+    -- the verbatim raw input is held on EnrichedProduct.raw_input_cols
+    (populated by the orchestrator pre-cleaner so "-- Unbranded --" / "-- No
+    Unilog Brand --" / "-- No DIB Brand --" placeholders survive -- cleaner.py
+    normalizes those to None, so reading post-cleaned brand_name would
+    silently empty ~2554 brand cells per submission on the 1000-row file).
   * Populated by the pipeline:
       MFR URL                 <- product.mfr_url
       Ref URL 1..5            <- product.ref_urls (left-padded with "")
@@ -50,6 +55,13 @@ UPCs / weights / item features / spec sheet URLs we never fetched):
       These are all genuinely missing without enrichment reach; emitting
       "" is the contract, not a gap to paper over.
 
+The cell-level row mapping is shared with the live API route through
+backend/export/delivery_csv.py -- the byte-for-byte equality of a script
+run (this file) and an API + UI upload run (POST /api/process -> GET
+/api/export/{job_id}) is the proof the refactor didn't silently drift the
+252-col layout. The orchestrator's raw_input_cols on EnrichedProduct is
+what makes that equality hold end-to-end for the brand/pass-through cols.
+
 Running:
     python scripts/export_1000_submission.py
     python scripts/export_1000_submission.py --limit 50     # quick smoke
@@ -70,92 +82,23 @@ sys.path.insert(0, str(ROOT / "backend"))
 from persistence.db import init_db  # noqa: E402
 from persistence.llm_cache import hit_miss_summary, reset_hit_miss  # noqa: E402
 from pipeline.orchestrator import process_job  # noqa: E402
+from export.delivery_csv import (  # noqa: E402
+    INPUT_COLS, build_output_row, build_failed_row_stub, load_template_columns,
+)
 
 INPUT_CSV = ROOT / "data" / "input" / "scale_input_1000.csv"
-TEMPLATE_CSV = ROOT / "data" / "reference" / "delivery_format_template.csv"
 OUT_DIR = ROOT / "data" / "output"
 
-# The 6 columns the scale_input file has -- the ONLY input we get for the
-# blind 1000-row submission. Same set evaluate_orchestrator_full.py uses
-# after the E.4 crib-col drop.
-INPUT_COLS = [
-    "Mfg_Part_Num", "Part_Desc", "E1_Brand", "Unilog_Brand", "DIB_Brand", "Part_Manuf",
-]
-
-# Delivery columns populated by the orchestrator (everything else stays "").
-DESC_FIELD_BY_COL = {
-    "MOBILE_DESC": "mobile_desc",
-    "INVOICE_DESC": "invoice_desc",
-    "SHORT_DESC": "short_desc",
-    "LONG_DESC1": "long_desc1",
-    "RETAIL_DESC": "retail_desc",
-    "MARKETING_DESCRIPTION": "marketing_description",
-}
-
-MAX_ATTRIBUTE_SLOTS = 50  # template reserves 50 triplets; leaf templates vary (LED=27)
-
-
-def load_template_columns() -> list[str]:
-    """Read row 1 of delivery_format_template.csv -> the 252-col header."""
-    with open(TEMPLATE_CSV, encoding="utf-8-sig") as f:
-        reader = csv.reader(f)
-        return next(reader)
+# INPUT_COLS is imported from the shared module so the script and the API
+# route agree on the 6 pass-through column names. Re-exported here purely
+# so the existing `out_stub_for_failed_input` helper (now also imported)
+# can keep the same shape for anyone reading the script file historically.
 
 
 def load_input_rows(limit: int | None = None) -> list[dict]:
     with open(INPUT_CSV, encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
     return rows[:limit] if limit else rows
-
-
-def build_output_row(
-    product,
-    input_row: dict,
-    columns: list[str],
-) -> dict:
-    """Map an EnrichedProduct + its raw input row -> a 252-key dict."""
-    out = {col: "" for col in columns}
-
-    # --- pass-through raw input (cols 11-16, 12..15 with 1-idx in header) ---
-    out["Mfg_Part_Num"] = product.mfg_part_num or input_row.get("Mfg_Part_Num", "")
-    out["Part_Desc"] = product.part_desc or input_row.get("Part_Desc", "")
-    out["E1_Brand"] = input_row.get("E1_Brand", "")
-    out["Unilog_Brand"] = input_row.get("Unilog_Brand", "")
-    out["DIB_Brand"] = input_row.get("DIB_Brand", "")
-    out["Part_Manuf"] = product.part_manuf_raw or input_row.get("Part_Manuf", "")
-
-    # --- pipeline-resolved identity ---
-    out["MANUFACTURER_NAME"] = product.manufacturer_name or ""
-    out["BRAND_NAME"] = product.brand_name or ""
-    out["MANUFACTURER_PART_NUMBER"] = product.mfg_part_num or ""
-    out["Classpath"] = product.classpath or ""
-
-    # --- source / evidence URLs ---
-    out["MFR URL"] = product.mfr_url or ""
-    for i, url in enumerate(product.ref_urls or [], start=1):
-        col = f"Ref URL {i}"
-        if col in out:
-            out[col] = url
-
-    # --- descriptions (Stage 5 output; never invented -- S5 returns "" / None
-    #     without enrichment evidence, so this just writes what S5 produced) ---
-    d = product.descriptions
-    for col, field in DESC_FIELD_BY_COL.items():
-        out[col] = getattr(d, field) or ""
-
-    # --- attributes: ATTRIBUTE_LABEL n / VALUE n / UOM n ---
-    # product.attributes is ordered by slot (1-indexed); emit label even
-    # when value is empty (the slot-occupancy rule). Slots beyond the leaf
-    # template's length stay "" -- do NOT invent labels for empty slots.
-    for attr in (product.attributes or []):
-        n = attr.slot
-        if n < 1 or n > MAX_ATTRIBUTE_SLOTS:
-            continue
-        out[f"ATTRIBUTE_LABEL {n}"] = attr.label or ""
-        out[f"ATTRIBUTE_VALUE {n}"] = attr.value or ""
-        out[f"ATTRIBUTE_UOM {n}"] = attr.uom or ""
-
-    return out
 
 
 def write_csv(rows: list[dict], columns: list[str], out_path: Path) -> None:
@@ -216,11 +159,11 @@ def main():
             # product is an enrichment failure, not a schema failure. The
             # row will have empty manufacturer/classpath/attributes -- per
             # "never invent", that's the honest output for a failed row.
-            stub = out_stub_for_failed_input(input_row, columns)
+            stub = build_failed_row_stub(input_row, columns)
             out_rows.append(stub)
             continue
         rows_with_output += 1
-        out_rows.append(build_output_row(product, input_row, columns))
+        out_rows.append(build_output_row(product, columns))
 
     out_path = Path(args.out) if args.out else (OUT_DIR / "submission_1000.csv")
     write_csv(out_rows, columns, out_path)
@@ -238,17 +181,6 @@ def main():
     print(f"Output CSV:           {out_path}")
     print(f"LLM cache hits/misses: {hits}/{misses} "
           f"(hit ratio: {ratio:.1f}% of {total_calls} calls)")
-
-
-def out_stub_for_failed_input(input_row: dict, columns: list[str]) -> dict:
-    """A row whose pipeline product is missing still emits the round-trip
-    raw input columns + a valid Classpath-less/attribute-less row -- we
-    do NOT invent a classpath or attributes. Same "never invent" rule."""
-    out = {col: "" for col in columns}
-    for k in INPUT_COLS:
-        if k in out:
-            out[k] = input_row.get(k, "")
-    return out
 
 
 if __name__ == "__main__":

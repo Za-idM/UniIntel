@@ -71,14 +71,19 @@ def test_extraction_drops_keys_not_in_the_template():
     """A JSON-schema-forced extraction must not accept invented/off-template
     keys even if the model hallucinates one."""
     client = _mock_client({"Wattage": "8", "Not A Real Slot Label": "should be dropped"})
-    result = asyncio.run(extract_attributes("text", LED_CLASSPATH, client=client))
+    # Unique evidence_text per test (not re-used "text") so each test gets a
+    # distinct cache key -- otherwise cached_call() returns a prior test's
+    # stored completion and the mock client is never invoked, defeating the
+    # isolation this test was written for. Pre-existing fragility surfaced
+    # 2026-08-17 while validating the dynamic-upload extractor.py Fix2.
+    result = asyncio.run(extract_attributes("text-drops-keys-unique", LED_CLASSPATH, client=client))
     assert result == {"Wattage": "8"}
     assert "Not A Real Slot Label" not in result
 
 
 def test_extraction_drops_empty_values():
     client = _mock_client({"Wattage": "8", "Lumens": "", "Bulb Shape": None})
-    result = asyncio.run(extract_attributes("text", LED_CLASSPATH, client=client))
+    result = asyncio.run(extract_attributes("text-drops-empty-unique", LED_CLASSPATH, client=client))
     assert result == {"Wattage": "8"}
 
 
@@ -87,7 +92,7 @@ def test_extraction_403_returns_empty_dict_not_raise():
     classify() does -- reconcile() already handles an empty dict
     gracefully (falls back to rule_priors), so a 403 here should degrade
     to {} rather than propagate and take the row down with it."""
-    result = asyncio.run(extract_attributes("text", LED_CLASSPATH, client=_403_client()))
+    result = asyncio.run(extract_attributes("text-403-probe-unique", LED_CLASSPATH, client=_403_client()))
     assert result == {}
 
 

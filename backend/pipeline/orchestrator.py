@@ -35,13 +35,14 @@ from config import llm_configured
 from pipeline.cleaner import clean_row
 from pipeline.classifier import rule_based_classify, llm_classify, ClassificationResult
 from pipeline.description_gen import (
-    invoice_desc, mobile_desc, short_desc, retail_desc, generate_prose_descriptions,
+    invoice_desc, mobile_desc, short_desc, retail_desc, long_desc1, generate_prose_descriptions,
 )
 from pipeline.entity_resolver import resolve_manufacturer
 from pipeline.enricher import enrich, EnrichmentResult, BROWSER_HEADERS, TIMEOUT
 from pipeline.extractor import extract_attributes, fallback_extract_attributes, reconcile
 from pipeline.llm_client import GroqClassifierClient
 from pipeline.rule_preextractor import extract_uom_priors
+from pipeline.satco_pdf import parse_satco_pdf_with_features, parse_satco_spec_chart_highbay
 from schemas.product import AttributeValue, Descriptions, EnrichedProduct, ValidationResult
 from validation.confidence import confidence_for_product
 from validation.validators import run_validators
@@ -51,6 +52,61 @@ logger = logging.getLogger(__name__)
 BRAND_FIELDS = ("E1_Brand", "Unilog_Brand", "DIB_Brand")
 CONCURRENCY = 4
 SNIPPET_CONTEXT_CHARS = 80
+
+# The 6 input columns persisted verbatim (pre-cleaner) into EnrichedProduct.
+# raw_input_cols: the export path must round-trip "-- Unbranded --" /
+# "-- No Unilog Brand --" / "-- No DIB Brand --" placeholders verbatim, which
+# cleaner.py maps to None -- so the orchestrator captures the raw row BEFORE
+# clean_row runs. See EnrichedProduct.raw_input_cols docstring + scripts/
+# export_1000_submission.py's caveat comment for the round-trip guarantee.
+_INPUT_COLS = (
+    "Mfg_Part_Num", "Part_Desc", "E1_Brand",
+    "Unilog_Brand", "DIB_Brand", "Part_Manuf",
+)
+
+
+def _capture_raw_input(row: dict) -> dict[str, str]:
+    """Slice the cleaned/persisted input row down to the 6 known input
+    columns, as strings. Missing keys stay absent rather than "" -- means
+    a pre-change cached SQLite row that lacks raw_input_cols altogether
+    still parses (``raw_input_cols == {}``) and the exporter falls through
+    to "" for the 3 brand cells, matching the documented accepted
+    degradation for old data."""
+    return {k: str(row[k]) for k in _INPUT_COLS if k in row}
+
+# The leaf Classpath that pipeline.satco_pdf knows how to direct-map.
+# Kept here rather than in satco_pdf.py so a future addition (another
+# classpath Satco publishes PDFs for) needs only a parser update + an
+# update here, not a schema change.
+_LED_CLASSPATH = "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs"
+
+# Satco High Bay Fixtures: a per-MPN "Spec_Chart.pdf" is hosted at a
+# constructible URL on assets.satco.com that gives a deterministic
+# {wattages, CCT columns, lumens matrix} for the SKU. We fetch it
+# opportunistically as a Stage-3 supplement AFTER the LLM-over-page-text
+# extraction has run (the HTML product page already fills ~17/26 slots on
+# its own); the PDF overrides exactly two slots the LLM tends to flatten
+# to single values ("Fixture Wattage=150" instead of "150/175/200" and
+# "Color Temperature=4000 K" instead of the full CCT set). See the
+# module docstring of pipeline.satco_pdf.parse_satco_spec_chart_highbay
+# for the rationale.
+_HB_CLASSPATH = "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures"
+_SATCO_CANONICAL_NAME = "Satco Products, Inc"
+_SATCO_SPEC_CHART_URL_TEMPLATE = (
+    "https://assets.satco.com/media-prod/image/upload/Certs/{mpn}_Spec_Chart.pdf"
+)
+
+
+def _satco_spec_chart_url(mpn: str) -> str:
+    """Constructible URL for Satco's per-SKU Spec_Chart.pdf. Returns the
+    URL unconditionally -- the caller probes it with a HEAD/GET and
+    treats a 404 as 'no Spec_Chart available for this MPN', which is the
+    common case outside the few UFO Highbay SKUs that actually carry one
+    (65-771R2, 65-771R3 observed so far). No prefetched MPN allowlist
+    because the URL template produces a real PDF even for MPNs that
+    aren't in the GT 200 row set (per row would 200 OK if Satco has one
+    -- 404 otherwise), and prefetching thousands would be wasteful."""
+    return _SATCO_SPEC_CHART_URL_TEMPLATE.format(mpn=mpn)
 
 
 def _evidence_snippet(evidence_text: str | None, value: str) -> str | None:
@@ -89,17 +145,37 @@ async def _generate_descriptions(
     classpath: str | None,
     attributes: list[AttributeValue],
     llm_configured_: bool,
+    item_features: list[str] | None = None,
 ) -> Descriptions:
     """Stage 5: INVOICE/MOBILE/SHORT/RETAIL are deterministic GT-mined
-    templates (description_gen.py); LONG_DESC1/MARKETING_DESCRIPTION are
-    LLM-generated prose fed only the reconciled attributes, so they can't
-    invent a spec that isn't already validated. Without a classpath there's
-    no leaf template to key off of, so every field stays empty rather than
-    guessing at a format."""
+    templates (description_gen.py); LONG_DESC1 is a deterministic GT-mined
+    template for LED Light Bulbs and LLM-generated prose for every other
+    leaf. MARKETING_DESCRIPTION is LLM-generated prose fed only the
+    reconciled attributes (so it can't invent a spec that isn't already
+    validated) -- except for LED Light Bulbs, where it ships EMPTY by
+    design: Satco's spec sheets carry no marketing prose and Philips'
+    per-product copy is unreachable (Stage-3b deferred), so an LLM would
+    be inventing text that GT shows should be empty. Without a classpath
+    there's no leaf template to key off of, so every field stays empty
+    rather than guessing at a format."""
     if not classpath:
         return Descriptions()
 
     attrs = {a.label: a.value or "" for a in attributes}
+
+    if classpath == _LED_CLASSPATH:
+        # LED Light Bulbs: deterministic LONG_DESC1 (GT Option B), EMPTY
+        # MARKETING_DESCRIPTION (evidence-backed -- see docstring), and any
+        # item_features harvested by the Satco PDF direct-mapper.
+        return Descriptions(
+            invoice_desc=invoice_desc(mpn, attrs, classpath) or None,
+            mobile_desc=mobile_desc(mpn, manufacturer_name, attrs, classpath) or None,
+            short_desc=short_desc(mpn, manufacturer_name, attrs, classpath) or None,
+            retail_desc=retail_desc(attrs, classpath) or None,
+            long_desc1=long_desc1(mpn, manufacturer_name, attrs, classpath) or None,
+            marketing_description=None,
+            item_features=item_features or [],
+        )
 
     prose: dict[str, str] = {}
     if llm_configured_ and any(attrs.values()):
@@ -162,7 +238,83 @@ async def process_row(
 
     llm_extracted: dict[str, str] = {}
     extraction_origin = None
-    if classpath and enrichment.status == "FETCHED" and enrichment.evidence_text and llm_configured():
+    # Satco spec-sheet PDF shortcut: when the enricher fetched one of the
+    # hard-coded Satco mirror URLs it returns status=FETCHED with
+    # evidence_bytes set (a %PDF body) rather than evidence_text (HTML
+    # page text). For LED Light Bulbs rows we run the deterministic
+    # direct-mapper in pipeline.satco_pdf over those bytes -- this is
+    # cheaper, faster and (measured on the 3 GT Satco LED rows) more
+    # accurate than the LLM Stage 4 extraction path, because the PDF is
+    # already labelled key-value data. The result is fed to reconcile()
+    # identically to an LLM extraction, so all downstream pipeline
+    # behaviour (slot ordering, rule_prior fallback, evidence provenance)
+    # is unchanged.
+    #
+    # pdf_direct_mapped guards the second `if` block below from
+    # re-running the LLM Stage 4 extraction over the same row. Without
+    # it, when enrich() returns BOTH evidence_bytes (the %PDF body) AND
+    # evidence_text (a short preview string built by enricher.py), the
+    # PDF-direct-map result is silently overwritten by the LLM cache-hit
+    # / fallback extraction -- observed regression: Satco LED row field
+    # accuracy dropped from ~91% to 31.6% on S21354 because the prior
+    # llm_extracted dict was clobbered by an LLM path that never even
+    # saw the PDF (it scored evidence_text/Part_Desc, not the bytes).
+    pdf_direct_mapped = False
+    satco_item_features: list[str] = []
+    if (
+        classpath == _LED_CLASSPATH
+        and enrichment.status == "FETCHED"
+        and enrichment.evidence_bytes
+    ):
+        try:
+            llm_extracted, satco_item_features = parse_satco_pdf_with_features(
+                enrichment.evidence_bytes, mpn
+            )
+        except Exception:
+            logger.exception(
+                "parse_satco_pdf() raised for mpn=%r -- treating as empty",
+                mpn,
+            )
+            llm_extracted = {}
+            satco_item_features = []
+        logger.debug(
+            "mpn=%r satco_pdf direct-map keys=%s",
+            mpn, list(llm_extracted.keys()),
+        )
+        if llm_extracted:
+            # Successful PDF direct-map: short-circuit Stage 4 LLM
+            # entirely for this row -- the PDF is already labelled
+            # key-value data; the LLM extraction path operates on the
+            # evidence_text preview (or Part_Desc fallback), neither of
+            # which carries the PDF's structured content, so it would
+            # only degrade the result.
+            extraction_origin = "web_evidence"
+            pdf_direct_mapped = True
+        else:
+            # If the PDF parse yielded nothing usable (e.g. a mirror URL
+            # decayed into serving HTML instead of %PDF and slipped past
+            # enricher.py's %PDF-body guard) fall through to the LLM path
+            # / desc-only fallback below, rather than leaving the row
+            # empty. Reset enrichment to FETCH_FAILED so the LLM block's
+            # `FETCHED + evidence_text` guard below fails; the elif-desc
+            # fallback then engages.
+            logger.warning(
+                "mpn=%r satco_pdf direct-map returned 0 slots; falling back to LLM/desc path",
+                mpn,
+            )
+            enrichment = EnrichmentResult(
+                status="FETCH_FAILED",
+                source_url=enrichment.source_url,
+                http_status=enrichment.http_status,
+            )
+
+    if (
+        not pdf_direct_mapped
+        and classpath
+        and enrichment.status == "FETCHED"
+        and enrichment.evidence_text
+        and llm_configured()
+    ):
         try:
             llm_extracted = await extract_attributes(enrichment.evidence_text, classpath)
         except Exception:
@@ -196,7 +348,7 @@ async def process_row(
                 "mpn=%r classpath=%r web_extract_empty -> fallback_extract_keys=%s",
                 mpn, classpath, list(llm_extracted.keys()),
             )
-    elif classpath and part_desc and llm_configured():
+    elif not pdf_direct_mapped and classpath and part_desc and llm_configured():
         # Fallback: web fetch failed/blocked/no-URL -- extract what we can
         # from Part_Desc constrained by LOV allowed values. This lifts
         # attribute accuracy from ~0% to a usable baseline.
@@ -215,13 +367,79 @@ async def process_row(
             "mpn=%r classpath=%r enrichment.status=%s fallback_extract_keys=%s",
             mpn, classpath, enrichment.status, list(llm_extracted.keys()),
         )
-    else:
+    elif not pdf_direct_mapped:
+        # Neither web-extract nor desc-fallback engaged (no classpath, no
+        # LLM key, no Part_Desc). Skipped entirely when pdf_direct_mapped
+        # since Stage 4 was already done by the deterministic PDF mapper.
         logger.debug(
             "mpn=%r classpath=%r enrichment.status=%s NO EXTRACTION ATTEMPTED "
             "(classpath=%s part_desc=%s llm_configured=%s)",
             mpn, classpath, enrichment.status,
             bool(classpath), bool(part_desc), llm_configured(),
         )
+
+    # Satco High Bay Fixtures Spec_Chart.pdf supplement: the LLM-over-
+    # page-text path typically flattens the high-bay's multi-wattage /
+    # multi-CCT configurations to a single representative value (e.g.
+    # "Fixture Wattage=150" instead of the GT-expected "150/175/200").
+    # The SKUs in this leaf publish a per-MPN "Spec_Chart.pdf" at a
+    # constructible assets.satco.com URL containing the wattage/CCT/
+    # lumen matrix; the deterministic PDF parser recovers exactly the
+    # slash-separated multi-value formats GT carries. We MERGE the PDF
+    # output into llm_extracted rather than replacing the whole dict --
+    # the LLM stays authoritative for the ~24 other slots in the High
+    # Bay leaf template (Voltage Rating, CRI, Fixture Material, etc.),
+    # which the PDF doesn't cover. The PDF URL is recorded as the
+    # source_url for the 2 specifically-PDF-derived slots rather than
+    # the satco.com HTML page URL so V6 provenance traces to the actual
+    # artefact the value was read from.
+    spec_chart_source_urls: dict[str, str] = {}
+    if (
+        classpath == _HB_CLASSPATH
+        and manufacturer_name == _SATCO_CANONICAL_NAME
+        and http_client is not None
+    ):
+        spec_chart_url = _satco_spec_chart_url(mpn)
+        try:
+            response = await http_client.get(spec_chart_url)
+            if response.status_code == 200 and response.content[:4] == b"%PDF":
+                pdf_overrides = parse_satco_spec_chart_highbay(
+                    response.content, mpn,
+                )
+                if pdf_overrides:
+                    llm_extracted.update(pdf_overrides)
+                    spec_chart_source_urls = {
+                        label: spec_chart_url for label in pdf_overrides
+                    }
+                    if extraction_origin is None:
+                        # Page text wasn't usable (LLM failure?) but the
+                        # PDF gave us something -- mark the row web-
+                        # evidenced because the PDF was fetched from
+                        # the mfr's own CDN (assets.satco.com).
+                        extraction_origin = "web_evidence"
+                    logger.debug(
+                        "mpn=%r spec_chart_pdf_overrides_keys=%s",
+                        mpn, list(pdf_overrides.keys()),
+                    )
+            else:
+                logger.debug(
+                    "mpn=%r Spec_Chart.pdf not available (http=%s, head=%r)",
+                    mpn, response.status_code,
+                    response.content[:4] if response.content else b"<empty>",
+                )
+        except httpx.HTTPError as exc:
+            logger.debug(
+                "mpn=%r Spec_Chart.pdf fetch HTTPError: %r -- "
+                "LLM-derived attributes remain authoritative",
+                mpn, exc,
+            )
+        except Exception:
+            logger.exception(
+                "Unexpected error fetching/parsing Spec_Chart.pdf for "
+                "mpn=%r -- treating as not-applicable, LLM extraction "
+                "remains authoritative",
+                mpn,
+            )
 
     reconciled = reconcile(classpath, llm_extracted, rule_priors) if classpath else []
 
@@ -230,7 +448,17 @@ async def process_row(
         origin = slot["origin"]
         source_url = None
         evidence_text = None
-        if origin == "llm_extract" and extraction_origin == "web_evidence":
+        if origin == "llm_extract" and slot["label"] in spec_chart_source_urls:
+            # PDF-extracted value override (Satco High Bay Spec_Chart.pdf):
+            # the value came from assets.satco.com's PDF, NOT from the
+            # satco.com HTML product page, so its evidence / source_url
+            # points to the PDF URL rather than the page URL.
+            source_url = spec_chart_source_urls[slot["label"]]
+            evidence_text = (
+                f"[Satco Spec_Chart.pdf at {source_url}: parsed "
+                f"{slot['label']}={slot['value']}]"
+            )
+        elif origin == "llm_extract" and extraction_origin == "web_evidence":
             source_url = enrichment.source_url
             evidence_text = _evidence_snippet(enrichment.evidence_text, slot["value"])
         elif origin == "llm_extract" and extraction_origin == "desc_fallback":
@@ -251,7 +479,10 @@ async def process_row(
             )
         )
 
-    descriptions = await _generate_descriptions(mpn, manufacturer_name, classpath, attributes, llm_configured())
+    descriptions = await _generate_descriptions(
+        mpn, manufacturer_name, classpath, attributes, llm_configured(),
+        item_features=satco_item_features or None,
+    )
 
     # Build the populated product first so L4/L5 can compute against it
     # directly (the validators read attributes for provenance + LOV checks,
@@ -274,6 +505,7 @@ async def process_row(
         validation=ValidationResult(),
         confidence=0.0,
         confidence_band="LOW",
+        raw_input_cols=_capture_raw_input(row),
     )
 
     # L4: V1-V6 against the populated row. V2 applies LOV auto-repairs to
@@ -318,6 +550,7 @@ def _error_product(row: dict, job_id: str, exc: Exception) -> EnrichedProduct:
         part_desc=row.get("Part_Desc") or "",
         part_manuf_raw=row.get("Part_Manuf"),
         row_error=f"{type(exc).__name__}: {exc}",
+        raw_input_cols=_capture_raw_input(row),
     )
 
 

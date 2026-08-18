@@ -2,21 +2,23 @@
 Stage 5: description generation.
 
 Deterministic string templates (INVOICE_DESC, MOBILE_DESC, SHORT_DESC,
-RETAIL_DESC) mined from GT -- zero LLM calls, zero invented text, exact
-values pulled straight from the reconciled attribute set. LONG_DESC1 and
-MARKETING_DESCRIPTION are LLM-generated prose (Groq, JSON-schema forced)
-fed the same validated attribute JSON -- never given room to invent a
-value that isn't already in the reconciled attributes.
+RETAIL_DESC, LONG_DESC1) mined from GT -- zero LLM calls, zero invented
+text, exact values pulled straight from the reconciled attribute set.
+MARKETING_DESCRIPTION is the one remaining LLM-generated prose field
+(Groq, JSON-schema forced) fed the same validated attribute JSON -- never
+given room to invent a value that isn't already in the reconciled
+attributes -- and only for classpaths other than LED Light Bulbs (see
+long_desc1 docstring below for why LED marketing ships empty).
 
 RETAIL_DESC deviates from the original plan (LLM-generated) on GT
 evidence: it is exactly SHORT_DESC with the "{brand} {mpn} " prefix
-stripped in every sampled GT row. Implemented deterministically instead --
+stripped in every sampled GT row. LONG_DESC1 deviates on the same GT
+evidence: every one of the 22 LED rows follows the same deterministic
+per-slot structure ("{value} {uom} {label}" / bare "{value} {uom}" /
+"{label}: {value}"), not free prose -- so it is generated deterministically
+here rather than through the LLM. Implemented deterministically instead --
 free, exact, and the locked plan explicitly cares about cost-per-SKU
-(Section 8). LONG_DESC1 also shows a very regular per-slot structure in
-GT (not free prose) but generalizing that would mean extending the leaf
-template schema itself (per-slot format-type) -- bigger scope than this
-pass, so LONG_DESC1 stays LLM-generated per the plan; worth a follow-up
-look if LONG_DESC1 match quality matters more than MARKETING_DESCRIPTION's.
+(Section 8).
 """
 import asyncio
 import json
@@ -24,9 +26,16 @@ import logging
 from functools import lru_cache
 from pathlib import Path
 
-from groq import AsyncGroq, PermissionDeniedError, RateLimitError
+from groq import (
+    AsyncGroq,
+    BadRequestError,
+    NotFoundError,
+    PermissionDeniedError,
+    RateLimitError,
+)
 
 from config import GROQ_API_KEY, GROQ_DESC_MODEL
+from leaf_templates.registry import get_template
 from pipeline.llm_client import GROQ_70B_PACER, _make_http_client, is_daily_quota_exhausted, mark_quota_exhausted, quota_is_exhausted
 from persistence import llm_cache
 from pipeline.normalizer import format_uom
@@ -277,6 +286,102 @@ def retail_desc(attrs: dict[str, str], classpath: str | None = None) -> str:
     return _short_desc_body(attrs, classpath)
 
 
+# ---------------------------------------------------------------------------
+# LONG_DESC1 -- deterministic Option B (see module docstring)
+# ---------------------------------------------------------------------------
+# GT's LONG_DESC1 across all 22 LED rows is not free prose: it is
+# "{Brand} LED[ Filament] {Noun}" followed by a comma-separated chain of
+# per-slot tokens emitted in template slot 1->27 order (only slots with a
+# value). Each slot uses exactly one of these shapes (all GT-verified):
+#   "v_u_l"  -> "{value} {uom} {label}"    8 W Wattage, 800 Lumens Lumens,
+#                                          15000 hr Average Life
+#   "v_u"    -> "{value} {uom}"            (label elided) 120 V, 2700 K
+#   "v_l"    -> "{value} {label}"          Tube Bulb Shape, E26 Bulb Base Code
+#   "l_v"    -> "{label}: {value}"         Light Appearance: Warm White,
+#                                          Dimmable: Dimmable, Title 20
+#                                          Compliant: Title 20 Compliant
+#   "l_v_u"  -> "{label}: {value} {uom}"   Incandescent Wattage Equivalent: 60 W
+# Two slots override the label text itself (GT-verified):
+#   Bulb Finish -> "{value} Bulb"          Clear Bulb, Frosted Bulb
+#   Color Rendering Index (CRI) -> "{value} CRI"   90+ CRI
+_LONG_DESC1_SLOT_FORMAT: dict[str, str] = {
+    "Wattage": "v_u_l",
+    "Lumens": "v_u_l",
+    "Bulb Shape": "v_l",
+    "Bulb Shape Code": "v_l",
+    "Color Temperature": "v_u",
+    "Light Appearance": "l_v",
+    "Bulb Base": "v_l",
+    "Bulb Base Code": "v_l",
+    "Bulb Finish": "finish",
+    "Voltage Rating": "v_u",
+    "Color Rendering Index (CRI)": "cri",
+    "Bulb Designation": "v_l",
+    "Average Life": "v_u_l",
+    "Beam Angle": "v_u_l",
+    "Incandescent Wattage Equivalent": "l_v_u",
+    "Halogen Wattage Equivalent": "l_v_u",
+    "Fluorescent Wattage Equivalent": "l_v_u",
+    "HID Wattage Equivalent": "l_v_u",
+    "Dimmable": "l_v",
+    "Smart Compatible With": "l_v",
+    "Diameter": "v_u_l",
+    "Length": "v_u_l",
+    "Energy Star Certified": "l_v",
+    "Title 20 Compliant": "l_v",
+    "Title 24 Compliant": "l_v",
+    "Additional Information": "l_v",
+}
+_LONG_DESC1_DEFAULT_FORMAT = "v_l"  # Series etc.: "{value} {label}"
+
+
+def _long_desc1_token(slot, value: str) -> str:
+    """Render one slot's value into its LONG_DESC1 token."""
+    fmt = _LONG_DESC1_SLOT_FORMAT.get(slot.label, _LONG_DESC1_DEFAULT_FORMAT)
+    uom = slot.uom_hint or ""
+    if fmt == "v_u_l":
+        return f"{format_uom(value, uom, 'LONG_DESC1')} {slot.label}"
+    if fmt == "v_u":
+        return format_uom(value, uom, "LONG_DESC1")
+    if fmt == "finish":
+        return f"{value} Bulb"
+    if fmt == "cri":
+        return f"{value} CRI"
+    if fmt == "l_v":
+        return f"{slot.label}: {value}"
+    if fmt == "l_v_u":
+        return f"{slot.label}: {format_uom(value, uom, 'LONG_DESC1')}"
+    return f"{value} {slot.label}"
+
+
+def long_desc1(
+    mpn: str,
+    manufacturer_name: str | None,
+    attrs: dict[str, str],
+    classpath: str | None = None,
+) -> str:
+    """Deterministic LONG_DESC1 for LED Light Bulbs (GT Option B): the
+    GT-verified structure "{Brand} LED[ Filament] {Noun}, {slot chain}".
+    Zero LLM calls, values pulled straight from the reconciled attribute
+    set. Non-LED classpaths return "" -- no per-leaf template is mined for
+    them yet, so they stay on the LLM prose path."""
+    if classpath != LED_BULBS_CLASSPATH:
+        return ""
+
+    brand = _brand(manufacturer_name, "short")
+    noun = _noun(attrs, classpath)
+    prefix = f"{brand} {noun}".strip()
+
+    tokens = [prefix]
+    for slot in get_template(classpath):
+        value = (attrs.get(slot.label) or "").strip()
+        if not value:
+            continue
+        tokens.append(_long_desc1_token(slot, value))
+
+    return ", ".join(tokens)
+
+
 _PROSE_SYSTEM_PROMPT = """You write product descriptions for a B2B distributor catalog from a fixed \
 set of validated product attributes. Use ONLY the facts given -- never invent a spec, feature, or \
 certification that isn't in the attribute list. Reply with ONLY a JSON object with exactly two keys: \
@@ -352,8 +457,29 @@ async def generate_prose_descriptions(
                     await asyncio.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
                     continue
                 return None
-            except PermissionDeniedError:
-                logger.warning("Groq generate_prose_descriptions() got 403 PermissionDenied -- skipping prose generation")
+            except (PermissionDeniedError, NotFoundError, BadRequestError) as exc:
+                # NotFoundError (HTTP 404) is raised when the configured model
+                # has been decommissioned by Groq without advance notice -- this
+                # has now happened twice (llama-3.1-70b-versatile then
+                # llama-3.3-70b-versatile on 2026-08-16). BadRequestError covers
+                # the related "model_not_found" payload variant. Treating either
+                # as a graceful "prose unavailable" fail -- mark_quota_exhausted
+                # deactivates prose for the rest of this run so subsequent rows
+                # skip the live call, the row survives with deterministic
+                # invoice/mobile/short/retail fields intact, and long_desc1 /
+                # marketing_description stay empty rather than the 404
+                # propagating up through process_row into _bounded's outer
+                # except and wiping manufacturer_name + classpath + attributes
+                # (the 73.5% regression root cause).
+                logger.warning(
+                    "Groq generate_prose_descriptions() model %r unavailable "
+                    "(%s: %s) -- skipping prose generation for this run; "
+                    "rows will have empty long_desc1/marketing_description",
+                    model_name,
+                    type(exc).__name__,
+                    exc,
+                )
+                mark_quota_exhausted(model_name)
                 return None
         return None
 

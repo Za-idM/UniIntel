@@ -27,6 +27,11 @@ class Descriptions(BaseModel):
     long_desc1: str | None = None
     retail_desc: str | None = None
     marketing_description: str | None = None
+    # Deterministic spec-cell-derived feature bullets (Satco LED rows via
+    # pipeline.satco_pdf); empty for every other classpath. Written to the
+    # delivery template's ITEM_FEATURES_1..20 columns by the shared
+    # export/delivery_csv.py writer.
+    item_features: list[str] = Field(default_factory=list)
 
 
 class ValidationResult(BaseModel):
@@ -67,3 +72,21 @@ class EnrichedProduct(BaseModel):
     # best-effort stub (whatever was known before the failure), not a real
     # result. None for every normally-processed row.
     row_error: str | None = None
+
+    # Verbatim pre-cleaner values of the 6 input row columns (Mfg_Part_Num,
+    # Part_Desc, E1_Brand, Unilog_Brand, DIB_Brand, Part_Manuf). Populated
+    # by the orchestrator from the raw input row BEFORE cleaner.py maps
+    # the "-- Unbranded --" / "-- No Unilog Brand --" / "-- No DIB Brand --"
+    # placeholders to None. The export path (api/export.py + scripts/
+    # export_1000_submission.py via backend/export/delivery_csv.py) must
+    # round-trip those placeholder strings verbatim into the 252-col
+    # delivery template -- sponsors expect "-- Unbranded --", not "".
+    # persistence/schema.sql's products table does NOT carry the 3 raw
+    # brand cols as separate columns, so persisting them inside data_json
+    # via this field is the only way an SQLite-backed API route can emit
+    # the original input values without a migration. Empty {} on pre-
+    # change SQLite rows -- Pydantic default -- so old data_json blobs
+    # still parse and the API falls through to "" for brand cells (an
+    # accepted, documented degradation that only affects pre-change data;
+    # every fresh upload populates this field).
+    raw_input_cols: dict[str, str] = Field(default_factory=dict)

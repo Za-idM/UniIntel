@@ -19,7 +19,13 @@ import logging
 from functools import lru_cache
 from pathlib import Path
 
-from groq import AsyncGroq, PermissionDeniedError, RateLimitError
+from groq import (
+    AsyncGroq,
+    BadRequestError,
+    NotFoundError,
+    PermissionDeniedError,
+    RateLimitError,
+)
 
 from config import GROQ_API_KEY, GROQ_EXTRACT_MODEL
 from leaf_templates.registry import AttributeSlot, get_template
@@ -174,8 +180,34 @@ async def extract_attributes(
                     await asyncio.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
                     continue
                 return None
-            except PermissionDeniedError:
-                logger.warning("Groq extract_attributes() got 403 PermissionDenied -- skipping LLM extraction")
+            except (PermissionDeniedError, NotFoundError, BadRequestError) as exc:
+                # Same rationale as description_gen.py Fix 1: NotFoundError
+                # (HTTP 404) fires when Groq decommissions the configured
+                # model (seen live 2026-08-17 for llama-3.1-8b-instant).
+                # Without this catch the 404 propagates up to
+                # orchestrator.process_row's broad `except Exception: llm_extracted={}`,
+                # which DOES keep the row alive -- but it raised a full
+                # Python traceback to the logs on EVERY un-cached row, AND
+                # never called mark_quota_exhausted, so every subsequent
+                # row replicated the same ~0.4s dead-API round-trip with
+                # no fast-path. On a 1000-row judge-uploaded dataset with
+                # zero cache hits (the dynamic-upload requirement UniHack
+                # organizers confirmed live 2026-08-17), that's ~7 minutes
+                # of pure wasted round-trips plus 1000 stacktraces in the
+                # logs. Killing it here: catch -> mark_quota_exhausted ->
+                # log once -> return None -> {}/clean reconcile. After
+                # the first failed row, every subsequent row sees
+                # quota_is_exhausted()=True on the model_name and short-
+                # circuits `skip_live` without pacing or HTTP.
+                logger.warning(
+                    "Groq extract_attributes() model %r unavailable "
+                    "(%s: %s) -- skipping Stage 4 web-evidence LLM "
+                    "extraction for this run; reconciling from rule priors",
+                    model_name,
+                    type(exc).__name__,
+                    exc,
+                )
+                mark_quota_exhausted(model_name)
                 return None
         return None
 
@@ -271,8 +303,30 @@ async def fallback_extract_attributes(
                     await asyncio.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
                     continue
                 return None
-            except PermissionDeniedError:
-                logger.warning("Groq fallback_extract_attributes() got 403 -- skipping")
+            except (PermissionDeniedError, NotFoundError, BadRequestError) as exc:
+                # Mirrors the same handler added to extract_attributes()
+                # above -- NotFoundError (decommissioned GROQ_EXTRACT_MODEL
+                # llama-3.1-8b-instant live on 2026-08-17) propagates
+                # through llm_cache.cached_call's await live_fn() and would
+                # otherwise hit the orchestrator's broad `except Exception:`
+                # per row, costing ~0.4s of dead-API round-trip + a
+                # stacktrace in the logs every single time. The stage-3
+                # fetch failure path is the MOST-FIRED stage-4 path
+                # (`enrichment.status != "FETCHED"` is the majority case
+                # per CLAUDE.md: 19/22 Philips rows NO_URL + 3/22 Satco
+                # FETCH_FAILED), so this branch dominates dynamic-upload
+                # latency on rows where Stage 3 didn't reach a manufacturer
+                # page. Catching here + mark_quota_exhausted means later
+                # rows in the same job fail-fast without HTTP.
+                logger.warning(
+                    "Groq fallback_extract_attributes() model %r unavailable "
+                    "(%s: %s) -- skipping Stage 4 desc-fallback LLM "
+                    "extraction for this run; reconciling from rule priors",
+                    model_name,
+                    type(exc).__name__,
+                    exc,
+                )
+                mark_quota_exhausted(model_name)
                 return None
         return None
 
@@ -318,11 +372,21 @@ def reconcile(
     when the LLM found nothing for a uom-tagged slot (e.g. because Stage 3
     enrichment never fetched a page), a regex-extracted (value, uom) pair
     from Part_Desc fills it directly -- e.g. "8W" -> Wattage=8 with no
-    fetch required. Each prior is claimed by at most one slot, given to the
-    first matching slot in template order, so an ambiguous uom shared by
+    fetch required. Each prior is claimed by at most one slot, given to
+    the first matching slot in template order, so an ambiguous uom shared by
     multiple slots (LED's Wattage and Incandescent Wattage Equivalent both
     hint "W") resolves to the more directly-named one rather than being
-    applied twice."""
+    applied twice.
+
+    LLM extraction sometimes keeps the UOM in the value (e.g. "125V" /
+    "60Hz" / "1 hp" for Leviton GFCI rows) despite prompt instructions
+    not to. When the slot has a registered uom_hint, a trailing suffix
+    matching that hint is stripped here so the value lands numeric and
+    matches GT's representation. The UOM lives in the slot's `uom`
+    field, not the value. See `_strip_attribute_uom` for the conservative
+    guards (remainder must be numeric, no mid-word stripping). This is a
+    Stage-4 post-processor -- V3 (description UOM) handles a different
+    output contract downstream."""
     slots = get_template(classpath)
     prior_uom_by_value = {p["value"]: p["uom"] for p in rule_priors}
     priors_by_uom: dict[str, list[str]] = {}
@@ -332,6 +396,14 @@ def reconcile(
     result = []
     for slot in slots:
         value = llm_extracted.get(slot.label, "")
+        # Strip trailing UOM suffix the LLM may have inappropriately kept
+        # (e.g. "125V" -> "125" for a V-hinted slot). Conservative: only
+        # fires when the remainder is numeric (after stripping) so a
+        # genuine text value like "Var" can't be mis-stripped. No-op for
+        # values that don't end with the slot's UOM (the LED direct-map
+        # path already sanitises upstream so this is dead-code there).
+        if value and slot.uom_hint:
+            value = _strip_attribute_uom(value, slot.uom_hint)
         uom = slot.uom_hint if value else ""
         origin = "llm_extract" if value else None
         if value in prior_uom_by_value:
@@ -345,3 +417,63 @@ def reconcile(
             origin = "rule_prior"
         result.append({"slot": slot.slot, "label": slot.label, "value": value, "uom": uom, "origin": origin})
     return result
+
+
+import re as _re
+
+
+def _strip_attribute_uom(value: str, uom_hint: str) -> str:
+    """Strip a trailing UOM suffix the LLM may have kept inside the value
+    (e.g. "125V" / "60Hz" / "1 hp" -> "125" / "60" / "1"), keyed on the
+    slot's registered uom_hint. The UOM belongs in the slot's `uom`
+    field, not the value itself.
+
+    Conservative guards so we never damage a value we're not sure about:
+      * Remainder must still look numeric / range / fraction-y (digits,
+        dots, dashes, slashes, commas, spaces). A textual remainder
+        like "Maximum Continuous" -> strip would yield a non-numeric
+        remainder and we leave the value untouched.
+      * The UOM must match the *suffix* of the value (case-insensitive,
+        optional preceding whitespace). It can't match mid-word -- a
+        value of "Var" with uom_hint "V" wouldn't have its "ar" stolen.
+      * When uom_hint is itself multi-word ("deg C", "lb. ft."), the
+        regex repeats each token once with optional whitespace, so a
+        realistic space-separated suffix ("125 deg C") and a compact one
+        ("125°C") need the tokeniser -- the degenerate case is that the
+        structurally-splitting match fails and we leave the value as-is.
+
+    Mirrors what satco_pdf._strip_uom does for the PDF direct-map path;
+    this is left intentionally narrower because the LLM is more chaotic
+    than a controlled PDF text layer and we'd rather under-strip than
+    silently corrupt a value."""
+    if not value or not uom_hint:
+        return value
+    v = value.strip()
+    if not v:
+        return value
+
+    # Build a regex that matches <-numeric-remainder>(<whitespace>*<uom_hint>)$
+    # re.escape handles chars like "$" or "/" in uom_hint; the \s* absorbs
+    # the optional space between value and UOM.
+    hint = _re.escape(uom_hint.strip())
+    pattern = _re.compile(
+        r"^(.+?)\s*" + hint + r"\s*$",
+        _re.IGNORECASE,
+    )
+    m = pattern.match(v)
+    if not m:
+        return value
+    remainder = m.group(1).strip()
+    if not remainder:
+        return value
+    # Numeric / range / fraction guard. Allows digits, dots, dashes,
+    # commas, slashes, whitespace, AND the " to " range separator (so
+    # "120 to 347" passes after a "V" suffix strip). Substituting " to "
+    # with a slash before the charset check keeps the guard cheap and
+    # avoids admitting other words. Counter-examples that fail this
+    # guard correctly: "Integral LED" (no digit start), "Maximum
+    # Continuous" (words other than "to"), "10mp" (no digit-only prefix).
+    check = remainder.replace(" to ", "/")
+    if not _re.match(r"^[\d.\-/,\s]+$", check):
+        return value
+    return remainder

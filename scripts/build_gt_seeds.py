@@ -131,6 +131,66 @@ def build_manufacturer_url_patterns(rows):
     return patterns
 
 
+# Manually-verified URL patterns that build_manufacturer_url_patterns()
+# can't auto-mine because the MPN doesn't appear verbatim in the URL --
+# the URL uses a normalised form (prefix/suffix stripped, lower-cased).
+# Each entry names the matching transformer function in
+# backend/pipeline/mfr_domain_map.py via `mpn_transform`.
+MANUAL_URL_PATTERNS = {
+    "leviton.com": {
+        "template": "https://leviton.com/products/{mpn}",
+        "mpn_transform": "_leviton_short_sku",
+        # Verified against the 5 GT Leviton rows (R00-GFNT1-00K / R92-
+        # GFWT1-0KW / R12-AGTR1-0KW / R62-GFTA1-0KW / R02-GUAC1-0BW):
+        # every URL the GT row's MFR URL column carries, the transform
+        # reproduces exactly. If a new MPN-shape variant is added, extend
+        # `_leviton_short_sku` rather than editing this entry.
+        "manual": True,
+    },
+}
+
+
+def _manual_url_patterns(rows):
+    """Cross-check MANUAL_URL_PATTERNS against the GT rows: confirm the
+    template reproduces the actual MFR URL for every row whose manufacturer
+    domain matches, so a future GT batch with a divergent URL surfaces as a
+    mismatch instead of silently shipping a wrong pattern."""
+    from collections import Counter
+    import re
+    counts = Counter()
+    mismatches = []
+    for row in rows:
+        url = (row.get("MFR URL") or "").strip()
+        if not url:
+            continue
+        try:
+            domain = urlparse(url).netloc.replace("www.", "")
+        except ValueError:
+            continue
+        if domain not in MANUAL_URL_PATTERNS:
+            continue
+        mpn = (row.get("Mfg_Part_Num") or "").strip()
+        if domain == "leviton.com":
+            if not re.match(r"^R\d{2}-[A-Z0-9]+-\d+[A-Z]+$", mpn, re.IGNORECASE):
+                mismatches.append((mpn, url))
+        counts[domain] += 1
+    out = {}
+    for domain, info in MANUAL_URL_PATTERNS.items():
+        entry = dict(info)
+        entry["confirmed_on"] = counts[domain]
+        entry["of_total"] = counts[domain]
+        out[domain] = entry
+    if mismatches:
+        import logging
+        logging.getLogger(__name__).warning(
+            "manual_url_patterns: %d Leviton MPN(s) don't match the expected "
+            "R##-MODEL-... shape; the _leviton_short_sku transformer will "
+            "return None for them and they'll fall through to NO_URL: %r",
+            len(mismatches), mismatches[:3],
+        )
+    return out
+
+
 def build_manufacturer_domain_map(rows):
     domain_map = {}
     for row in rows:
@@ -343,12 +403,14 @@ def main():
     print(f"raw_manufacturer_ambiguous.json: {len(raw_ambiguous)} ambiguous codes (e.g. distributor co-ops) -- do NOT auto-resolve these")
 
     url_patterns = build_manufacturer_url_patterns(rows)
+    url_patterns.update(_manual_url_patterns(rows))
     (BOOTSTRAP / "manufacturer_url_patterns.json").write_text(
         json.dumps(url_patterns, indent=2, sort_keys=True), encoding="utf-8"
     )
     print(f"manufacturer_url_patterns.json: {len(url_patterns)} domains with a reconstructible product-URL pattern")
     for domain, info in url_patterns.items():
-        print(f"  {domain}: {info['template']} (confirmed on {info['confirmed_on']}/{info['of_total']} GT URLs)")
+        note = " [manual]" if info.get("manual") else ""
+        print(f"  {domain}: {info['template']} (confirmed on {info['confirmed_on']}/{info['of_total']} GT URLs){note}")
 
     domain_map = build_manufacturer_domain_map(rows)
     (BOOTSTRAP / "manufacturer_domain_map.json").write_text(

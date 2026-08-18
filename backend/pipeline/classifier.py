@@ -95,4 +95,26 @@ class LLMClassifierClient(Protocol):
 
 async def llm_classify(part_desc: str, manufacturer_name: str | None, client: LLMClassifierClient) -> ClassificationResult:
     classpath = await client.classify(part_desc, manufacturer_name)
+    if classpath == "UNKNOWN":
+        # LLM explicitly demurred (the configured prompt instructs it to
+        # reply UNKNOWN when no candidate fits). Without this fallback the
+        # row would emit ClassificationResult(classpath="UNKNOWN"), which
+        # the downstream pipeline treats as a real classification and
+        # blanks manufacturer-history priors + leaf-template slots
+        # downstream for a 252-col row. Observed on 2026-08-17: the live
+        # Groq openai/gpt-oss-* successors to the decommissioned
+        # llama-3.x family aren't as strict about emitting the exact leaf
+        # Classpath string -- they often truncate to an intermediate class
+        # (e.g. "Electrical>Lamps & Lightings>Light Bulbs" rather than
+        # "...>LED Light Bulbs"), which the validator in
+        # GroqClassifierClient.classify routes to "UNKNOWN". Defer to the
+        # rule-based baseline (87.3% LOO per CLAUDE.md) -- never hide that
+        # we did, per the doc's "never hide uncertainty" principle.
+        fb = rule_based_classify(part_desc, manufacturer_name)
+        return ClassificationResult(
+            classpath=fb.classpath,
+            confidence=fb.confidence,
+            method="RULE_BASED_LLM_UNKNOWN_FALLBACK",
+            runner_up=fb.runner_up,
+        )
     return ClassificationResult(classpath=classpath, confidence=1.0, method="LLM")

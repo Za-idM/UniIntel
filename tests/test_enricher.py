@@ -16,7 +16,7 @@ import httpx
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "backend"))
 
-from pipeline.enricher import enrich  # noqa: E402
+from pipeline.enricher import enrich, SATCO_PDF_MIRRORS  # noqa: E402
 from pipeline.mfr_domain_map import construct_product_url  # noqa: E402
 
 
@@ -91,10 +91,14 @@ def test_enrich_gives_up_after_max_retries_on_persistent_429():
     assert result.http_status == 429
 
 
-def test_satco_fails_fast_without_any_network_call():
-    """The real regression this is pinning: satco.com is confirmed
-    persistently 429-blocked (not transient), so it must never even reach
-    the retry loop -- zero requests, immediate FETCH_BLOCKED."""
+def test_satco_led_sku_served_from_local_pdf_without_any_network_call():
+    """The real regression this is pinning: S21354 is one of the
+    SATCO_PDF_MIRRORS SKUs with a local PDF fallback checked into
+    data/output/satco_samples/, and the local copy is preferred FIRST
+    (see enricher.py's _local_satco_pdf_fallback ordering) -- so it must
+    never even reach the network, and must come back FETCHED, not
+    FETCH_BLOCKED (that was the pre-2026-08-16 behavior before the
+    mirror/local-fallback fix)."""
     calls = {"n": 0}
 
     def handler(request):
@@ -106,18 +110,19 @@ def test_satco_fails_fast_without_any_network_call():
             return await enrich("Satco Products, Inc", "S21354", client=client)
 
     result = _run(run())
-    assert result.status == "FETCH_BLOCKED"
-    assert result.source_url == "https://www.satco.com/products/S21354"
-    assert calls["n"] == 0, "Satco must skip the network call entirely, not just skip retries after one attempt"
+    assert result.status == "FETCHED"
+    assert result.source_url == SATCO_PDF_MIRRORS["S21354"]
+    assert result.evidence_bytes is not None and result.evidence_bytes[:4] == b"%PDF"
+    assert calls["n"] == 0, "Satco LED SKUs with a local PDF fallback must skip the network call entirely"
 
 
-def test_satco_fast_fail_does_not_construct_client_when_none_given():
+def test_satco_led_sku_local_fallback_does_not_construct_client_when_none_given():
     """No injected client at all (production path, not just the mocked-
-    transport test path) -- still short-circuits before constructing a
-    real httpx.AsyncClient or making any request."""
+    transport test path) -- the local PDF fallback short-circuits before
+    constructing a real httpx.AsyncClient or making any request."""
     result = _run(enrich("Satco Products, Inc", "S21354"))
-    assert result.status == "FETCH_BLOCKED"
-    assert result.source_url == "https://www.satco.com/products/S21354"
+    assert result.status == "FETCHED"
+    assert result.source_url == SATCO_PDF_MIRRORS["S21354"]
 
 
 def test_non_satco_manufacturer_unaffected_by_fast_fail():
@@ -143,7 +148,7 @@ if __name__ == "__main__":
     test_enrich_success_extracts_evidence_text()
     test_enrich_retries_on_429_and_recovers()
     test_enrich_gives_up_after_max_retries_on_persistent_429()
-    test_satco_fails_fast_without_any_network_call()
-    test_satco_fast_fail_does_not_construct_client_when_none_given()
+    test_satco_led_sku_served_from_local_pdf_without_any_network_call()
+    test_satco_led_sku_local_fallback_does_not_construct_client_when_none_given()
     test_non_satco_manufacturer_unaffected_by_fast_fail()
     print("All enricher tests passed.")
