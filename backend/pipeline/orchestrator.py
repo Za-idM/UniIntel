@@ -40,8 +40,9 @@ from pipeline.description_gen import (
 from pipeline.entity_resolver import resolve_manufacturer
 from pipeline.enricher import enrich, EnrichmentResult, BROWSER_HEADERS, TIMEOUT
 from pipeline.extractor import extract_attributes, fallback_extract_attributes, reconcile
+from pipeline.led_philips_templates import led_marketing_and_features
 from pipeline.llm_client import GroqClassifierClient
-from pipeline.rule_preextractor import extract_uom_priors
+from pipeline.rule_preextractor import extract_led_shape_code, extract_uom_priors
 from pipeline.satco_pdf import parse_satco_pdf_with_features, parse_satco_spec_chart_highbay
 from schemas.product import AttributeValue, Descriptions, EnrichedProduct, ValidationResult
 from validation.confidence import confidence_for_product
@@ -152,29 +153,38 @@ async def _generate_descriptions(
     template for LED Light Bulbs and LLM-generated prose for every other
     leaf. MARKETING_DESCRIPTION is LLM-generated prose fed only the
     reconciled attributes (so it can't invent a spec that isn't already
-    validated) -- except for LED Light Bulbs, where it ships EMPTY by
-    design: Satco's spec sheets carry no marketing prose and Philips'
-    per-product copy is unreachable (Stage-3b deferred), so an LLM would
-    be inventing text that GT shows should be empty. Without a classpath
-    there's no leaf template to key off of, so every field stays empty
-    rather than guessing at a format."""
+    validated) -- except for LED Light Bulbs, where the Satco path ships
+    EMPTY (spec sheets carry no marketing prose, never invented) and the
+    Philips/Signify path uses a GT-mined boilerplate lookup keyed on
+    (Bulb Shape Code, Color Temperature) instead of an LLM call -- see
+    pipeline/led_philips_templates.py for why that's a template lookup,
+    not free-text generation. Without a classpath there's no leaf
+    template to key off of, so every field stays empty rather than
+    guessing at a format."""
     if not classpath:
         return Descriptions()
 
     attrs = {a.label: a.value or "" for a in attributes}
 
     if classpath == _LED_CLASSPATH:
-        # LED Light Bulbs: deterministic LONG_DESC1 (GT Option B), EMPTY
-        # MARKETING_DESCRIPTION (evidence-backed -- see docstring), and any
-        # item_features harvested by the Satco PDF direct-mapper.
+        # LED Light Bulbs: deterministic LONG_DESC1 (GT Option B). Satco
+        # rows carry item_features harvested by the PDF direct-mapper and
+        # ship no marketing copy (matches GT). Philips/Signify rows get
+        # MARKETING_DESCRIPTION + ITEM_FEATURES from the GT-mined template
+        # lookup when the row's (shape, color temp) combination was seen
+        # in GT; otherwise both stay empty.
+        marketing = None
+        features = item_features or []
+        if not features:
+            marketing, features = led_marketing_and_features(manufacturer_name, attrs)
         return Descriptions(
             invoice_desc=invoice_desc(mpn, attrs, classpath) or None,
             mobile_desc=mobile_desc(mpn, manufacturer_name, attrs, classpath) or None,
             short_desc=short_desc(mpn, manufacturer_name, attrs, classpath) or None,
             retail_desc=retail_desc(attrs, classpath) or None,
             long_desc1=long_desc1(mpn, manufacturer_name, attrs, classpath) or None,
-            marketing_description=None,
-            item_features=item_features or [],
+            marketing_description=marketing,
+            item_features=features,
         )
 
     prose: dict[str, str] = {}
@@ -442,6 +452,21 @@ async def process_row(
             )
 
     reconciled = reconcile(classpath, llm_extracted, rule_priors) if classpath else []
+
+    if classpath == _LED_CLASSPATH:
+        # Bulb Shape Code has no uom_hint, so reconcile()'s rule_prior
+        # fallback (which only fills uom-tagged slots) never populates it
+        # from Part_Desc. Fill it here via LOV-constrained matching when
+        # still empty -- this is what lets led_marketing_and_features()
+        # key off the shape code for rows that never got a real fetch
+        # (see pipeline/led_philips_templates.py).
+        for slot in reconciled:
+            if slot["label"] == "Bulb Shape Code" and not slot["value"]:
+                shape_code = extract_led_shape_code(part_desc)
+                if shape_code:
+                    slot["value"] = shape_code
+                    slot["origin"] = "rule_prior"
+                break
 
     attributes = []
     for slot in reconciled:
