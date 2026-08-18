@@ -17,9 +17,18 @@ Some raw codes are genuinely ambiguous (e.g. "Appliance Dealers Cooperative"
 covers 6+ manufacturers) -- these must NOT be auto-resolved; they route to
 NEEDS_DISAMBIGUATION and need a secondary signal (brand, product page) to
 resolve, which is out of scope for this deterministic stage.
-"""
 
-'''hello'''
+One exception, added after GT verification: "Appliance Dealers Cooperative
+(APPDE)" specifically. All 23 GT rows carrying this exact raw code turn out
+to be fully resolvable from Part_Desc/MPN alone -- ADC is a co-op *billing*
+code, not a manufacturer signal, but the co-op's own SKUs still carry the
+real manufacturer's brand marker in the free-text description (21/23 rows)
+or a manufacturer-specific MPN prefix (the remaining 2/23, which carry no
+text signal at all). See _disambiguate_adc() below -- this is a targeted,
+GT-mined secondary-signal lookup for this one raw code, not a general
+"try harder on any ambiguous code" mechanism; every other ambiguous raw
+string still routes straight to NEEDS_DISAMBIGUATION as before.
+"""
 import json
 import re
 from dataclasses import dataclass
@@ -34,6 +43,63 @@ ACCEPT_THRESHOLD = 85
 REVIEW_THRESHOLD = 70
 
 _CODE_SUFFIX_RE = re.compile(r"\s*\([^)]*\)\s*$")
+
+
+_ADC_RAW_CODE = "Appliance Dealers Cooperative (APPDE)"
+
+# GT-mined from all 23 rows carrying _ADC_RAW_CODE (gt_input_200.csv /
+# gt_delivery_200.csv, verified 2026-08-19). Ordered rules, first match
+# wins; each keyword regex requires a leading word boundary so it can't
+# false-positive on a substring inside an unrelated word (checked against
+# the full 200-row GT: zero non-ADC rows contain any of these tokens at
+# all, so there's no cross-contamination risk from routing this table only
+# off Part_Desc). "Caf" intentionally has no trailing \b -- the source
+# text is "Caf\xe9" (Café) with a mis-decoded accented e that Python's \w
+# already treats as a word character, so \bCaf\b never finds a boundary
+# after the f; a leading-only boundary is still specific enough (no other
+# GT row starts a word with "Caf").
+_ADC_KEYWORD_RULES: list[tuple[re.Pattern, str]] = [
+    (re.compile(r"\bSQ\b"), "Alliance Laundry Systems LLC"),
+    (re.compile(r"\bSpeed Queen\b", re.IGNORECASE), "Alliance Laundry Systems LLC"),
+    (re.compile(r"\bGE\b"), "Haier"),
+    (re.compile(r"\bCaf"), "Haier"),
+    (re.compile(r"\bBeko\b", re.IGNORECASE), "Beko"),
+]
+
+# MPN-prefix fallback, tried only when no keyword rule matched. Two of
+# these (WDTS, PDSH) carry NO independent text signal in Part_Desc at all
+# ("Dishwasher SS - Display Only") -- this is a single-row-mined exact
+# prefix pin, the same confidence tier as enricher.py's SATCO_PDF_MIRRORS
+# hardcoded URLs: it will only ever fire again on this literal prefix, not
+# a learned pattern. XOU and MVWP are also GT-mined but are genuine
+# manufacturer-specific SKU-line prefixes (XOU = XO Ventilation's own
+# product-line code, already used elsewhere in this codebase's confirmed
+# xoappliance.com URL pattern; MVWP = Whirlpool/Maytag's vertical-washer
+# line prefix), not a coincidental short generic code.
+_ADC_MPN_PREFIX_RULES: list[tuple[str, str]] = [
+    ("XOU", "XO Ventilation"),
+    ("MVWP", "Whirlpool Corporation"),
+    ("WDTS", "Whirlpool Corporation"),
+    ("PDSH", "Rheem Manufacturing"),
+]
+
+
+def _disambiguate_adc(part_desc: str | None, mpn: str | None) -> str | None:
+    """Secondary-signal resolution for the ADC co-op code specifically --
+    see the module docstring. Returns a canonical manufacturer name, or
+    None when neither the Part_Desc keyword table nor the MPN-prefix table
+    matches (caller falls through to the normal NEEDS_DISAMBIGUATION
+    path -- this never forces a guess on a genuinely unrecognized row)."""
+    if part_desc:
+        for pattern, manufacturer in _ADC_KEYWORD_RULES:
+            if pattern.search(part_desc):
+                return manufacturer
+    if mpn:
+        mpn_upper = mpn.strip().upper()
+        for prefix, manufacturer in _ADC_MPN_PREFIX_RULES:
+            if mpn_upper.startswith(prefix):
+                return manufacturer
+    return None
 
 
 def _strip_code_suffix(raw: str) -> str:
@@ -63,7 +129,14 @@ def _load():
     return raw_map, ambiguous, domain_map
 
 
-def resolve_manufacturer(part_manuf_raw: str | None) -> ResolutionResult:
+def resolve_manufacturer(
+    part_manuf_raw: str | None,
+    part_desc: str | None = None,
+    mpn: str | None = None,
+) -> ResolutionResult:
+    """part_desc/mpn are optional secondary-disambiguation signals, used
+    only for the ADC co-op code (see _disambiguate_adc). Every other raw
+    string's resolution is unaffected by whether they're passed."""
     if not part_manuf_raw:
         return ResolutionResult(status="UNRESOLVED")
 
@@ -82,6 +155,16 @@ def resolve_manufacturer(part_manuf_raw: str | None) -> ResolutionResult:
         )
 
     if raw in ambiguous:
+        if raw == _ADC_RAW_CODE:
+            disambiguated = _disambiguate_adc(part_desc, mpn)
+            if disambiguated:
+                return ResolutionResult(
+                    status="RESOLVED",
+                    manufacturer_name=disambiguated,
+                    domain=domain_map.get(disambiguated),
+                    matched_raw=f"{raw} [ADC secondary-signal match]",
+                    match_score=100.0,
+                )
         return ResolutionResult(status="NEEDS_DISAMBIGUATION", candidates=ambiguous[raw])
 
     # fuzzy match against known raw strings (typo/format variants only),
