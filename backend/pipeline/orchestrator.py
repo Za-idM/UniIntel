@@ -229,9 +229,9 @@ async def process_row(
     part_desc = cleaned.get("Part_Desc") or ""
     part_manuf_raw = cleaned.get("Part_Manuf")
 
-    resolution = resolve_manufacturer(part_manuf_raw, part_desc=part_desc, mpn=mpn)
-    manufacturer_name = resolution.manufacturer_name
     brand_name = next((cleaned[f] for f in BRAND_FIELDS if cleaned.get(f)), None)
+    resolution = resolve_manufacturer(part_manuf_raw, part_desc=part_desc, mpn=mpn, brand=brand_name)
+    manufacturer_name = resolution.manufacturer_name
 
     classification = await _classify(part_desc, manufacturer_name, llm_client)
     classpath = classification.classpath
