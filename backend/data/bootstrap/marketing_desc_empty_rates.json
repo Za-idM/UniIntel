@@ -1,0 +1,298 @@
+{
+  "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers": {
+    "empty": 2,
+    "total": 3
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Electric Dryers": {
+    "empty": 3,
+    "total": 4
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Gas Dryers": {
+    "empty": 6,
+    "total": 8
+  },
+  "Appliances & Consumer Electronics>Laundry Appliances>Top Loading Washers": {
+    "empty": 1,
+    "total": 3
+  },
+  "Building Materials>Decking>Deck & Porch Railings>Deck Railing Kits": {
+    "empty": 0,
+    "total": 4
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Post Sleeves": {
+    "empty": 2,
+    "total": 2
+  },
+  "Building Materials>Decking>Deck Posts & Deck Sleeves>Deck Posts": {
+    "empty": 1,
+    "total": 1
+  },
+  "Building Materials>Decking>Deck Stairs>Deck Stair Railing Kits": {
+    "empty": 0,
+    "total": 2
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Access Doors": {
+    "empty": 0,
+    "total": 1
+  },
+  "Building Materials>Doors & Windows>Exterior Doors>Patio Doors": {
+    "empty": 0,
+    "total": 4
+  },
+  "Building Materials>Doors & Windows>Skylights>Fixed Skylights": {
+    "empty": 0,
+    "total": 3
+  },
+  "Building Materials>Flooring>Floor Moulding & Trims>Thresholds": {
+    "empty": 2,
+    "total": 2
+  },
+  "Building Materials>House Wraps & Tapes>House Wraps": {
+    "empty": 0,
+    "total": 1
+  },
+  "Building Materials>Lumber & Composites>Plywood>Oriented Strand Board (OSB)": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Batteries & Accessories>Battery Accessories>Battery Jump Starters": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Boxes & Enclosures>Electrical Boxes & Covers>Electrical Box Covers": {
+    "empty": 3,
+    "total": 3
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Accent & Display Lighting": {
+    "empty": 2,
+    "total": 2
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Bath & Vanity Lights": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>High Bay Fixtures": {
+    "empty": 1,
+    "total": 1
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Ceiling Fixtures": {
+    "empty": 4,
+    "total": 4
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Indoor Strip & Tape Lighting": {
+    "empty": 1,
+    "total": 1
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Panel & Troffer Light Fixtures": {
+    "empty": 1,
+    "total": 1
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Recessed Lighting>Recessed Lighting Fixtures": {
+    "empty": 7,
+    "total": 8
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Surface-Mount Fixtures": {
+    "empty": 5,
+    "total": 5
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wall Sconces": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Lamps & Lightings>Indoor Lighting>Wraparound Lights": {
+    "empty": 2,
+    "total": 2
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Fluorescent Light Bulbs": {
+    "empty": 0,
+    "total": 3
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Halogen Light Bulbs": {
+    "empty": 2,
+    "total": 2
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>Incandescent Light Bulbs": {
+    "empty": 11,
+    "total": 11
+  },
+  "Electrical>Lamps & Lightings>Light Bulbs>LED Light Bulbs": {
+    "empty": 3,
+    "total": 22
+  },
+  "Electrical>Lamps & Lightings>Portable & Temporary Lightings>Headlamps": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Wires & Cables>Building Wires>Service Entrance & Underground Cables": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Wires & Cables>Copper Data Cables": {
+    "empty": 0,
+    "total": 1
+  },
+  "Electrical>Wiring Devices>GFCI & AFCI Devices>GFCI & AFCI Receptacles": {
+    "empty": 2,
+    "total": 4
+  },
+  "Electrical>Wiring Devices>Straight Blade Devices>Receptacles & USB Ports": {
+    "empty": 1,
+    "total": 1
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Beverage Coolers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Food Preparation Equipment & Supplies>Bar Supplies>Beverage & Wine Coolers>Wine Coolers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Built-In Microwaves": {
+    "empty": 1,
+    "total": 1
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Electric Cooktops": {
+    "empty": 1,
+    "total": 1
+  },
+  "Food Preparation Equipment & Supplies>Food Equipment>Cooking Equipment>Induction Cooktops": {
+    "empty": 0,
+    "total": 1
+  },
+  "Hardware & Fasteners>Cabinet & Drawer Hardware>Cabinet Hardware>Cabinet Hardware Installation Templates": {
+    "empty": 0,
+    "total": 1
+  },
+  "Lawn, Garden & Patio>Fencing>Gate Openers & Hardware>Gate Latches & Slide Bolts": {
+    "empty": 0,
+    "total": 1
+  },
+  "Safety>Eye Protection>Safety Glasses": {
+    "empty": 0,
+    "total": 4
+  },
+  "Safety>Fire Protection>Fire Extinguishers & Accessories>Fire Extinguishers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Test & Measurement>Measuring & Layout Tools>Levels>Rotary & Straight Line Laser Levels": {
+    "empty": 0,
+    "total": 6
+  },
+  "Test & Measurement>Measuring & Layout Tools>Marking & Layout Tools>Mason's Lines": {
+    "empty": 0,
+    "total": 8
+  },
+  "Tools & Equipment>Hand Tools>Hex, Torx & Spline Keys>Hex Key Sets": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Hand Tools>Snips & Shears>Snips": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Cordless Tools>Cordless Blowers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Oscillating Tools>Oscillating Tool Sandpaper & Sanding Pads": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Drills": {
+    "empty": 0,
+    "total": 3
+  },
+  "Tools & Equipment>Power Tools>Power Drills>Cordless Hammer Drills": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Nailers>Cordless Nailers": {
+    "empty": 0,
+    "total": 4
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Screwdrivers>Power Nut Setters & Bit Holders": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Staplers & Riveters>Cordless Staplers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Drivers": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Impact Wrenches": {
+    "empty": 0,
+    "total": 3
+  },
+  "Tools & Equipment>Power Tools>Power Fastening Tools>Power Wrenches & Ratchets>Cordless Ratchet Wrenches": {
+    "empty": 0,
+    "total": 4
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Buffers & Polishers>Cordless Buffers & Polishers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Finishing Tools>Power Grinders>Cordless Die & Straight Grinders": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Circular Saw Blades": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Diamond Saw Blades": {
+    "empty": 0,
+    "total": 5
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Hole Saws & Accessories>Hole Saw Sets": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Saw Blades>Planer Blades": {
+    "empty": 1,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Band Saws>Corded Band Saws": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Circular Saws>Cordless Circular Saws": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Jig Saws>Cordless Jig Saws": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Saws>Miter Saws>Cordless Miter Saws": {
+    "empty": 0,
+    "total": 3
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Batteries": {
+    "empty": 0,
+    "total": 6
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Battery Chargers": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Cordless Tool Power Supplies & Battery Adapters": {
+    "empty": 0,
+    "total": 2
+  },
+  "Tools & Equipment>Power Tools>Power Tool Accessories>Dust Collector Accessories": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Power Tools>Power Tool Combination Kits": {
+    "empty": 0,
+    "total": 1
+  },
+  "Tools & Equipment>Woodworking Tools & Machinery>Woodworking Machinery>Woodworking Planer Machines": {
+    "empty": 2,
+    "total": 4
+  }
+}

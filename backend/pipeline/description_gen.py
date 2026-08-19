@@ -78,6 +78,42 @@ def _display_names() -> dict[str, dict[str, str]]:
     return json.loads((BOOTSTRAP / "manufacturer_display_names.json").read_text(encoding="utf-8"))
 
 
+# Minimum GT sample size / empty-rate for a leaf Classpath to be treated as
+# "GT usually leaves MARKETING_DESCRIPTION empty" -- must match
+# scripts/build_gt_seeds.py's MARKETING_EMPTY_MIN_SAMPLES/_MIN_RATE (the
+# values that produced marketing_desc_empty_rates.json).
+_MARKETING_EMPTY_MIN_SAMPLES = 2
+_MARKETING_EMPTY_MIN_RATE = 0.75
+
+
+@lru_cache(maxsize=1)
+def _marketing_desc_empty_classpaths() -> frozenset[str]:
+    """Leaf classpaths where GT's own MARKETING_DESCRIPTION is empty often
+    enough (>=75% of >=2 sampled rows -- see build_gt_seeds.py) that the
+    free-text LLM prose call should be skipped entirely rather than
+    invented ungrounded copy shipped for a field GT expects blank.
+    Classpaths with too few samples or a genuinely mixed empty/non-empty
+    split (e.g. GFCI & AFCI Receptacles, 2/4) are NOT included here --
+    same "don't guess, default to the existing behavior" discipline as
+    everywhere else in this pipeline; those rows still go through the LLM
+    call unchanged."""
+    rates = json.loads((BOOTSTRAP / "marketing_desc_empty_rates.json").read_text(encoding="utf-8"))
+    return frozenset(
+        classpath
+        for classpath, counts in rates.items()
+        if counts["total"] >= _MARKETING_EMPTY_MIN_SAMPLES
+        and counts["empty"] / counts["total"] >= _MARKETING_EMPTY_MIN_RATE
+    )
+
+
+def marketing_desc_should_skip_llm(classpath: str | None) -> bool:
+    """True when `classpath` is GT-confirmed to usually leave
+    MARKETING_DESCRIPTION empty -- callers should skip the
+    generate_prose_descriptions() call and ship marketing_description
+    empty rather than invented prose. See _marketing_desc_empty_classpaths."""
+    return bool(classpath) and classpath in _marketing_desc_empty_classpaths()
+
+
 def _brand(manufacturer_name: str | None, style: str) -> str:
     """style is 'mobile' or 'short'. Falls back to the raw manufacturer
     name when it's not one of the (currently 2) GT-mined display names --

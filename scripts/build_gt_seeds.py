@@ -378,6 +378,35 @@ def build_lov_by_classpath(rows):
     }
 
 
+# Minimum GT sample size and empty-rate for a leaf Classpath to be treated as
+# "GT usually leaves MARKETING_DESCRIPTION empty" -- same discipline as the
+# LED Philips template lookup (led_philips_templates.py), which only fires on
+# a verified, multiply-observed combination and defaults to empty otherwise.
+# n>=2 rules out single-row noise (many leaves have exactly 1 GT row, where
+# a 100%-empty "rate" is really just one data point); >=75% rules out
+# genuinely mixed leaves (e.g. GFCI & AFCI Receptacles is 2/4 = 50% empty --
+# ambiguous, left under the old LLM-call guard rather than forced either way).
+MARKETING_EMPTY_MIN_SAMPLES = 2
+MARKETING_EMPTY_MIN_RATE = 0.75
+
+
+def build_marketing_desc_empty_classpaths(rows):
+    """Per-leaf-Classpath (empty_count, total_count) for MARKETING_DESCRIPTION,
+    used by pipeline/description_gen.py to gate the free-text LLM prose call:
+    classpaths meeting MARKETING_EMPTY_MIN_SAMPLES/MARKETING_EMPTY_MIN_RATE
+    skip the LLM call and ship empty (matching GT's own pattern) instead of
+    invented marketing copy GT never has for that leaf."""
+    counts = defaultdict(lambda: [0, 0])  # [empty, total]
+    for row in rows:
+        classpath = row.get("Classpath", "").strip()
+        if not classpath:
+            continue
+        counts[classpath][1] += 1
+        if not row.get("MARKETING_DESCRIPTION", "").strip():
+            counts[classpath][0] += 1
+    return {classpath: {"empty": e, "total": t} for classpath, (e, t) in counts.items()}
+
+
 def main():
     BOOTSTRAP.mkdir(parents=True, exist_ok=True)
     rows = load_rows()
@@ -441,6 +470,17 @@ def main():
         json.dumps(lov, indent=2, sort_keys=True), encoding="utf-8"
     )
     print(f"lov_by_classpath.json: {len(lov)} leaf classpaths")
+
+    marketing_empty = build_marketing_desc_empty_classpaths(rows)
+    (BOOTSTRAP / "marketing_desc_empty_rates.json").write_text(
+        json.dumps(marketing_empty, indent=2, sort_keys=True), encoding="utf-8"
+    )
+    gated = sum(
+        1 for e, t in ((v["empty"], v["total"]) for v in marketing_empty.values())
+        if t >= MARKETING_EMPTY_MIN_SAMPLES and e / t >= MARKETING_EMPTY_MIN_RATE
+    )
+    print(f"marketing_desc_empty_rates.json: {len(marketing_empty)} leaf classpaths "
+          f"({gated} meet the empty-gate threshold)")
 
 
 if __name__ == "__main__":

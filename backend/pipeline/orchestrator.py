@@ -36,6 +36,7 @@ from pipeline.cleaner import clean_row
 from pipeline.classifier import rule_based_classify, llm_classify, ClassificationResult
 from pipeline.description_gen import (
     invoice_desc, mobile_desc, short_desc, retail_desc, long_desc1, generate_prose_descriptions,
+    marketing_desc_should_skip_llm,
 )
 from pipeline.entity_resolver import resolve_manufacturer
 from pipeline.enricher import enrich, EnrichmentResult, BROWSER_HEADERS, TIMEOUT
@@ -191,13 +192,23 @@ async def _generate_descriptions(
     if llm_configured_ and any(attrs.values()):
         prose = await generate_prose_descriptions(mpn, manufacturer_name, classpath, attrs)
 
+    # marketing_description is suppressed (not the whole prose call) for
+    # classpaths GT itself usually leaves blank -- LONG_DESC1 stays real
+    # prose even on these classpaths (GT has non-empty LONG_DESC1 on every
+    # one of them; it's specifically MARKETING_DESCRIPTION that's usually
+    # empty), so the LLM call still runs to produce it. Without this, the
+    # same free-text call invents plausible-sounding marketing copy (e.g.
+    # "ideal for office spaces, retail displays...") for a field GT scores
+    # as wrong unless it's blank -- see marketing_desc_should_skip_llm's
+    # docstring for the GT-mined threshold.
+    marketing = None if marketing_desc_should_skip_llm(classpath) else prose.get("marketing_description")
     return Descriptions(
         invoice_desc=invoice_desc(mpn, attrs, classpath) or None,
         mobile_desc=mobile_desc(mpn, manufacturer_name, attrs, classpath) or None,
         short_desc=short_desc(mpn, manufacturer_name, attrs, classpath) or None,
         retail_desc=retail_desc(attrs, classpath) or None,
         long_desc1=prose.get("long_desc1") or None,
-        marketing_description=prose.get("marketing_description") or None,
+        marketing_description=marketing or None,
     )
 
 
