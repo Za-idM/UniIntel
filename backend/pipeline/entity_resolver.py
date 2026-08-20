@@ -58,12 +58,27 @@ _ADC_RAW_CODE = "Appliance Dealers Cooperative (APPDE)"
 # already treats as a word character, so \bCaf\b never finds a boundary
 # after the f; a leading-only boundary is still specific enough (no other
 # GT row starts a word with "Caf").
+#
+# GE and LG additions (2026-08-20, Aug-20-handoff Item 3): GE was
+# case-sensitive-only, missing lowercase/mixed-case renders like "Ge
+# Dishwasher SS" (confirmed present in the 1000-row scale input, e.g.
+# PDT715SYVFS); made case-insensitive. LG had no rule at all despite 6
+# ADC-raw rows in the 1000-row set literally reading "LG Dishwasher",
+# "LG Fridge", etc. (LDPH5554D, WKE100HWA, MSER2090S, LSEL6333ZE,
+# LT18S2100W, LT18S2100SS). Checked all 84 ADC-raw rows in the 1000-row
+# set for a false-positive risk (e.g. "Lg"/"LG" as a glove-size
+# abbreviation, the trap that sank 3 of Finding B's original 18-row
+# estimate) -- every LG/GE token in an ADC-raw row's Part_Desc is a real
+# LG/GE appliance mention; size-abbreviation rows never carry the ADC raw
+# code (they're a different Part_Manuf entirely), so this table -- which
+# only ever runs for the exact ADC raw code -- can't reach that trap.
 _ADC_KEYWORD_RULES: list[tuple[re.Pattern, str]] = [
     (re.compile(r"\bSQ\b"), "Alliance Laundry Systems LLC"),
     (re.compile(r"\bSpeed Queen\b", re.IGNORECASE), "Alliance Laundry Systems LLC"),
-    (re.compile(r"\bGE\b"), "Haier"),
+    (re.compile(r"\bGE\b", re.IGNORECASE), "Haier"),
     (re.compile(r"\bCaf"), "Haier"),
     (re.compile(r"\bBeko\b", re.IGNORECASE), "Beko"),
+    (re.compile(r"\bLG\b", re.IGNORECASE), "LG Electronics"),
 ]
 
 # MPN-prefix fallback, tried only when no keyword rule matched. Two of

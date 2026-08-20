@@ -89,6 +89,31 @@ def test_adc_unrecognized_row_falls_back_to_needs_disambiguation():
     assert result.candidates and len(result.candidates) >= 5
 
 
+def test_adc_lg_and_case_insensitive_ge_resolve_correctly():
+    """Aug 20 handoff Item 3: GE was case-sensitive-only (missed 'Ge
+    Dishwasher SS'); LG had no keyword rule at all despite real ADC-raw
+    rows in the 1000-row scale input reading 'LG Dishwasher'/'LG Fridge'/
+    etc. Confirms both now resolve, and that word-boundary matching still
+    rejects a same-shaped false positive."""
+    ge_lower = resolve_manufacturer(ADC_RAW, part_desc="PDT715SYVFS Ge Dishwasher SS", mpn="PDT715SYVFS")
+    assert ge_lower.status == "RESOLVED"
+    assert ge_lower.manufacturer_name == "Haier"
+
+    lg = resolve_manufacturer(ADC_RAW, part_desc="LDPH5554D LG Dishwasher BSS", mpn="LDPH5554D")
+    assert lg.status == "RESOLVED"
+    assert lg.manufacturer_name == "LG Electronics"
+
+    lg_lower = resolve_manufacturer(ADC_RAW, part_desc="LSEL6333ZE lg 30\" Elec Range BS", mpn="LSEL6333ZE")
+    assert lg_lower.status == "RESOLVED"
+    assert lg_lower.manufacturer_name == "LG Electronics"
+
+    # word-boundary safety: "Lg" as a size abbreviation inside an unrelated
+    # word must not false-positive (mirrors the existing HUGE/BISQUE checks)
+    large_desc = resolve_manufacturer(ADC_RAW, part_desc="ZZZ9999XX Large Capacity Unit SS", mpn="ZZZ9999XX")
+    assert large_desc.status == "NEEDS_DISAMBIGUATION"
+    assert large_desc.manufacturer_name is None
+
+
 def test_non_adc_ambiguous_code_unaffected_by_secondary_signal():
     """Only the exact ADC raw string gets the secondary-signal lookup --
     other genuinely ambiguous raw codes (e.g. the mined "-" code) must
@@ -111,6 +136,7 @@ if __name__ == "__main__":
     test_adc_resolves_all_23_gt_rows_to_correct_manufacturer()
     test_adc_prefix_only_rows_resolve_with_no_text_signal()
     test_adc_word_boundary_rejects_substring_false_positives()
+    test_adc_lg_and_case_insensitive_ge_resolve_correctly()
     test_adc_unrecognized_row_falls_back_to_needs_disambiguation()
     test_non_adc_ambiguous_code_unaffected_by_secondary_signal()
     test_adc_resolution_without_part_desc_or_mpn_still_needs_disambiguation()
