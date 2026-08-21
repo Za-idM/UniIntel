@@ -34,7 +34,7 @@ export default function AttributeRow({ attr }: { attr: AttributeValue }) {
           )}
         </td>
         <td className="px-3 py-1.5">
-          <OriginTag origin={attr.origin} />
+          <OriginTag origin={attr.origin} sourceUrl={attr.source_url} />
         </td>
       </tr>
       {open && hasEvidence && (
