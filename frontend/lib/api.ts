@@ -80,17 +80,36 @@ export interface ProductRow {
   data_json?: string;
 }
 
-// Display-only: how many of a row's attribute slots actually have a value.
-// Never invents anything -- purely counts what extraction already put
-// there. Tolerant of a missing/unparseable data_json (returns 0) so a
-// malformed row degrades to "sorts last", not a crash.
+// Display-only: how many of a row's attribute slots actually have a value,
+// of ANY origin. Never invents anything -- purely counts what extraction
+// already put there. Tolerant of a missing/unparseable data_json (returns
+// 0) so a malformed row degrades to "sorts last", not a crash. Used for
+// the table's default sort order (rows with more data surface first,
+// regardless of how that data was derived).
 export function countFilledAttributes(row: ProductRow): number {
-  if (!row.data_json) return 0;
+  return _filledAttributes(row).length;
+}
+
+// Display-only: how many of a row's filled attributes are specifically
+// origin="rule_prior" (a regex/LOV match against the input text -- no LLM
+// involved at all). Distinct from countFilledAttributes() on purpose: the
+// coverage banner's wording specifically claims "rule-based" coverage, and
+// origin="llm_extract" covers both genuine fetched-page extraction AND
+// plain LLM inference from Part_Desc with no web fetch (source_url=None
+// in that case) -- neither of which is "rule-based". Counting all filled
+// attributes here previously overstated the banner's claim; see
+// investigation notes for the confirmed bug this fixes.
+export function countRuleBasedAttributes(row: ProductRow): number {
+  return _filledAttributes(row).filter((a) => a.origin === "rule_prior").length;
+}
+
+function _filledAttributes(row: ProductRow): AttributeValue[] {
+  if (!row.data_json) return [];
   try {
     const parsed = JSON.parse(row.data_json) as EnrichedProduct;
-    return (parsed.attributes || []).filter((a) => !!a.value).length;
+    return (parsed.attributes || []).filter((a) => !!a.value);
   } catch {
-    return 0;
+    return [];
   }
 }
 

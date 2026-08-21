@@ -4,6 +4,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import { parseCsvPreview } from "@/lib/csv";
 import {
   countFilledAttributes,
+  countRuleBasedAttributes,
   exportJob,
   processFile,
   type JobStatusResponse,
@@ -98,23 +99,37 @@ export default function UploadView({
   const running = jobStatus?.status === "RUNNING" || jobStatus?.status === "PENDING";
   const pct = jobStatus && jobStatus.total_rows > 0 ? (100 * jobStatus.processed_rows) / jobStatus.total_rows : 0;
 
-  // Display-only ordering: rows with more filled attributes (tie-broken by
-  // confidence) surface first, so a viewer's first impression isn't a wall
-  // of mostly-empty rows from categories with no rule-based coverage yet.
-  // This is purely a browsable-table sort -- jobProducts itself (and the
-  // CSV/delivery-template export, which reads straight from SQLite by
-  // rowid/insert order in backend/api/export.py) is never reordered or
-  // mutated.
+  // Display-only ordering: rows with more filled attributes -- of ANY
+  // origin, deliberately not just rule-based -- surface first (tied-broken
+  // by confidence), so a viewer's first impression isn't a wall of
+  // mostly-empty rows. This is purely a browsable-table sort -- jobProducts
+  // itself (and the CSV/delivery-template export, which reads straight
+  // from SQLite by rowid/insert order in backend/api/export.py) is never
+  // reordered or mutated.
   const rowsByCoverage = useMemo(() => {
     return jobProducts
-      .map((p) => ({ product: p, filled: countFilledAttributes(p) }))
+      .map((p) => ({ product: p, filled: countFilledAttributes(p), ruleBased: countRuleBasedAttributes(p) }))
       .sort((a, b) => b.filled - a.filled || b.product.confidence - a.product.confidence);
   }, [jobProducts]);
 
-  // % of rows with ANY rule-based attribute coverage, computed fresh from
-  // the current job's own data (never hardcoded) -- feeds the coverage
-  // banner below.
+  // % of rows with >=1 attribute whose origin is SPECIFICALLY "rule_prior"
+  // (a regex/LOV match on the input text, no LLM involved), computed fresh
+  // from the current job's own data -- feeds the coverage banner below.
+  // Deliberately NOT the same as "any attribute filled": origin=
+  // "llm_extract" covers both real fetched-page evidence AND plain LLM
+  // inference from Part_Desc with no fetch (source_url=None in that case)
+  // -- neither is "rule-based", so counting them here would overstate this
+  // specific claim exactly like the confirmed bug this fixes.
   const coveragePct =
+    jobProducts.length > 0
+      ? Math.round((100 * rowsByCoverage.filter((r) => r.ruleBased > 0).length) / jobProducts.length)
+      : 0;
+
+  // Additional, separately-labeled stat: rows with ANY attribute coverage
+  // regardless of origin (rule-based OR llm-derived, sourced or inferred).
+  // Kept distinct from coveragePct per the task's instruction not to let
+  // this broader number bleed into the "rule-based" claim above.
+  const anyAttributeCoveragePct =
     jobProducts.length > 0
       ? Math.round((100 * rowsByCoverage.filter((r) => r.filled > 0).length) / jobProducts.length)
       : 0;
@@ -270,8 +285,16 @@ export default function UploadView({
           {jobProducts.length > 0 && (
             <div>
               <div className="mb-2 rounded border border-accent-600/25 bg-accent-50 px-3 py-2 text-[12.5px] text-accent-700">
-                <span className="font-semibold">{coveragePct}%</span> of rows have rule-based attribute coverage.
-                Remaining categories show no attributes rather than invented values &mdash; we don&apos;t guess.
+                <div>
+                  <span className="font-semibold">{coveragePct}%</span> of rows have rule-based attribute coverage.
+                  Remaining categories show no attributes rather than invented values &mdash; we don&apos;t guess.
+                </div>
+                {anyAttributeCoveragePct > coveragePct && (
+                  <div className="mt-0.5 text-[11.5px] opacity-80">
+                    {anyAttributeCoveragePct}% of rows have any attribute filled (rule-based + LLM-derived
+                    combined).
+                  </div>
+                )}
               </div>
               <div className="overflow-hidden rounded border border-paper-300 bg-white">
                 <table className="w-full border-collapse text-left text-[13px]">
