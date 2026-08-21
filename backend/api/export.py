@@ -96,7 +96,19 @@ def _safe_validate_product(data: dict, job_id: str, mfg_part_num: str) -> Enrich
 
 @router.get("/api/export/{job_id}")
 async def export(job_id: str):
-    columns = load_template_columns()
+    # Called before StreamingResponse is constructed -- i.e. before any
+    # bytes/200-status have gone to the client -- so a failure here can
+    # still become a proper HTTP error instead of an abandoned connection
+    # (the "Failed to fetch" symptom _safe_validate_product's docstring
+    # above describes for the per-row case). See delivery_csv.py's
+    # load_template_columns for what actually raises here (a missing
+    # template file under a changed deploy root) and its RuntimeError text
+    # for the fix pointer.
+    try:
+        columns = load_template_columns()
+    except RuntimeError as exc:
+        logger.error("export job_id=%r: %s", job_id, exc)
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     conn = get_connection()
     try:

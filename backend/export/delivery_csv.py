@@ -29,8 +29,18 @@ existing scripts."""
 import csv
 from pathlib import Path
 
-# backend/export/delivery_csv.py -> backend/ -> uniintel/ (repo root).
-ROOT = Path(__file__).resolve().parent.parent.parent
+# backend/export/delivery_csv.py -> backend/export -> backend/. NOT
+# .parent.parent.parent (repo root) -- Railway's Root Directory is set to
+# backend/, so only backend/ is deployed as the container's app root; a
+# third .parent resolves one level ABOVE that root (e.g. to "/"), which is
+# exactly the '/data/reference/delivery_format_template.csv' FileNotFoundError
+# seen in production. Same bug, same fix as 1f06cd8 ("Fix data/bootstrap
+# path resolution for Railway's backend-scoped Root Directory") applied to
+# classifier.py/registry.py/entity_resolver.py/etc -- this module just
+# predates that fix. The file is mirrored into backend/data/reference/ (like
+# backend/data/bootstrap/ and backend/data/ground_truth/) so this same
+# relative depth resolves correctly both locally and on Railway.
+ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE_CSV = ROOT / "data" / "reference" / "delivery_format_template.csv"
 
 # Delivery columns populated by the orchestrator (everything else stays "").
@@ -70,7 +80,20 @@ def load_template_columns() -> list[str]:
     description column positional alignment all depend on this exact
     sequence). Re-reading on every export call is intentional: it keeps a
     last-minute template swap from silently producing a differently-shaped
-    CSV vs the script run."""
+    CSV vs the script run.
+
+    Raises a clear RuntimeError (not a raw FileNotFoundError) if the file
+    is missing -- e.g. a future deploy-root change breaks this same path
+    assumption again -- so a live demo/judge sees a diagnosable 500 message
+    instead of a bare stack trace with no pointer to the fix."""
+    if not TEMPLATE_CSV.exists():
+        raise RuntimeError(
+            f"Delivery template CSV not found at {TEMPLATE_CSV}. This path is "
+            "computed as backend/'s own directory + data/reference/ -- see "
+            "delivery_csv.py's ROOT comment. If the deploy's Root Directory "
+            "setting changed, or the file was moved/renamed, update ROOT "
+            "and/or re-copy the file into backend/data/reference/."
+        )
     with open(TEMPLATE_CSV, encoding="utf-8-sig") as f:
         reader = csv.reader(f)
         return next(reader)
