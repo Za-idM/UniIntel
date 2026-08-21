@@ -1,8 +1,15 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { parseCsvPreview } from "@/lib/csv";
-import { exportJob, processFile, type JobStatusResponse, type ProcessResponse, type ProductRow } from "@/lib/api";
+import {
+  countFilledAttributes,
+  exportJob,
+  processFile,
+  type JobStatusResponse,
+  type ProcessResponse,
+  type ProductRow,
+} from "@/lib/api";
 import { ConfidenceBadge } from "@/components/Badges";
 
 export default function UploadView({
@@ -90,6 +97,27 @@ export default function UploadView({
 
   const running = jobStatus?.status === "RUNNING" || jobStatus?.status === "PENDING";
   const pct = jobStatus && jobStatus.total_rows > 0 ? (100 * jobStatus.processed_rows) / jobStatus.total_rows : 0;
+
+  // Display-only ordering: rows with more filled attributes (tie-broken by
+  // confidence) surface first, so a viewer's first impression isn't a wall
+  // of mostly-empty rows from categories with no rule-based coverage yet.
+  // This is purely a browsable-table sort -- jobProducts itself (and the
+  // CSV/delivery-template export, which reads straight from SQLite by
+  // rowid/insert order in backend/api/export.py) is never reordered or
+  // mutated.
+  const rowsByCoverage = useMemo(() => {
+    return jobProducts
+      .map((p) => ({ product: p, filled: countFilledAttributes(p) }))
+      .sort((a, b) => b.filled - a.filled || b.product.confidence - a.product.confidence);
+  }, [jobProducts]);
+
+  // % of rows with ANY rule-based attribute coverage, computed fresh from
+  // the current job's own data (never hardcoded) -- feeds the coverage
+  // banner below.
+  const coveragePct =
+    jobProducts.length > 0
+      ? Math.round((100 * rowsByCoverage.filter((r) => r.filled > 0).length) / jobProducts.length)
+      : 0;
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-5">
@@ -240,45 +268,53 @@ export default function UploadView({
           )}
 
           {jobProducts.length > 0 && (
-            <div className="overflow-hidden rounded border border-paper-300 bg-white">
-              <table className="w-full border-collapse text-left text-[13px]">
-                <thead>
-                  <tr className="border-b border-paper-300 bg-paper-100 text-ink-500">
-                    <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">MPN</th>
-                    <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
-                      Manufacturer
-                    </th>
-                    <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
-                      Classpath
-                    </th>
-                    <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
-                      Confidence
-                    </th>
-                    <th className="px-3 py-1.5" />
-                  </tr>
-                </thead>
-                <tbody>
-                  {jobProducts.map((p) => (
-                    <tr
-                      key={p.id}
-                      className="cursor-pointer border-b border-paper-200 transition-colors last:border-0 hover:bg-paper-100"
-                      onClick={() => onSelectProduct(p.id)}
-                    >
-                      <td className="px-3 py-1.5 font-mono text-ink900">{p.mfg_part_num}</td>
-                      <td className="px-3 py-1.5 text-ink900">
-                        {p.manufacturer_name || <span className="text-ink-400">unresolved</span>}
-                      </td>
-                      <td className="max-w-xs truncate px-3 py-1.5 text-ink-500" title={p.classpath || ""}>
-                        {p.classpath?.split(">").pop() || <span className="text-ink-400">&mdash;</span>}
-                      </td>
-                      <td className="px-3 py-1.5">
-                        <ConfidenceBadge band={p.confidence_band} score={p.confidence} />
-                      </td>
-                      <td className="px-3 py-1.5 text-right text-accent-600">view &rarr;</td>
+            <div>
+              <div className="mb-2 rounded border border-accent-600/25 bg-accent-50 px-3 py-2 text-[12.5px] text-accent-700">
+                <span className="font-semibold">{coveragePct}%</span> of rows have rule-based attribute coverage.
+                Remaining categories show no attributes rather than invented values &mdash; we don&apos;t guess.
+              </div>
+              <div className="overflow-hidden rounded border border-paper-300 bg-white">
+                <table className="w-full border-collapse text-left text-[13px]">
+                  <thead>
+                    <tr className="border-b border-paper-300 bg-paper-100 text-ink-500">
+                      <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
+                        MPN
+                      </th>
+                      <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
+                        Manufacturer
+                      </th>
+                      <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
+                        Classpath
+                      </th>
+                      <th className="px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wide">
+                        Confidence
+                      </th>
+                      <th className="px-3 py-1.5" />
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {rowsByCoverage.map(({ product: p }) => (
+                      <tr
+                        key={p.id}
+                        className="cursor-pointer border-b border-paper-200 transition-colors last:border-0 hover:bg-paper-100"
+                        onClick={() => onSelectProduct(p.id)}
+                      >
+                        <td className="px-3 py-1.5 font-mono text-ink900">{p.mfg_part_num}</td>
+                        <td className="px-3 py-1.5 text-ink900">
+                          {p.manufacturer_name || <span className="text-ink-400">unresolved</span>}
+                        </td>
+                        <td className="max-w-xs truncate px-3 py-1.5 text-ink-500" title={p.classpath || ""}>
+                          {p.classpath?.split(">").pop() || <span className="text-ink-400">&mdash;</span>}
+                        </td>
+                        <td className="px-3 py-1.5">
+                          <ConfidenceBadge band={p.confidence_band} score={p.confidence} />
+                        </td>
+                        <td className="px-3 py-1.5 text-right text-accent-600">view &rarr;</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
         </div>

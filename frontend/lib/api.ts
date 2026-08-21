@@ -71,6 +71,27 @@ export interface ProductRow {
   confidence_band: ConfidenceBand;
   created_at: string;
   updated_at: string;
+  // Backend's GET /api/job/{id}/results already serializes every products
+  // table column (`dict(r)` over `SELECT * FROM products`), so the raw
+  // EnrichedProduct JSON blob is already on the wire for each row -- this
+  // just gives it a type so the UI can read attributes_filled for display
+  // (sort order, coverage banner) without a backend change or an extra
+  // per-row fetch. Optional because older/partial rows could omit it.
+  data_json?: string;
+}
+
+// Display-only: how many of a row's attribute slots actually have a value.
+// Never invents anything -- purely counts what extraction already put
+// there. Tolerant of a missing/unparseable data_json (returns 0) so a
+// malformed row degrades to "sorts last", not a crash.
+export function countFilledAttributes(row: ProductRow): number {
+  if (!row.data_json) return 0;
+  try {
+    const parsed = JSON.parse(row.data_json) as EnrichedProduct;
+    return (parsed.attributes || []).filter((a) => !!a.value).length;
+  } catch {
+    return 0;
+  }
 }
 
 export interface ProductDetail extends ProductRow {
